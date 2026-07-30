@@ -1,0 +1,81 @@
+{
+  "drugs": [
+    {
+      "drug_name": "Ganja",
+      "small_quantity": {
+        "value": 1,
+        "unit": "kg"
+      },
+      "commercial_quantity": {
+        "value": 20,
+        "unit": "kg"
+      }
+    },
+    {
+      "drug_name": "Hashish",
+      "small_quantity": {
+        "value": 100,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 1,
+        "unit": "kg"
+      }
+    },
+    {
+      "drug_name": "Heroin",
+      "small_quantity": {
+        "value": 5,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 250,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "Cocaine",
+      "small_quantity": {
+        "value": 2,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 100,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "MDMA",
+      "small_quantity": {
+        "value": 0.5,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 10,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "Methamphetamine",
+      "small_quantity": {
+        "value": 2,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 50,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "Opium",
+      "small_quantity": {
+        "value": 25,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 2.5,
+        "unit": "kg"
+      }
+    }
+  ]
+}

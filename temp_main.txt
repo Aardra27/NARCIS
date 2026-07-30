@@ -1,0 +1,22 @@
+
+# --------------------------------------------------
+# Main
+# --------------------------------------------------
+
+if __name__ == "__main__":
+
+    dataset = load_dataset()
+
+    X, y, encoders = preprocess_data(dataset)
+
+    print("\n" + "=" * 60)
+    print("PREPROCESSING COMPLETE")
+    print("=" * 60)
+
+    print(f"Features Shape : {X.shape}")
+    print(f"Target Shape   : {y.shape}")
+
+    print("\nFirst Five Rows:")
+
+    print(X.head())
+

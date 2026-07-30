@@ -1,0 +1,77 @@
+{
+  "drug_name": "Hashish",
+  "aliases": [
+    "Charas",
+    "Cannabis Resin"
+  ],
+  "scientific_name": "Cannabis Resin",
+  "category": "Cannabis Resin",
+  "description": "The separated resin obtained from the cannabis plant, commonly known as charas in India, and regulated under the NDPS Act.",
+  "small_quantity": {
+    "value": 100,
+    "unit": "g"
+  },
+  "commercial_quantity": {
+    "value": 1,
+    "unit": "kg"
+  },
+  "common_transport_modes": [
+    "Road",
+    "Rail",
+    "Bus",
+    "Courier"
+  ],
+  "common_vehicle_types": [
+    "Car",
+    "Motorcycle",
+    "Bus",
+    "Train",
+    "Courier Parcel"
+  ],
+  "common_concealment_methods": [
+    "Hidden Vehicle Compartment",
+    "Backpack",
+    "Courier Parcel",
+    "Food Container",
+    "Clothing Concealment",
+    "False Bottom Luggage"
+  ],
+  "major_trafficking_states": [
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Uttarakhand",
+    "Delhi",
+    "Punjab",
+    "Maharashtra"
+  ],
+  "common_source_regions": [
+    "Himalayan Cannabis Cultivation Areas",
+    "Interstate Distribution Networks"
+  ],
+  "typical_intelligence_sources": [
+    "Confidential Informant",
+    "NCB Intelligence",
+    "State Police Intelligence",
+    "Surveillance",
+    "Local Police Information"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Call Detail Records",
+    "Vehicle Search",
+    "Witness Statement",
+    "CCTV Footage"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "20(b)"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Department of Revenue - Small and Commercial Quantities",
+    "NCB Annual Reports",
+    "Public NCB and State Police Seizure Reports"
+  ]
+}

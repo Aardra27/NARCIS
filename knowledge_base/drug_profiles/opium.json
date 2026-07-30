@@ -1,0 +1,80 @@
+{
+  "drug_name": "Opium",
+  "aliases": [
+    "Afeem",
+    "Raw Opium"
+  ],
+  "scientific_name": "Papaver somniferum Latex",
+  "category": "Natural Narcotic Drug",
+  "description": "The coagulated latex obtained from the opium poppy (Papaver somniferum), regulated under the NDPS Act.",
+  "small_quantity": {
+    "value": 25,
+    "unit": "g"
+  },
+  "commercial_quantity": {
+    "value": 2.5,
+    "unit": "kg"
+  },
+  "common_transport_modes": [
+    "Road",
+    "Rail",
+    "Bus",
+    "Courier"
+  ],
+  "common_vehicle_types": [
+    "Car",
+    "Motorcycle",
+    "Truck",
+    "Bus",
+    "Train",
+    "Courier Parcel"
+  ],
+  "common_concealment_methods": [
+    "Hidden Vehicle Compartment",
+    "False Bottom Luggage",
+    "Food Container",
+    "Parcel",
+    "Agricultural Produce",
+    "Clothing Concealment"
+  ],
+  "major_trafficking_states": [
+    "Rajasthan",
+    "Madhya Pradesh",
+    "Uttar Pradesh",
+    "Punjab",
+    "Haryana",
+    "Delhi"
+  ],
+  "common_source_regions": [
+    "Licensed Opium Cultivation Areas",
+    "Interstate Distribution Networks"
+  ],
+  "typical_intelligence_sources": [
+    "NCB Intelligence",
+    "State Police Intelligence",
+    "Confidential Informant",
+    "Surveillance",
+    "Local Police Information"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Call Detail Records",
+    "Vehicle Search",
+    "Witness Statement",
+    "Digital Payment Records",
+    "CCTV Footage"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "18"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Department of Revenue - Small and Commercial Quantities",
+    "Central Bureau of Narcotics",
+    "NCB Annual Reports",
+    "Public NCB and State Police Seizure Reports"
+  ]
+}

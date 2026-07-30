@@ -1,0 +1,47 @@
+{
+  "act_name": "Narcotic Drugs and Psychotropic Substances Act, 1985",
+  "abbreviation": "NDPS Act",
+  "enforced_year": 1985,
+  "purpose": "To consolidate and amend the law relating to narcotic drugs, psychotropic substances, and to provide for the control and regulation of operations relating to them.",
+  "objectives": [
+    "Prevent illicit trafficking of narcotic drugs and psychotropic substances",
+    "Regulate manufacture, possession, transport, sale and use for medical and scientific purposes",
+    "Provide stringent penalties for NDPS offences",
+    "Enable investigation and prosecution of drug-related crimes"
+  ],
+  "key_sections": [
+    {
+      "section": "8(c)",
+      "purpose": "General prohibition on production, possession, sale, purchase, transport, storage, use, import and export of narcotic drugs and psychotropic substances except as permitted."
+    },
+    {
+      "section": "18",
+      "purpose": "Punishment for offences involving opium and opium poppy."
+    },
+    {
+      "section": "20(b)",
+      "purpose": "Punishment for offences involving cannabis (ganja and hashish/charas)."
+    },
+    {
+      "section": "21",
+      "purpose": "Punishment for offences involving manufactured narcotic drugs such as heroin and cocaine."
+    },
+    {
+      "section": "22",
+      "purpose": "Punishment for offences involving psychotropic substances such as MDMA and methamphetamine."
+    }
+  ],
+  "investigating_agencies": [
+    "Narcotics Control Bureau (NCB)",
+    "Directorate of Revenue Intelligence (DRI)",
+    "Customs",
+    "State Police",
+    "Central Bureau of Narcotics (CBN)"
+  ],
+  "references": [
+    "NDPS Act, 1985",
+    "Narcotics Control Bureau",
+    "Central Bureau of Narcotics",
+    "Department of Revenue"
+  ]
+}

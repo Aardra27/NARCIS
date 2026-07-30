@@ -1,0 +1,81 @@
+{
+  "drug_name": "Cocaine",
+  "aliases": [
+    "Coke",
+    "Snow",
+    "Blow"
+  ],
+  "scientific_name": "Benzoylmethylecgonine",
+  "category": "Manufactured Narcotic Drug",
+  "description": "A powerful stimulant narcotic drug derived from coca leaves and regulated under the NDPS Act.",
+  "small_quantity": {
+    "value": 2,
+    "unit": "g"
+  },
+  "commercial_quantity": {
+    "value": 100,
+    "unit": "g"
+  },
+  "common_transport_modes": [
+    "Air",
+    "Road",
+    "Courier",
+    "Rail"
+  ],
+  "common_vehicle_types": [
+    "Flight",
+    "Car",
+    "Motorcycle",
+    "Bus",
+    "Train",
+    "Courier Parcel"
+  ],
+  "common_concealment_methods": [
+    "False Bottom Luggage",
+    "Cosmetic Container",
+    "Courier Parcel",
+    "Clothing Concealment",
+    "Food Packet",
+    "Hidden Vehicle Compartment"
+  ],
+  "major_trafficking_states": [
+    "Delhi",
+    "Maharashtra",
+    "Goa",
+    "Karnataka",
+    "Kerala",
+    "Gujarat"
+  ],
+  "common_source_regions": [
+    "International Air Passenger Route",
+    "International Courier Network",
+    "Interstate Distribution Networks"
+  ],
+  "typical_intelligence_sources": [
+    "NCB Intelligence",
+    "Customs Intelligence",
+    "Airport Intelligence Unit",
+    "State Police Intelligence",
+    "Confidential Informant"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Passport",
+    "Flight Ticket",
+    "Digital Payment Records",
+    "Call Detail Records",
+    "CCTV Footage"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "21"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Department of Revenue - Small and Commercial Quantities",
+    "NCB Annual Reports",
+    "Public NCB, DRI and State Police Seizure Reports"
+  ]
+}

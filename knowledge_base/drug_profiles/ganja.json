@@ -1,0 +1,75 @@
+{
+  "drug_name": "Ganja",
+  "aliases": [
+    "Cannabis",
+    "Marijuana",
+    "Weed"
+  ],
+  "scientific_name": "Cannabis sativa",
+  "category": "Cannabis",
+  "description": "Dried flowering or fruiting tops of the cannabis plant excluding seeds and leaves when not accompanied by the tops.",
+  "small_quantity": {
+    "value": 1,
+    "unit": "kg"
+  },
+  "commercial_quantity": {
+    "value": 20,
+    "unit": "kg"
+  },
+  "common_transport_modes": [
+    "Road",
+    "Rail",
+    "Private Vehicle",
+    "Bus",
+    "Courier"
+  ],
+  "common_vehicle_types": [
+    "Car",
+    "Motorcycle",
+    "Truck",
+    "Bus",
+    "Train"
+  ],
+  "common_concealment_methods": [
+    "Travel Bag",
+    "Luggage",
+    "Hidden Vehicle Compartment",
+    "Agricultural Produce",
+    "Parcel"
+  ],
+  "major_trafficking_states": [
+    "Odisha",
+    "Andhra Pradesh",
+    "Telangana",
+    "Chhattisgarh",
+    "Maharashtra",
+    "Kerala"
+  ],
+  "common_source_regions": [
+    "Domestic Cultivation Areas"
+  ],
+  "typical_intelligence_sources": [
+    "Confidential Informant",
+    "Police Intelligence",
+    "NCB Intelligence",
+    "Surveillance"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Call Records",
+    "Vehicle Search",
+    "Witness Statement"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "20(b)"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Central Bureau of Narcotics Notifications",
+    "Department of Revenue - Small and Commercial Quantities",
+    "NCB Annual Reports"
+  ]
+}

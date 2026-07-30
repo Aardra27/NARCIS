@@ -1,0 +1,81 @@
+{
+  "drug_name": "Methamphetamine",
+  "aliases": [
+    "Meth",
+    "Crystal Meth",
+    "Ice"
+  ],
+  "scientific_name": "Methamphetamine",
+  "category": "Psychotropic Substance",
+  "description": "A highly addictive synthetic stimulant classified as a psychotropic substance under the NDPS Act.",
+  "small_quantity": {
+    "value": 2,
+    "unit": "g"
+  },
+  "commercial_quantity": {
+    "value": 50,
+    "unit": "g"
+  },
+  "common_transport_modes": [
+    "Road",
+    "Air",
+    "Courier",
+    "Rail"
+  ],
+  "common_vehicle_types": [
+    "Car",
+    "Motorcycle",
+    "Bus",
+    "Train",
+    "Flight",
+    "Courier Parcel"
+  ],
+  "common_concealment_methods": [
+    "False Bottom Luggage",
+    "Courier Parcel",
+    "Plastic Packet",
+    "Food Container",
+    "Cosmetic Container",
+    "Hidden Vehicle Compartment"
+  ],
+  "major_trafficking_states": [
+    "Manipur",
+    "Mizoram",
+    "Nagaland",
+    "Assam",
+    "Delhi",
+    "Maharashtra"
+  ],
+  "common_source_regions": [
+    "Golden Triangle Route",
+    "Interstate Distribution Networks",
+    "Domestic Synthetic Drug Manufacturing Networks"
+  ],
+  "typical_intelligence_sources": [
+    "NCB Intelligence",
+    "State Police Intelligence",
+    "Customs Intelligence",
+    "Confidential Informant",
+    "Border Intelligence"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Digital Payment Records",
+    "Chat Messages",
+    "Courier Documents",
+    "Vehicle Search",
+    "CCTV Footage"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "22"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Department of Revenue - Small and Commercial Quantities",
+    "NCB Annual Reports",
+    "Public NCB, DRI and State Police Seizure Reports"
+  ]
+}

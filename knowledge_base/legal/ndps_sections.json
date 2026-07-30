@@ -1,0 +1,73 @@
+{
+  "sections": [
+    {
+      "section": "8(c)",
+      "title": "Prohibition of Certain Operations",
+      "category": "General Prohibition",
+      "description": "Prohibits the production, manufacture, possession, sale, purchase, transport, storage, use, consumption, import, export and transshipment of narcotic drugs and psychotropic substances except for medical or scientific purposes as permitted under the Act.",
+      "applicable_for": [
+        "All Narcotic Drugs",
+        "All Psychotropic Substances"
+      ],
+      "severity": "High",
+      "references": [
+        "NDPS Act, 1985"
+      ]
+    },
+    {
+      "section": "18",
+      "title": "Punishment for Opium Poppy and Opium Offences",
+      "category": "Natural Narcotic Drug",
+      "description": "Applies to offences involving opium.",
+      "applicable_for": [
+        "Opium"
+      ],
+      "severity": "High",
+      "references": [
+        "NDPS Act, 1985"
+      ]
+    },
+    {
+      "section": "20(b)",
+      "title": "Punishment for Cannabis",
+      "category": "Cannabis",
+      "description": "Applies to cannabis offences including ganja and hashish.",
+      "applicable_for": [
+        "Ganja",
+        "Hashish"
+      ],
+      "severity": "High",
+      "references": [
+        "NDPS Act, 1985"
+      ]
+    },
+    {
+      "section": "21",
+      "title": "Punishment for Manufactured Drugs",
+      "category": "Manufactured Narcotic Drug",
+      "description": "Applies to manufactured narcotic drugs such as heroin and cocaine.",
+      "applicable_for": [
+        "Heroin",
+        "Cocaine"
+      ],
+      "severity": "High",
+      "references": [
+        "NDPS Act, 1985"
+      ]
+    },
+    {
+      "section": "22",
+      "title": "Punishment for Psychotropic Substances",
+      "category": "Psychotropic Substance",
+      "description": "Applies to psychotropic substances including MDMA and methamphetamine.",
+      "applicable_for": [
+        "MDMA",
+        "Methamphetamine"
+      ],
+      "severity": "High",
+      "references": [
+        "NDPS Act, 1985"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "drug_name": "MDMA",
+  "aliases": [
+    "Ecstasy",
+    "Molly"
+  ],
+  "scientific_name": "3,4-Methylenedioxymethamphetamine",
+  "category": "Psychotropic Substance",
+  "description": "A synthetic psychoactive drug classified as a psychotropic substance under the NDPS Act.",
+  "small_quantity": {
+    "value": 0.5,
+    "unit": "g"
+  },
+  "commercial_quantity": {
+    "value": 10,
+    "unit": "g"
+  },
+  "common_transport_modes": [
+    "Road",
+    "Air",
+    "Courier",
+    "Rail"
+  ],
+  "common_vehicle_types": [
+    "Car",
+    "Motorcycle",
+    "Bus",
+    "Flight",
+    "Train",
+    "Courier Parcel"
+  ],
+  "common_concealment_methods": [
+    "Parcel",
+    "Courier Package",
+    "False Bottom Luggage",
+    "Hidden Vehicle Compartment",
+    "Food Packet",
+    "Cosmetic Container",
+    "Clothing Concealment"
+  ],
+  "major_trafficking_states": [
+    "Kerala",
+    "Karnataka",
+    "Goa",
+    "Maharashtra",
+    "Telangana",
+    "Delhi"
+  ],
+  "common_source_regions": [
+    "Domestic Synthetic Drug Manufacturing Networks",
+    "Interstate Distribution Networks"
+  ],
+  "typical_intelligence_sources": [
+    "NCB Intelligence",
+    "State Police Intelligence",
+    "Cyber Intelligence",
+    "Confidential Informant",
+    "Surveillance"
+  ],
+  "evidence_types": [
+    "Drug Sample",
+    "Mobile Phone",
+    "Chat Messages",
+    "Digital Payment Records",
+    "Courier Documents",
+    "Call Detail Records",
+    "CCTV Footage"
+  ],
+  "applicable_ndps_sections": [
+    "8(c)",
+    "22"
+  ],
+  "risk_weight": null,
+  "references": [
+    "NDPS Act, 1985",
+    "Department of Revenue - Small and Commercial Quantities",
+    "NCB Annual Reports",
+    "Public NCB and State Police Seizure Reports"
+  ]
+}
