@@ -1,4 +1,4 @@
-import os
+﻿import os
 import joblib
 
 from sklearn.model_selection import train_test_split
@@ -10,7 +10,6 @@ from sklearn.metrics import (
 )
 
 from preprocess import load_dataset, preprocess_data
-
 
 # --------------------------------------------------
 # Project Paths
@@ -24,7 +23,14 @@ MODEL_DIR = os.path.join(
     "saved_models"
 )
 
+ENCODER_DIR = os.path.join(
+    BASE_DIR,
+    "models",
+    "encoders"
+)
+
 os.makedirs(MODEL_DIR, exist_ok=True)
+os.makedirs(ENCODER_DIR, exist_ok=True)
 
 # --------------------------------------------------
 # Load and Split Dataset
@@ -35,6 +41,17 @@ def prepare_data():
     dataset = load_dataset()
 
     X, y, encoders = preprocess_data(dataset)
+
+    feature_columns = X.columns.tolist()
+
+    feature_path = os.path.join(
+        ENCODER_DIR,
+        "feature_columns.pkl"
+    )
+
+    joblib.dump(feature_columns, feature_path)
+
+    print(f"\nFeature columns saved to:\n{feature_path}")
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,
@@ -51,7 +68,7 @@ def prepare_data():
     print(f"Training Samples : {len(X_train)}")
     print(f"Testing Samples  : {len(X_test)}")
 
-    return X_train, X_test, y_train, y_test, encoders
+    return X_train, X_test, y_train, y_test
 
 
 # --------------------------------------------------
@@ -72,8 +89,6 @@ def train_model(X_train, y_train):
 
     model.fit(X_train, y_train)
 
-    print("Training Complete.")
-
     model_path = os.path.join(
         MODEL_DIR,
         "random_forest.pkl"
@@ -87,14 +102,17 @@ def train_model(X_train, y_train):
 
 
 # --------------------------------------------------
-# Evaluate Model
+# Evaluate
 # --------------------------------------------------
 
 def evaluate_model(model, X_test, y_test):
 
     predictions = model.predict(X_test)
 
-    accuracy = accuracy_score(y_test, predictions)
+    accuracy = accuracy_score(
+        y_test,
+        predictions
+    )
 
     print("\n" + "=" * 60)
     print("MODEL EVALUATION")
@@ -102,7 +120,7 @@ def evaluate_model(model, X_test, y_test):
 
     print(f"Accuracy : {accuracy:.4f}")
 
-    print("\nClassification Report:\n")
+    print("\nClassification Report\n")
 
     print(
         classification_report(
@@ -111,7 +129,7 @@ def evaluate_model(model, X_test, y_test):
         )
     )
 
-    print("\nConfusion Matrix:\n")
+    print("\nConfusion Matrix\n")
 
     print(
         confusion_matrix(
@@ -127,9 +145,12 @@ def evaluate_model(model, X_test, y_test):
 
 if __name__ == "__main__":
 
-    X_train, X_test, y_train, y_test, encoders = prepare_data()
+    X_train, X_test, y_train, y_test = prepare_data()
 
-    model = train_model(X_train, y_train)
+    model = train_model(
+        X_train,
+        y_train
+    )
 
     evaluate_model(
         model,
@@ -140,4 +161,3 @@ if __name__ == "__main__":
     print("\n" + "=" * 60)
     print("MODEL TRAINING PIPELINE COMPLETED")
     print("=" * 60)
-

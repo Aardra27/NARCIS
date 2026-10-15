@@ -1,0 +1,704 @@
+﻿
+============================================================
+1. PROJECT STRUCTURE
+============================================================
+ROOT     : C:\Users\AARDRA\Downloads\NARCIS
+FRONTEND : C:\Users\AARDRA\Downloads\NARCIS\frontend
+BACKEND  : C:\Users\AARDRA\Downloads\NARCIS\backend
+
+============================================================
+2. BACKEND PYTHON FILES
+============================================================
+[PY] backend\__init__.py
+[PY] backend\api\__init__.py
+[PY] backend\api\auth.py
+[PY] backend\api\cases.py
+[PY] backend\api\dashboard.py
+[PY] backend\auth\__init__.py
+[PY] backend\auth\authentication.py
+[PY] backend\auth\security.py
+[PY] backend\database\__init__.py
+[PY] backend\database\database.py
+[PY] backend\database\models.py
+[PY] backend\main.py
+
+Total Python files: 12
+
+============================================================
+3. IMPORTANT NARCIS BACKEND FILES
+============================================================
+
+[FOUND] main.py
+        Size       : 1053 bytes
+        Modified   : 09/16/2026 00:48:53
+
+[MISSING] importer\extractor.py
+
+[MISSING] importer\mapper.py
+
+[MISSING] importer\validator.py
+
+[MISSING] agent\orchestrator.py
+
+[MISSING] rag\case_similarity.py
+
+[MISSING] rag\knowledge_retriever.py
+
+[MISSING] llm\test_gemini.py
+
+[MISSING] llm\report_generator.py
+
+============================================================
+4. BACKEND PYTHON IMPORT / CALL RELATIONSHIPS
+============================================================
+
+FILE: backend\main.py
+   -> from fastapi
+   -> from fastapi.middleware.cors
+   -> from backend.database.database
+   -> from backend.database
+   -> from backend.api.auth
+   -> from backend.api.dashboard
+   -> from backend.api.cases
+
+FILE: backend\api\auth.py
+   -> from datetime
+   -> from fastapi
+   -> from pydantic
+   -> from sqlalchemy.orm
+   -> from backend.auth.security
+   -> from backend.database.database
+   -> from backend.database.models
+
+FILE: backend\api\cases.py
+   -> from pathlib
+   -> import sys
+   -> import uuid
+   -> from fastapi
+   -> from extractor
+   -> from mapper
+   -> from validator
+   -> from fastapi.responses
+
+FILE: backend\api\dashboard.py
+   -> from fastapi
+   -> from pathlib
+   -> import json
+   -> from config
+
+FILE: backend\auth\authentication.py
+   -> from sqlalchemy.orm
+   -> from backend.auth.security
+   -> from backend.database.models
+
+FILE: backend\auth\security.py
+   -> from passlib.context
+
+FILE: backend\database\database.py
+   -> from sqlalchemy
+   -> from sqlalchemy.orm
+
+FILE: backend\database\models.py
+   -> from sqlalchemy
+   -> from datetime
+   -> from backend.database.database
+
+============================================================
+5. BACKEND API ENDPOINTS
+============================================================
+
+FILE     : backend\main.py
+METHOD   : GET
+ENDPOINT : /
+
+FILE     : backend\main.py
+METHOD   : GET
+ENDPOINT : /api/health
+
+FILE     : backend\api\auth.py
+METHOD   : POST
+ENDPOINT : /login
+
+FILE     : backend\api\cases.py
+METHOD   : POST
+ENDPOINT : /extract
+
+FILE     : backend\api\cases.py
+METHOD   : GET
+ENDPOINT : /document/{document_id}
+
+FILE     : backend\api\dashboard.py
+METHOD   : GET
+ENDPOINT : /stats
+
+FILE     : backend\api\dashboard.py
+METHOD   : GET
+ENDPOINT : /analysis
+
+FILE     : backend\api\dashboard.py
+METHOD   : GET
+ENDPOINT : /recent-cases
+
+FILE     : backend\api\dashboard.py
+METHOD   : GET
+ENDPOINT : /activity
+
+============================================================
+6. MAIN.PY ROUTER / CORS INFORMATION
+============================================================
+main.py FOUND.
+
+--- router/include information ---
+app.include_router(auth_router)
+app.include_router(dashboard_router)
+app.include_router(cases_router)
+
+--- CORS information ---
+from fastapi.middleware.cors import CORSMiddleware
+CORSMiddleware,
+allow_origins=[
+allow_methods=["*"],
+allow_headers=["*"],
+
+============================================================
+7. FRONTEND APP PAGES
+============================================================
+[PAGE] /frontend/.next/dev/server/app/case-verification
+       File: frontend\.next\dev\server\app\case-verification\page.js
+[PAGE] /frontend/.next/dev/server/app/document-extraction
+       File: frontend\.next\dev\server\app\document-extraction\page.js
+[PAGE] /frontend/_NARCIS_BACKUPS/before-case-verification-new-shell-20260917-002340
+       File: frontend\_NARCIS_BACKUPS\before-case-verification-new-shell-20260917-002340\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-case-verification-new-shell-20260922-151755
+       File: frontend\_NARCIS_BACKUPS\before-case-verification-new-shell-20260922-151755\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-final-layout-20260916-214050
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-final-layout-20260916-214050\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-frontend-layout-20260916-212555
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-frontend-layout-20260916-212555\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-frontend-rebuild-20260916-212248
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-frontend-rebuild-20260916-212248\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-frontend-rebuild-20260916-212328
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-frontend-rebuild-20260916-212328\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-layout-build-20260916-210043
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-layout-build-20260916-210043\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-layout-fix-20260922-152259
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-layout-fix-20260922-152259\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-layout-repair-20260916-211542
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-layout-repair-20260916-211542\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-page-edit-20260916-211716
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-page-edit-20260916-211716\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-document-extraction-restore-20260922-144337
+       File: frontend\_NARCIS_BACKUPS\before-document-extraction-restore-20260922-144337\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-extraction-page-20260916-202636/frontend/src/app/new-case
+       File: frontend\_NARCIS_BACKUPS\before-extraction-page-20260916-202636\frontend\src\app\new-case\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/before-login-transition-fix-20260924-182236
+       File: frontend\_NARCIS_BACKUPS\before-login-transition-fix-20260924-182236\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/BEFORE-RESTORE-document-extraction-20260922-152105
+       File: frontend\_NARCIS_BACKUPS\BEFORE-RESTORE-document-extraction-20260922-152105\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-18-field-repair-20260916-235312/case-verification
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-18-field-repair-20260916-235312\case-verification\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-continuation-repair-20260917-000100
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-continuation-repair-20260917-000100\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-exact-sidebar-2026-09-25_14-45-02
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-exact-sidebar-2026-09-25_14-45-02\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-exact-sidebar-2026-09-27_12-31-39
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-exact-sidebar-2026-09-27_12-31-39\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/BACKUP_BEFORE_LEFT_PANEL_FIX_2026-09-25_12-12-45
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\BACKUP_BEFORE_LEFT_PANEL_FIX_2026-09-25_12-12-45\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/BACKUP_SIDEBAR_2026-09-25_04-42-10
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\BACKUP_SIDEBAR_2026-09-25_04-42-10\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification/EMERGENCY_BACKUP_2026-09-25_04-55-03
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-final-shell-repair-20260925-141510/case-verification
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-final-shell-repair-20260925-141510\case-verification\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-layout-repair-20260916-233859
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-layout-repair-20260916-233859\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-newcase-layout-20260917-001943
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-newcase-layout-20260917-001943\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/case-verification-before-newcase-layout-20260922-152012
+       File: frontend\_NARCIS_BACKUPS\case-verification-before-newcase-layout-20260922-152012\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-combined-layout-20260916-235717
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-combined-layout-20260916-235717\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-final-layout-20260916-214924
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-final-layout-20260916-214924\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-final-layout-20260916-215705
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-final-layout-20260916-215705\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-final-layout-20260916-215815
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-final-layout-20260916-215815\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-workflow-layout-20260916-213139
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-workflow-layout-20260916-213139\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-before-workflow-layout-20260916-214457
+       File: frontend\_NARCIS_BACKUPS\document-extraction-before-workflow-layout-20260916-214457\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-current-20260916-214017
+       File: frontend\_NARCIS_BACKUPS\document-extraction-current-20260916-214017\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-working-20260916-215441
+       File: frontend\_NARCIS_BACKUPS\document-extraction-working-20260916-215441\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/document-extraction-working-20260916-220003
+       File: frontend\_NARCIS_BACKUPS\document-extraction-working-20260916-220003\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/BACKUP_SIDEBAR_2026-09-25_04-42-10
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\BACKUP_SIDEBAR_2026-09-25_04-42-10\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification/EMERGENCY_BACKUP_2026-09-25_04-55-03
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/case-verification
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\case-verification\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/document-extraction/BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00/backup-before-scroll-sidebar-fix-20260925-035222
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/document-extraction/BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/document-extraction/BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/document-extraction/backup-before-scroll-sidebar-fix-20260925-035222
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+[PAGE] /frontend/_NARCIS_BACKUPS/visual-repair-before-glow-and-verification-2026-09-25_10-17-10/document-extraction
+       File: frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\page.tsx
+[PAGE] /frontend/backups/document-extraction_20260922_153052
+       File: frontend\backups\document-extraction_20260922_153052\page.tsx
+[PAGE] /case-verification/BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17
+       File: frontend\src\app\case-verification\BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17\page.tsx
+[PAGE] /case-verification/BACKUP_BEFORE_EXACT_DOCUMENT_SIDEBAR_2026-09-25_14-26-58
+       File: frontend\src\app\case-verification\BACKUP_BEFORE_EXACT_DOCUMENT_SIDEBAR_2026-09-25_14-26-58\page.tsx
+[PAGE] /case-verification/BACKUP_BEFORE_LEFT_PANEL_FIX_2026-09-25_12-12-45
+       File: frontend\src\app\case-verification\BACKUP_BEFORE_LEFT_PANEL_FIX_2026-09-25_12-12-45\page.tsx
+[PAGE] /case-verification/BACKUP_BEFORE_RESTORE_2026-09-27_12-28-06
+       File: frontend\src\app\case-verification\BACKUP_BEFORE_RESTORE_2026-09-27_12-28-06\page.tsx
+[PAGE] /case-verification/BACKUP_SIDEBAR_2026-09-25_04-42-10
+       File: frontend\src\app\case-verification\BACKUP_SIDEBAR_2026-09-25_04-42-10\page.tsx
+[PAGE] /case-verification/BEFORE_RESTORE_2026-09-27_12-24-49
+       File: frontend\src\app\case-verification\BEFORE_RESTORE_2026-09-27_12-24-49\page.tsx
+[PAGE] /case-verification/BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08
+       File: frontend\src\app\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+[PAGE] /case-verification/BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21
+       File: frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+[PAGE] /case-verification/CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02
+       File: frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+[PAGE] /case-verification/EMERGENCY_BACKUP_2026-09-25_04-55-03
+       File: frontend\src\app\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+[PAGE] /case-verification
+       File: frontend\src\app\case-verification\page.tsx
+[PAGE] /case-verification_BACKUP_BEFORE_LAYOUT_2026-09-25_04-34-26
+       File: frontend\src\app\case-verification_BACKUP_BEFORE_LAYOUT_2026-09-25_04-34-26\page.tsx
+[PAGE] /case-verification_BACKUP_BEFORE_SELECT_FIX_2026-09-25_04-21-59
+       File: frontend\src\app\case-verification_BACKUP_BEFORE_SELECT_FIX_2026-09-25_04-21-59\page.tsx
+[PAGE] /case-verification_BACKUP_COMPLETE_REBUILD_2026-09-25_04-40-30
+       File: frontend\src\app\case-verification_BACKUP_COMPLETE_REBUILD_2026-09-25_04-40-30\page.tsx
+[PAGE] /case-verification_BACKUP_FORM_SELECTORS_2026-09-25_04-24-43
+       File: frontend\src\app\case-verification_BACKUP_FORM_SELECTORS_2026-09-25_04-24-43\page.tsx
+[PAGE] /case-verification_BACKUP_LAYOUT_2026-09-25_04-15-42
+       File: frontend\src\app\case-verification_BACKUP_LAYOUT_2026-09-25_04-15-42\page.tsx
+[PAGE] /case-verification_BACKUP_SELECT_FIX_2026-09-25_04-22-42
+       File: frontend\src\app\case-verification_BACKUP_SELECT_FIX_2026-09-25_04-22-42\page.tsx
+[PAGE] /case-verification_BACKUP_SELECT_FIX_2026-09-25_04-23-51
+       File: frontend\src\app\case-verification_BACKUP_SELECT_FIX_2026-09-25_04-23-51\page.tsx
+[PAGE] /dashboard
+       File: frontend\src\app\dashboard\page.tsx
+[PAGE] /document-extraction/BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00/backup-before-scroll-sidebar-fix-20260925-035222
+       File: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+[PAGE] /document-extraction/BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00
+       File: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\page.tsx
+[PAGE] /document-extraction/BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49
+       File: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49\page.tsx
+[PAGE] /document-extraction/backup-before-scroll-sidebar-fix-20260925-035222
+       File: frontend\src\app\document-extraction\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+[PAGE] /document-extraction
+       File: frontend\src\app\document-extraction\page.tsx
+[PAGE] /document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52
+       File: frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+[PAGE] /document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51
+       File: frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+[PAGE] /document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59
+       File: frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+[PAGE] /login
+       File: frontend\src\app\login\page.tsx
+[PAGE] /new-case/backup-before-document-extraction-fix-20260925-035222
+       File: frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx
+[PAGE] /new-case
+       File: frontend\src\app\new-case\page.tsx
+[PAGE] /page.tsx
+       File: frontend\src\app\page.tsx
+[PAGE] /UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38/case-verification
+       File: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\case-verification\page.tsx
+[PAGE] /UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38/document-extraction
+       File: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+[PAGE] /UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38/new-case
+       File: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+
+Total frontend pages: 87
+
+============================================================
+8. FRONTEND API CALLS
+============================================================
+
+FILE: frontend\.next\dev\static\chunks\node_modules_next_dist_client_16lnmlo._.js
+   FETCH -> ${this.assetPrefix}/_next/static/development/${_constants.DEV_CLIENT_PAGES_MANIFEST}
+   FETCH -> ${this.assetPrefix}/_next/static/${this.buildId}/${_constants.DEV_CLIENT_MIDDLEWARE_MANIFEST}
+   FETCH -> ${assetPrefix}/_next/static/development/_devPagesManifest.json
+
+FILE: frontend\.next\dev\static\chunks\node_modules_next_dist_compiled_14ibvna._.js
+   FETCH -> /__nextjs_original-stack-frames
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_attach-nodejs-inspector
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_devtools_config
+   FETCH -> /__nextjs_server_status
+   FETCH -> /__nextjs_server_status
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_disable_dev_indicator
+
+FILE: frontend\.next\dev\static\chunks\node_modules_next_dist_compiled_next-devtools_index_090k2jm.js
+   FETCH -> /__nextjs_original-stack-frames
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_attach-nodejs-inspector
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_devtools_config
+   FETCH -> /__nextjs_server_status
+   FETCH -> /__nextjs_server_status
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> ${process.env.__NEXT_ROUTER_BASEPATH||
+   FETCH -> /__nextjs_disable_dev_indicator
+
+FILE: frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/stats
+   FETCH -> ${API_BASE}/api/dashboard/recent-cases
+   FETCH -> ${API_BASE}/api/dashboard/activity
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+
+FILE: frontend\src\app\login\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/auth/login
+
+FILE: frontend\src\app\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\new-case-page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\_NARCIS_BACKUPS\before-document-workflow-sync-20260916-211429\new-case-page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\_NARCIS_BACKUPS\before-extraction-page-20260916-202636\frontend\src\app\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\_NARCIS_BACKUPS\before-login-transition-fix-20260924-182236\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/auth/login
+
+============================================================
+9. NARCIS WORKFLOW FRONTEND PAGES
+============================================================
+
+[FOUND] /dashboard
+        -> dashboard.module.css
+        -> dashboard.module.css.backup-before-original-restore-20260916-023721
+        -> dashboard.module.css.backup-before-sidebar-scroll-20260916-023519
+        -> dashboard.module.css.backup-before-sidebar-scroll-20260916-024216
+        -> page.tsx
+
+[FOUND] /new-case
+        -> new-case.module.css
+        -> new-case.module.css.backup-before-dashboard-sidebar-sync-20260916-022959
+        -> new-case.module.css.backup-before-proper-sidebar-fix-20260916-022329
+        -> new-case.module.css.backup-before-proper-sidebar-fix-20260916-022531
+        -> new-case.module.css.backup-before-revert-20260916-021943
+        -> new-case.module.css.backup-before-revert-20260916-023107
+        -> new-case.module.css.backup-before-scroll-logo-repair-20260916-021819
+        -> new-case.module.css.backup-before-scroll-restore-20260916-023327
+        -> new-case.module.css.backup-before-sidebar-inspection-20260916-022201
+        -> new-case.module.css.backup-before-sidebar-scroll-20260916-024216
+        -> new-case.module.css.backup-scroll-fix
+        -> page.tsx
+        -> page.tsx.backup-before-api
+        -> page.tsx.backup-before-api-insert
+        -> page.tsx.backup-before-api-restore
+        -> page.tsx.backup-before-button-fix
+        -> page.tsx.backup-before-button-fix-2
+        -> page.tsx.backup-before-click-debug
+        -> page.tsx.backup-before-file-state-debug
+        -> page.tsx.backup-before-final-extraction-20260916-021114
+        -> page.tsx.backup-before-final-handler-20260916-020717
+        -> page.tsx.backup-before-final-handler-20260916-020739
+        -> page.tsx.backup-before-handler-repair-20260916-020609
+        -> page.tsx.backup-before-repair-20260916_005514
+        -> page.tsx.backup-corrupted-20260916-010047
+
+[FOUND] /document-extraction
+        -> document-extraction.module.css
+        -> document-extraction.module.css.backup-before-document-extraction-20260916-205749
+        -> document-extraction.module.css.backup-before-frontend-layout-20260916-205203
+        -> document-extraction.module.css.backup-before-shell-rebuild-20260916-210843
+        -> document-extraction.module.css.backup-before-workflow-repair-20260916-211729
+        -> page.tsx
+        -> page.tsx.backup-before-document-extraction-20260916-205749
+        -> page.tsx.backup-before-frontend-layout-20260916-205203
+        -> page.tsx.backup-before-shell-rebuild-20260916-210843
+
+[FOUND] /case-verification
+        -> BEFORE_LEFT_PANEL_FIX_2026-09-25_09-32-18.css
+        -> case-verification.module.css
+        -> case-verification.module.css.backup
+        -> CSS_BEFORE_BRACE_REPAIR_2026-09-25_04-53-47.css
+        -> CSS_BEFORE_RECOVERY_2026-09-25_04-52-31.css
+        -> page.tsx
+        -> page.tsx.backup
+
+[NOT FOUND] /ai-analysis
+
+[NOT FOUND] /decision-support
+
+[NOT FOUND] /reports
+
+[NOT FOUND] /case-history
+
+============================================================
+10. KNOWN NARCIS ENDPOINT REFERENCES
+============================================================
+
+ENDPOINT: /api/cases/extract
+   FOUND: frontend\src\app\new-case\page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+   FOUND: frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+   FOUND: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+   FOUND: frontend\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\new-case-page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+   FOUND: frontend\_NARCIS_BACKUPS\before-document-workflow-sync-20260916-211429\new-case-page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+   FOUND: frontend\_NARCIS_BACKUPS\before-extraction-page-20260916-202636\frontend\src\app\new-case\page.tsx:147
+   CODE : "http://127.0.0.1:8000/api/cases/extract",
+
+ENDPOINT: /api/dashboard/analysis
+   FOUND: frontend\src\app\dashboard\page.tsx:108
+   CODE : fetch(`${API_BASE}/api/dashboard/analysis`),
+   FOUND: frontend\src\app\dashboard\page.tsx:129
+   CODE : `${API_BASE}/api/dashboard/analysis`
+
+ENDPOINT: /api/dashboard/activity
+   FOUND: frontend\src\app\dashboard\page.tsx:107
+   CODE : fetch(`${API_BASE}/api/dashboard/activity`),
+
+ENDPOINT: /api/dashboard/recent-cases
+   FOUND: frontend\src\app\dashboard\page.tsx:106
+   CODE : fetch(`${API_BASE}/api/dashboard/recent-cases`),
+
+ENDPOINT: /api/dashboard/stats
+   FOUND: frontend\src\app\dashboard\page.tsx:105
+   CODE : fetch(`${API_BASE}/api/dashboard/stats`),
+
+============================================================
+11. KNOWN NARCIS BACKEND ENDPOINT IMPLEMENTATIONS
+============================================================
+
+ENDPOINT: /api/cases/extract
+   NOT FOUND in backend.
+
+ENDPOINT: /api/dashboard/analysis
+   NOT FOUND in backend.
+
+ENDPOINT: /api/dashboard/activity
+   NOT FOUND in backend.
+
+ENDPOINT: /api/dashboard/recent-cases
+   NOT FOUND in backend.
+
+ENDPOINT: /api/dashboard/stats
+   NOT FOUND in backend.
+
+============================================================
+12. CASE VERIFICATION ANALYSIS
+============================================================
+CASE VERIFICATION PAGE FOUND.
+
+--- API/fetch references ---
+   NO obvious API call found.
+
+--- Initial/static case data references ---
+
+CSS brace balance:
+   Opening : 268
+   Closing : 268
+   STATUS  : BALANCED
+
+============================================================
+13. DOCUMENT EXTRACTION ANALYSIS
+============================================================
+DOCUMENT EXTRACTION PAGE FOUND.
+
+--- API/fetch references ---
+   NO obvious API call found.
+
+CSS brace balance:
+   Opening : 178
+   Closing : 178
+
+============================================================
+14. NEW CASE ANALYSIS
+============================================================
+NEW CASE PAGE FOUND.
+
+--- API/fetch references ---
+   fetch( "http://127.0.0.1:8000/api/cases/extract", { method: "POST", body: formData, } )
+
+============================================================
+15. FRONTEND BACKEND BASE URL / ENVIRONMENT VARIABLES
+============================================================
+
+--- hard-coded localhost/API URLs ---
+   frontend\.next\dev\server\chunks\ssr\src_app_document-extraction_19opb7d._.js:235
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\.next\dev\static\chunks\node_modules_next_dist_client_0r5nbpw._.js:1989
+      const matches = // example 1: at Page (http://localhost:3000/_next/static/chunks/pages/index.js?ts=1631600000000:2:1)
+   frontend\.next\dev\static\chunks\node_modules_next_dist_client_0r5nbpw._.js:1990
+      // example 2: Page@http://localhost:3000/_next/static/chunks/pages/index.js?ts=1631600000000:2:1
+   frontend\.next\dev\static\chunks\src_app_document-extraction_1l--9g6._.js:236
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\backups\document-extraction_20260922_153052\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\src\app\dashboard\page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\src\app\document-extraction\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\login\page.tsx:50
+      "http://127.0.0.1:8000/api/auth/login",
+   frontend\src\app\new-case\page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\new-case-page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\_NARCIS_BACKUPS\before-document-extraction-frontend-rebuild-20260916-212248\page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\_NARCIS_BACKUPS\before-document-extraction-layout-fix-20260922-152259\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\before-document-extraction-layout-repair-20260916-211542\page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\_NARCIS_BACKUPS\before-document-extraction-page-edit-20260916-211716\page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\_NARCIS_BACKUPS\before-document-extraction-restore-20260922-144337\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\before-document-workflow-sync-20260916-211429\document-extraction-page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\_NARCIS_BACKUPS\before-document-workflow-sync-20260916-211429\new-case-page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\_NARCIS_BACKUPS\before-extraction-layout-repair-20260917-010329\document-extraction-page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\before-extraction-page-20260916-202636\frontend\src\app\new-case\page.tsx:147
+      "http://127.0.0.1:8000/api/cases/extract",
+   frontend\_NARCIS_BACKUPS\before-login-transition-fix-20260924-182236\page.tsx:50
+      "http://127.0.0.1:8000/api/auth/login",
+   frontend\_NARCIS_BACKUPS\document-extraction-before-combined-layout-20260916-235717\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\document-extraction-before-final-layout-20260916-215705\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\document-extraction-before-final-layout-20260916-215815\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\document-extraction-before-workflow-layout-20260916-214457\page.tsx:7
+      const API_BASE = "http://127.0.0.1:8000";
+   frontend\_NARCIS_BACKUPS\document-extraction-working-20260916-215441\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\document-extraction-working-20260916-220003\page.tsx:176
+      : `http://127.0.0.1:8000${result.document_url}`
+   frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+   frontend\_NARCIS_BACKUPS\visual-repair-before-glow-and-verification-2026-09-25_10-17-10\document-extraction\BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49\page.tsx:113
+      return `http://127.0.0.1:8000${url.startsWith("/") ? "" : "/"}${url}`;
+
+============================================================
+16. BACKEND OUTPUT / GENERATED FILES
+============================================================
+
+============================================================
+17. PRELIMINARY CONNECTION STATUS
+============================================================
+
+This section is deliberately conservative.
+It is based ONLY on files and references discovered above.
+
+KNOWN FROM PREVIOUS NARCIS WORK:
+
+1. Dashboard
+   Known API references:
+   /api/dashboard/analysis
+   /api/dashboard/activity
+   /api/dashboard/recent-cases
+   /api/dashboard/stats
+
+2. New Case
+   Known backend endpoint:
+   POST /api/cases/extract
+
+   This was the upload -> extraction transition.
+
+3. Document Extraction
+   Previously established as the next frontend step after extraction.
+   Exact current backend/API usage will be determined by this audit.
+
+4. Case Verification
+   Current page contains static initialData such as CASE-01.
+   Exact API connection status will be determined from the scan above.
+
+5. AI Analysis / Reports
+   Do NOT connect anything yet.
+   First establish the actual orchestrator/report-generator interfaces.
+
+6. Backend AI chain to verify:
+   extractor.py
+      -> mapper.py
+      -> validator.py
+      -> structured case
+      -> orchestrator.py
+      -> ML
+      -> SHAP
+      -> case_similarity.py
+      -> knowledge_retriever.py
+      -> evidence package
+      -> report_generator.py
+      -> final report
+
+IMPORTANT:
+NO SOURCE FILES WERE MODIFIED BY THIS SCRIPT.

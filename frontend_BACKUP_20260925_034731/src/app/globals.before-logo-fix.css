@@ -1,0 +1,556 @@
+:root {
+  --navy: #0B1F3A;
+  --navy-deep: #020C1B;
+  --blue: #145DA0;
+  --blue-bright: #1688E8;
+  --red: #C6283D;
+  --red-bright: #F03A4F;
+  --white: #FFFFFF;
+  --light: #F5F7FA;
+
+  --logo-main: #F5F7FA;
+  --logo-blue: #145DA0;
+  --logo-red: #C6283D;
+  --logo-red-bright: #F03A4F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #020C1B;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.narcis-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 47%,
+      rgba(20, 93, 160, 0.18) 0%,
+      rgba(20, 93, 160, 0.07) 30%,
+      transparent 66%
+    ),
+    linear-gradient(
+      135deg,
+      #020C1B 0%,
+      #06172B 50%,
+      #0B1F3A 100%
+    );
+}
+
+.narcis-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(20, 93, 160, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(20, 93, 160, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  opacity: 0.3;
+
+  transform:
+    perspective(900px)
+    rotateX(58deg)
+    scale(1.5);
+
+  transform-origin: center bottom;
+}
+
+.narcis-root::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 34%,
+      rgba(0, 0, 0, 0.48) 100%
+    );
+
+  z-index: 50;
+}
+
+/* -------------------------------- */
+/* PARTICLES */
+/* -------------------------------- */
+
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #1688E8;
+
+  box-shadow:
+    0 0 7px #1688E8,
+    0 0 18px rgba(22, 136, 232, 0.55);
+
+  animation:
+    particlePulse
+    3.2s
+    ease-in-out
+    infinite;
+}
+
+.particle.red {
+  background: #F03A4F;
+
+  box-shadow:
+    0 0 7px #F03A4F,
+    0 0 18px rgba(240, 58, 79, 0.55);
+}
+
+.particle:nth-child(1) {
+  left: 7%;
+  top: 30%;
+  animation-delay: .2s;
+}
+
+.particle:nth-child(2) {
+  left: 14%;
+  top: 64%;
+  animation-delay: .8s;
+}
+
+.particle:nth-child(3) {
+  left: 22%;
+  top: 39%;
+  animation-delay: 1.3s;
+}
+
+.particle:nth-child(4) {
+  left: 34%;
+  top: 19%;
+  animation-delay: .5s;
+}
+
+.particle:nth-child(5) {
+  left: 41%;
+  top: 73%;
+  animation-delay: 1.8s;
+}
+
+.particle:nth-child(6) {
+  left: 59%;
+  top: 25%;
+  animation-delay: .9s;
+}
+
+.particle:nth-child(7) {
+  left: 67%;
+  top: 67%;
+  animation-delay: 1.5s;
+}
+
+.particle:nth-child(8) {
+  left: 77%;
+  top: 35%;
+  animation-delay: .3s;
+}
+
+.particle:nth-child(9) {
+  left: 84%;
+  top: 59%;
+  animation-delay: 1.1s;
+}
+
+.particle:nth-child(10) {
+  left: 92%;
+  top: 23%;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(11) {
+  left: 12%;
+  top: 83%;
+  animation-delay: 1.6s;
+}
+
+.particle:nth-child(12) {
+  left: 89%;
+  top: 78%;
+  animation-delay: .7s;
+}
+
+/* -------------------------------- */
+/* TOP SYSTEM LABEL */
+/* -------------------------------- */
+
+.system-label {
+  position: absolute;
+
+  top: 38px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: .32em;
+
+  text-transform: uppercase;
+
+  z-index: 10;
+
+  white-space: nowrap;
+}
+
+/* -------------------------------- */
+/* CENTER CONTENT */
+/* -------------------------------- */
+
+.intro-center {
+  position: absolute;
+
+  left: 50%;
+  top: 52%;
+
+  width: 92%;
+
+  transform:
+    translate(-50%, -50%);
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+/* -------------------------------- */
+/* NARCIS LOGO */
+/* -------------------------------- */
+
+.logo-symbol {
+  position: relative;
+
+  width: 170px;
+  height: 170px;
+
+  margin:
+    0 auto 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation:
+    logoFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+.logo-ring {
+  position: absolute;
+
+  inset: 5px;
+
+  border:
+    1px solid
+    rgba(22, 136, 232, 0.42);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 30px rgba(22, 136, 232, 0.13),
+    inset 0 0 25px rgba(22, 136, 232, 0.05);
+}
+
+.logo-ring-inner {
+  position: absolute;
+
+  inset: 26px;
+
+  border:
+    1px solid
+    rgba(198, 40, 61, 0.38);
+
+  border-radius: 50%;
+}
+
+.narcis-logo {
+  position: relative;
+
+  width: 145px;
+  height: 145px;
+
+  overflow: visible;
+
+  filter:
+    drop-shadow(
+      0 0 4px
+      rgba(255, 255, 255, 0.42)
+    )
+    drop-shadow(
+      0 0 16px
+      rgba(20, 93, 160, 0.4)
+    );
+
+  animation:
+    logoPulse
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+/* -------------------------------- */
+/* TITLE */
+/* -------------------------------- */
+
+.intro-title {
+  margin: 0;
+
+  color: #FFFFFF;
+
+  font-size:
+    clamp(
+      46px,
+      5.3vw,
+      76px
+    );
+
+  font-weight: 800;
+
+  letter-spacing: .045em;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.intro-title span {
+  color: #F03A4F;
+
+  text-shadow:
+    0 0 22px
+    rgba(240, 58, 79, 0.12);
+}
+
+/* -------------------------------- */
+/* SUBTITLE */
+/* -------------------------------- */
+
+.intro-subtitle {
+  margin:
+    25px auto 0;
+
+  max-width: 760px;
+
+  color:
+    rgba(255, 255, 255, .92);
+
+  font-size:
+    clamp(
+      18px,
+      1.55vw,
+      23px
+    );
+
+  line-height: 1.45;
+
+  font-weight: 400;
+}
+
+/* -------------------------------- */
+/* DESCRIPTION */
+/* -------------------------------- */
+
+.intro-description {
+  margin:
+    15px auto 0;
+
+  color:
+    rgba(255, 255, 255, .48);
+
+  font-size: 13px;
+
+  letter-spacing: .015em;
+}
+
+/* -------------------------------- */
+/* BOTTOM LIGHT */
+/* -------------------------------- */
+
+.bottom-glow {
+  position: absolute;
+
+  left: 50%;
+  bottom: 6%;
+
+  width: 340px;
+  height: 1px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #1688E8 35%,
+      #F03A4F 65%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 12px
+    rgba(22, 136, 232, .5),
+
+    0 0 25px
+    rgba(198, 40, 61, .2);
+
+  z-index: 10;
+}
+
+/* -------------------------------- */
+/* ANIMATIONS */
+/* -------------------------------- */
+
+@keyframes particlePulse {
+
+  0%,
+  100% {
+    opacity: .2;
+    transform: scale(.65);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes logoFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    filter:
+      drop-shadow(
+        0 0 4px
+        rgba(255, 255, 255, .38)
+      )
+      drop-shadow(
+        0 0 14px
+        rgba(20, 93, 160, .32)
+      );
+  }
+
+  50% {
+    filter:
+      drop-shadow(
+        0 0 7px
+        rgba(255, 255, 255, .62)
+      )
+      drop-shadow(
+        0 0 23px
+        rgba(20, 93, 160, .48)
+      );
+  }
+}
+
+/* -------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------- */
+
+@media (max-width: 900px) {
+
+  .intro-title {
+    font-size: 46px;
+  }
+
+  .logo-symbol {
+    width: 145px;
+    height: 145px;
+    margin-bottom: 30px;
+  }
+
+  .narcis-logo {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .system-label {
+    font-size: 9px;
+  }
+
+  .intro-title {
+    font-size: 34px;
+    letter-spacing: .025em;
+  }
+
+  .intro-subtitle {
+    font-size: 16px;
+  }
+
+  .intro-description {
+    font-size: 11px;
+  }
+
+  .logo-symbol {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 25px;
+  }
+
+  .narcis-logo {
+    width: 108px;
+    height: 108px;
+  }
+}

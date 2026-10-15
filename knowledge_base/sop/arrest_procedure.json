@@ -1,0 +1,104 @@
+﻿{
+  "version": "2.0",
+  "last_updated": "2026-07-31",
+
+  "sop_name": "Arrest Procedure under the NDPS Act",
+
+  "objective": "To ensure lawful arrest, documentation and production of accused persons in accordance with the NDPS Act, 1985 and the Code of Criminal Procedure (CrPC).",
+
+  "legal_basis": [
+    {
+      "section": "41",
+      "purpose": "Power to issue warrants and authorizations for arrest."
+    },
+    {
+      "section": "42",
+      "purpose": "Power to arrest based on prior information in specified places."
+    },
+    {
+      "section": "43",
+      "purpose": "Power to arrest in public places."
+    },
+    {
+      "section": "52",
+      "purpose": "Procedure after arrest."
+    },
+    {
+      "section": "57",
+      "purpose": "Mandatory report of arrest and seizure."
+    }
+  ],
+
+  "procedure": [
+    {
+      "step": 1,
+      "title": "Establish Legal Grounds",
+      "description": "Confirm that reasonable grounds exist for arrest under the NDPS Act."
+    },
+    {
+      "step": 2,
+      "title": "Identify the Officer",
+      "description": "The arresting officer shall identify themselves and disclose their authority."
+    },
+    {
+      "step": 3,
+      "title": "Inform the Accused",
+      "description": "Inform the accused of the grounds of arrest and applicable provisions of law."
+    },
+    {
+      "step": 4,
+      "title": "Conduct Personal Search",
+      "description": "Where applicable, conduct personal search in accordance with Section 50 of the NDPS Act."
+    },
+    {
+      "step": 5,
+      "title": "Prepare Arrest Memo",
+      "description": "Prepare an arrest memo containing the date, time, location, witnesses and signatures."
+    },
+    {
+      "step": 6,
+      "title": "Seize Relevant Evidence",
+      "description": "Secure narcotic substances, digital devices, documents and other material connected to the offence."
+    },
+    {
+      "step": 7,
+      "title": "Medical Examination",
+      "description": "Arrange medical examination whenever required under applicable law."
+    },
+    {
+      "step": 8,
+      "title": "Produce Before Magistrate",
+      "description": "Produce the arrested person before the competent Magistrate within the legally prescribed period."
+    },
+    {
+      "step": 9,
+      "title": "Submit Report",
+      "description": "Forward arrest and seizure report to the immediate superior officer in accordance with Section 57."
+    }
+  ],
+
+  "documents_required": [
+    "Arrest Memo",
+    "Grounds of Arrest",
+    "Seizure Memo",
+    "Inventory of Seized Articles",
+    "Personal Search Memo",
+    "Medical Examination Report (if applicable)",
+    "Case Diary Entry",
+    "Report under Section 57"
+  ],
+
+  "rights_of_accused": [
+    "To be informed of the grounds of arrest.",
+    "To be produced before a Magistrate within the prescribed legal period.",
+    "To consult a legal practitioner as permitted by law.",
+    "To receive a copy of the arrest memo."
+  ],
+
+  "references": [
+    "NDPS Act, 1985",
+    "Code of Criminal Procedure, 1973",
+    "NCB Standing Orders",
+    "NCB Training Module"
+  ]
+}

@@ -1,0 +1,116 @@
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "pattern_name": "Concealment Methods in Narcotics Trafficking",
+
+  "objective": "Provide structured intelligence regarding commonly encountered concealment methods in narcotics investigations to support evidence identification, investigative analysis and machine learning feature interpretation.",
+
+  "concealment_patterns": [
+    {
+      "method": "False Bottom Luggage",
+      "risk_level": "High",
+      "description": "Hidden compartments incorporated into luggage or baggage for concealing narcotic substances.",
+      "common_detection_methods": [
+        "Visual inspection",
+        "Physical examination",
+        "X-ray baggage scanner"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    },
+    {
+      "method": "Hidden Vehicle Compartment",
+      "risk_level": "High",
+      "description": "Modified compartments within vehicles identified during enforcement operations.",
+      "common_detection_methods": [
+        "Vehicle inspection",
+        "Density scanning",
+        "Canine detection"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    },
+    {
+      "method": "Courier Parcel",
+      "risk_level": "High",
+      "description": "Commercial courier consignments intercepted during enforcement or customs inspections.",
+      "common_detection_methods": [
+        "Parcel screening",
+        "Risk profiling",
+        "X-ray examination"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    },
+    {
+      "method": "Food Package",
+      "risk_level": "Medium",
+      "description": "Commercial food packages identified during seizure operations.",
+      "common_detection_methods": [
+        "Physical inspection",
+        "X-ray examination",
+        "Canine detection"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    },
+    {
+      "method": "Cosmetic Container",
+      "risk_level": "Medium",
+      "description": "Personal care or cosmetic containers examined during baggage or parcel inspections.",
+      "common_detection_methods": [
+        "Visual examination",
+        "Container inspection",
+        "Chemical screening"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    },
+    {
+      "method": "Clothing Concealment",
+      "risk_level": "Medium",
+      "description": "Concealment within garments or personal belongings identified during lawful searches.",
+      "common_detection_methods": [
+        "Personal search",
+        "Baggage inspection",
+        "Body scanner where authorized"
+      ],
+      "dataset_mapping": {
+        "concealment_method_field": "Concealment_Method"
+      }
+    }
+  ],
+
+  "investigation_indicators": [
+    "Tampered packaging.",
+    "Modified luggage or vehicle structures.",
+    "Weight inconsistent with declared contents.",
+    "Unusual packaging materials.",
+    "Inconsistent declarations during inspection."
+  ],
+
+  "investigation_guidelines": [
+    "Photograph concealed evidence before recovery whenever practicable.",
+    "Document the concealment location in detail.",
+    "Maintain chain of custody throughout recovery.",
+    "Collect fingerprints or DNA where appropriate.",
+    "Record concealment method for intelligence analysis."
+  ],
+
+  "dataset_mapping": {
+    "concealment_method_field": "Concealment_Method"
+  },
+
+  "references": [
+    "Narcotics Control Bureau Annual Reports",
+    "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+    "NDPS Act, 1985",
+    "NCB Training Module"
+  ]
+}

@@ -1,0 +1,119 @@
+﻿{
+  "version": "2.0",
+  "last_updated": "2026-07-31",
+
+  "sop_name": "Search and Seizure under the NDPS Act",
+
+  "objective": "To ensure lawful search, seizure, sampling, storage and reporting of narcotic drugs and psychotropic substances in accordance with the NDPS Act, 1985 and associated rules.",
+
+  "legal_basis": [
+    {
+      "section": "41",
+      "purpose": "Power to issue warrants and authorizations."
+    },
+    {
+      "section": "42",
+      "purpose": "Search, seizure and arrest based on prior information in buildings, conveyances or enclosed places."
+    },
+    {
+      "section": "43",
+      "purpose": "Search and seizure in public places."
+    },
+    {
+      "section": "49",
+      "purpose": "Power to stop and search conveyances."
+    },
+    {
+      "section": "50",
+      "purpose": "Conditions for personal search."
+    },
+    {
+      "section": "52",
+      "purpose": "Disposal and reporting after arrest and seizure."
+    },
+    {
+      "section": "52A",
+      "purpose": "Disposal, inventory, photography and sampling of seized narcotic drugs."
+    },
+    {
+      "section": "55",
+      "purpose": "Safe custody of seized articles."
+    },
+    {
+      "section": "57",
+      "purpose": "Reporting of arrest and seizure to superior officers."
+    }
+  ],
+
+  "procedure": [
+    {
+      "step": 1,
+      "title": "Record Intelligence",
+      "description": "Record information received regarding narcotic offences as required under Section 42 before initiating action where applicable."
+    },
+    {
+      "step": 2,
+      "title": "Obtain Authorization",
+      "description": "Obtain warrant or authorization under Section 41 whenever required. Emergency searches shall follow provisions of Section 42."
+    },
+    {
+      "step": 3,
+      "title": "Identify Search Location",
+      "description": "Determine whether the search is in a public place (Section 43) or a private building, conveyance or enclosed place (Section 42)."
+    },
+    {
+      "step": 4,
+      "title": "Conduct Personal Search",
+      "description": "Where personal search is required, comply with safeguards provided under Section 50."
+    },
+    {
+      "step": 5,
+      "title": "Search Premises or Vehicle",
+      "description": "Conduct systematic search while documenting all recovered narcotic drugs, psychotropic substances and related evidence."
+    },
+    {
+      "step": 6,
+      "title": "Prepare Inventory",
+      "description": "Prepare inventory of seized material including description, quantity, packaging, identifying marks and seizure location in accordance with Section 52A."
+    },
+    {
+      "step": 7,
+      "title": "Photography and Sampling",
+      "description": "Photograph seized material and draw representative samples following the NDPS Seizure, Storage, Sampling and Disposal Rules, 2022."
+    },
+    {
+      "step": 8,
+      "title": "Seal Evidence",
+      "description": "Seal all exhibits using tamper-evident methods and assign unique evidence identifiers."
+    },
+    {
+      "step": 9,
+      "title": "Deposit in Safe Custody",
+      "description": "Deposit seized articles in the designated malkhana or authorized storage facility as required under Section 55."
+    },
+    {
+      "step": 10,
+      "title": "Submit Report",
+      "description": "Forward seizure and arrest report to the immediate superior officer within the prescribed time under Section 57."
+    }
+  ],
+
+  "documents_required": [
+    "Search Authorization or Warrant",
+    "Grounds of Search",
+    "Seizure Memo (Panchnama)",
+    "Inventory under Section 52A",
+    "Photographic Record",
+    "Sample Seal Impression",
+    "Chain of Custody Form",
+    "Forwarding Letter to Forensic Laboratory",
+    "Arrest Memo (where applicable)"
+  ],
+
+  "references": [
+    "NDPS Act, 1985",
+    "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+    "NCB Standing Orders",
+    "NCB Training Module"
+  ]
+}

@@ -1,0 +1,891 @@
+﻿
+==============================================================================
+NARCIS COMPLETE REAL CONNECTION AUDIT
+==============================================================================
+Generated : 09/27/2026 21:23:17
+Root      : C:\Users\AARDRA\Downloads\NARCIS
+
+
+==============================================================================
+1. ACTUAL AI FILE LOCATIONS
+==============================================================================
+
+SEARCH: extractor.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\extractor.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\importer\extractor.py
+
+SEARCH: mapper.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\importer\mapper.py
+
+SEARCH: validator.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\validator.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\importer\validator.py
+
+SEARCH: orchestrator.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\agent\orchestrator.py
+
+SEARCH: case_similarity.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\rag\case_similarity.py
+
+SEARCH: knowledge_retriever.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\rag\knowledge_retriever.py
+
+SEARCH: test_gemini.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\llm\test_gemini.py
+
+SEARCH: report_generator.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\agent\report_generator.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\llm\report_generator.py
+
+==============================================================================
+2. BACKEND CORE FILES
+==============================================================================
+
+SEARCH: main.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\backend\main.py
+
+SEARCH: cases.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\backend\api\cases.py
+
+SEARCH: auth.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\backend\api\auth.py
+
+SEARCH: dashboard.py
+   FOUND -> C:\Users\AARDRA\Downloads\NARCIS\backend\api\dashboard.py
+
+==============================================================================
+3. IMPORT RELATIONSHIPS BETWEEN AI FILES
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\extractor.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\extractor.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\mapper.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\validator.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\validator.py
+   No Python imports detected.
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\agent\orchestrator.py
+   import shap
+   from case_similarity import retrieve_similar_cases
+   from knowledge_retriever import retrieve_all_knowledge
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\rag\case_similarity.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\rag\knowledge_retriever.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\llm\test_gemini.py
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\agent\report_generator.py
+   ERROR READING FILE: Exception calling "Matches" with "2" argument(s): "Value cannot be null.
+Parameter name: input"
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\llm\report_generator.py
+
+==============================================================================
+4. FUNCTIONS AND CLASSES IN AI FILES
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\extractor.py
+   FUNCTION -> extract_pdf
+   FUNCTION -> extract_docx
+   FUNCTION -> extract_txt
+   FUNCTION -> extract_text
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\extractor.py
+   FUNCTION -> extract_pdf
+   FUNCTION -> extract_docx
+   FUNCTION -> extract_txt
+   FUNCTION -> extract_text
+   FUNCTION -> save_text
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\mapper.py
+   FUNCTION -> clean
+   FUNCTION -> search_first
+   FUNCTION -> extract_year
+   FUNCTION -> extract_agency
+   FUNCTION -> extract_drug
+   FUNCTION -> extract_zonal_unit
+   FUNCTION -> extract_quantity
+   FUNCTION -> extract_arrests
+   FUNCTION -> extract_source_type
+   FUNCTION -> extract_ndps_sections
+   FUNCTION -> extract_quantity_category
+   FUNCTION -> extract_operation_type
+   FUNCTION -> extract_states
+   FUNCTION -> extract_vehicle
+   FUNCTION -> extract_transport_mode
+   FUNCTION -> extract_route_type
+   FUNCTION -> extract_interstate
+   FUNCTION -> build_case_dictionary
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\validator.py
+   FUNCTION -> validate
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\importer\validator.py
+   FUNCTION -> validate_case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\agent\orchestrator.py
+   FUNCTION -> prepare_case_for_ml
+   FUNCTION -> predict_priority
+   FUNCTION -> explain_prediction
+   FUNCTION -> analyze_case
+   FUNCTION -> print_summary
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\rag\case_similarity.py
+   FUNCTION -> case_to_text
+   FUNCTION -> normalize
+   FUNCTION -> field_match
+   FUNCTION -> structured_similarity
+   FUNCTION -> extract_quantity
+   FUNCTION -> quantity_similarity
+   FUNCTION -> cosine_similarity
+   FUNCTION -> retrieve_similar_cases
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\rag\knowledge_retriever.py
+   FUNCTION -> load_json
+   FUNCTION -> normalize
+   FUNCTION -> drug_matches
+   FUNCTION -> retrieve_drug_profile
+   FUNCTION -> retrieve_ndps_sections
+   FUNCTION -> retrieve_quantity_information
+   FUNCTION -> retrieve_sop
+   FUNCTION -> retrieve_trafficking_patterns
+   FUNCTION -> retrieve_all_knowledge
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\llm\test_gemini.py
+   No functions/classes detected.
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\agent\report_generator.py
+   ERROR: Exception calling "Matches" with "2" argument(s): "Value cannot be null.
+Parameter name: input"
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\llm\report_generator.py
+   No functions/classes detected.
+
+==============================================================================
+5. FASTAPI ROUTES
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\main.py
+   GET -> /
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\main.py
+   GET -> /api/health
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\auth.py
+   POST -> /login
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\cases.py
+   POST -> /extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\cases.py
+   GET -> /document/{document_id}
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\dashboard.py
+   GET -> /stats
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\dashboard.py
+   GET -> /analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\dashboard.py
+   GET -> /recent-cases
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\backend\api\dashboard.py
+   GET -> /activity
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\backend-main.py
+   GET -> /
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\backend-main.py
+   GET -> /api/health
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend_BACKUP_20260925_034731\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\backend-main.py
+   GET -> /
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend_BACKUP_20260925_034731\_NARCIS_BACKUPS\before-document-extraction-20260916-203257\backend-main.py
+   GET -> /api/health
+
+==============================================================================
+6. FRONTEND WORKFLOW PAGES
+==============================================================================
+
+[FOUND] /login
+   -> login.module.css
+   -> page.tsx
+
+[FOUND] /dashboard
+   -> dashboard.module.css
+   -> dashboard.module.css.backup-before-original-restore-20260916-023721
+   -> dashboard.module.css.backup-before-sidebar-scroll-20260916-023519
+   -> dashboard.module.css.backup-before-sidebar-scroll-20260916-024216
+   -> page.tsx
+
+[FOUND] /new-case
+   -> new-case.module.css
+   -> new-case.module.css.backup-before-dashboard-sidebar-sync-20260916-022959
+   -> new-case.module.css.backup-before-proper-sidebar-fix-20260916-022329
+   -> new-case.module.css.backup-before-proper-sidebar-fix-20260916-022531
+   -> new-case.module.css.backup-before-revert-20260916-021943
+   -> new-case.module.css.backup-before-revert-20260916-023107
+   -> new-case.module.css.backup-before-scroll-logo-repair-20260916-021819
+   -> new-case.module.css.backup-before-scroll-restore-20260916-023327
+   -> new-case.module.css.backup-before-sidebar-inspection-20260916-022201
+   -> new-case.module.css.backup-before-sidebar-scroll-20260916-024216
+   -> new-case.module.css.backup-scroll-fix
+   -> page.tsx
+   -> page.tsx.backup-before-api
+   -> page.tsx.backup-before-api-insert
+   -> page.tsx.backup-before-api-restore
+   -> page.tsx.backup-before-button-fix
+   -> page.tsx.backup-before-button-fix-2
+   -> page.tsx.backup-before-click-debug
+   -> page.tsx.backup-before-file-state-debug
+   -> page.tsx.backup-before-final-extraction-20260916-021114
+   -> page.tsx.backup-before-final-handler-20260916-020717
+   -> page.tsx.backup-before-final-handler-20260916-020739
+   -> page.tsx.backup-before-handler-repair-20260916-020609
+   -> page.tsx.backup-before-repair-20260916_005514
+   -> page.tsx.backup-corrupted-20260916-010047
+
+[FOUND] /document-extraction
+   -> document-extraction.module.css
+   -> document-extraction.module.css.backup-before-document-extraction-20260916-205749
+   -> document-extraction.module.css.backup-before-frontend-layout-20260916-205203
+   -> document-extraction.module.css.backup-before-shell-rebuild-20260916-210843
+   -> document-extraction.module.css.backup-before-workflow-repair-20260916-211729
+   -> page.tsx
+   -> page.tsx.backup-before-document-extraction-20260916-205749
+   -> page.tsx.backup-before-frontend-layout-20260916-205203
+   -> page.tsx.backup-before-shell-rebuild-20260916-210843
+
+[FOUND] /case-verification
+   -> BEFORE_LEFT_PANEL_FIX_2026-09-25_09-32-18.css
+   -> case-verification.module.css
+   -> case-verification.module.css.backup
+   -> CSS_BEFORE_BRACE_REPAIR_2026-09-25_04-53-47.css
+   -> CSS_BEFORE_RECOVERY_2026-09-25_04-52-31.css
+   -> page.tsx
+   -> page.tsx.backup
+
+[NOT FOUND] /ai-analysis
+
+[NOT FOUND] /risk-shap
+
+[NOT FOUND] /historical-intelligence
+
+[NOT FOUND] /legal-sop
+
+[NOT FOUND] /decision-support
+
+[NOT FOUND] /reports
+
+[NOT FOUND] /officer-review
+
+[NOT FOUND] /case-history
+
+==============================================================================
+7. FRONTEND -> BACKEND API CONNECTIONS
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/stats
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/recent-cases
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/activity
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\login\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/auth/login
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-click-debug
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-file-state-debug
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-extraction-20260916-021114
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020717
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020739
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-handler-repair-20260916-020609
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+==============================================================================
+8. FRONTEND NAVIGATION
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx
+   NAV -> /ai-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx.backup
+   NAV -> /ai-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx.backup
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx.backup
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx.backup
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BEFORE_RESTORE_2026-09-27_12-24-49\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BEFORE_RESTORE_2026-09-27_12-24-49\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   NAV -> /ai-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx.backup
+   NAV -> /ai-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx.backup
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx.backup
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx.backup
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx
+   NAV -> /case-verification
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /search
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /alerts
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   NAV -> /case-verification
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /search
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /alerts
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   NAV -> /case-verification
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   NAV -> /case-verification
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /case-analysis
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /search
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   NAV -> /alerts
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-api
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-api-insert
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-api-restore
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-button-fix
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-button-fix-2
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-click-debug
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-click-debug
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-file-state-debug
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-file-state-debug
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-extraction-20260916-021114
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-extraction-20260916-021114
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020717
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020717
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020739
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020739
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-handler-repair-20260916-020609
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-handler-repair-20260916-020609
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\case-verification\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\case-verification\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   NAV -> /case-verification
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   NAV -> /dashboard
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   NAV -> /new-case
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   NAV -> /document-extraction
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   NAV -> /dashboard
+
+==============================================================================
+9. CASE EXTRACTION CONNECTION
+==============================================================================
+CASES.PY:
+C:\Users\AARDRA\Downloads\NARCIS\backend\api\cases.py
+
+[FOUND] extract_text
+[FOUND] build_case_dictionary
+[FOUND] validate_case
+[NOT FOUND] orchestrator
+[NOT FOUND] report_generator
+[FOUND] /extract
+[FOUND] /document/
+
+==============================================================================
+10. FRONTEND WORKFLOW STATE
+==============================================================================
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\page.tsx.backup
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx.backup
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_BEFORE_LAYOUT_2026-09-25_04-34-26\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_BEFORE_SELECT_FIX_2026-09-25_04-21-59\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_COMPLETE_REBUILD_2026-09-25_04-40-30\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_FORM_SELECTORS_2026-09-25_04-24-43\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_LAYOUT_2026-09-25_04-15-42\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_SELECT_FIX_2026-09-25_04-22-42\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\case-verification_BACKUP_SELECT_FIX_2026-09-25_04-23-51\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction\page.tsx.backup-before-shell-rebuild-20260916-210843
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx.backup-before-shell-rebuild-20260916-210843
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx.backup-before-shell-rebuild-20260916-210843
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-click-debug
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-file-state-debug
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-extraction-20260916-021114
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020717
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020739
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-handler-repair-20260916-020609
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+   READS -> sessionStorage
+
+FILE: C:\Users\AARDRA\Downloads\NARCIS\frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   USES -> narcis_extraction_result
+   WRITES -> sessionStorage
+
+==============================================================================
+11. CURRENT VERIFIED WORKFLOW
+==============================================================================
+LOGIN
+  /login
+      |
+      | POST /api/auth/login
+      v
+DASHBOARD
+  /dashboard
+      |
+      | GET /api/dashboard/*
+      v
+NEW CASE
+  /new-case
+      |
+      | POST /api/cases/extract
+      v
+DOCUMENT EXTRACTION
+  /document-extraction
+      |
+      | extracted case data
+      v
+CASE VERIFICATION
+  /case-verification
+      |
+      | verified/corrected case data
+      v
+AI ANALYSIS
+  [frontend page currently needs verification]
+      |
+      v
+ORCHESTRATOR
+  orchestrator.py
+      |
+      +--> ML
+      +--> SHAP
+      +--> Historical Case RAG
+      +--> Knowledge RAG
+      |
+      v
+EVIDENCE PACKAGE
+      |
+      v
+LLM / REPORT GENERATOR
+      |
+      v
+FINAL INVESTIGATION REPORT
+
+==============================================================================
+12. IMPORTANT PATH DIAGNOSTIC
+==============================================================================
+The previous audit checked AI files specifically under:
+   backend\importer\
+   backend\agent\
+   backend\rag\
+   backend\llm\
+
+This audit searches the ENTIRE NARCIS project instead.
+Therefore the results below are the authoritative physical locations.
+
+extractor.py -> C:\Users\AARDRA\Downloads\NARCIS\extractor.py
+extractor.py -> C:\Users\AARDRA\Downloads\NARCIS\importer\extractor.py
+mapper.py -> C:\Users\AARDRA\Downloads\NARCIS\importer\mapper.py
+validator.py -> C:\Users\AARDRA\Downloads\NARCIS\validator.py
+validator.py -> C:\Users\AARDRA\Downloads\NARCIS\importer\validator.py
+orchestrator.py -> C:\Users\AARDRA\Downloads\NARCIS\agent\orchestrator.py
+case_similarity.py -> C:\Users\AARDRA\Downloads\NARCIS\rag\case_similarity.py
+knowledge_retriever.py -> C:\Users\AARDRA\Downloads\NARCIS\rag\knowledge_retriever.py
+test_gemini.py -> C:\Users\AARDRA\Downloads\NARCIS\llm\test_gemini.py
+report_generator.py -> C:\Users\AARDRA\Downloads\NARCIS\agent\report_generator.py
+report_generator.py -> C:\Users\AARDRA\Downloads\NARCIS\llm\report_generator.py
+
+==============================================================================
+13. AUDIT STATUS
+==============================================================================
+NO FILES WERE MODIFIED.
+NO FILES WERE MOVED.
+NO BACKUPS WERE CREATED.
+NO FRONTEND CODE WAS CHANGED.
+NO BACKEND CODE WAS CHANGED.

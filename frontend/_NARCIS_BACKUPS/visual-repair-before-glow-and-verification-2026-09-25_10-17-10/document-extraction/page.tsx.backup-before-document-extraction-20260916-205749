@@ -1,0 +1,692 @@
+﻿"use client";
+
+import styles from "./document-extraction.module.css";
+
+export default function DocumentExtractionPage() {
+  return (
+    <div className={styles.page}>
+
+      {/* =====================================================
+          SIDEBAR
+      ====================================================== */}
+
+      <aside className={styles.sidebar}>
+
+        <div className={styles.sidebarInner}>
+
+          <div className={styles.logoArea}>
+            <div className={styles.logoMark}>
+              <span>✦</span>
+            </div>
+
+            <div>
+              <div className={styles.logoText}>NARCIS</div>
+
+              <div className={styles.logoSubtitle}>
+                Narcotics Analysis, Risk Classification
+                <br />
+                and Intelligent Support System
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.sidebarDivider} />
+
+          <nav className={styles.navigation}>
+
+            <a className={styles.navItem} href="/dashboard">
+              <span className={styles.navIcon}>▦</span>
+              <span>Dashboard</span>
+            </a>
+
+            <a className={`${styles.navItem} ${styles.active}`} href="/new-case">
+              <span className={styles.navIcon}>▧</span>
+              <span>New Case</span>
+            </a>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>□</span>
+              <span>Cases</span>
+            </a>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>⌘</span>
+              <span>Intelligence</span>
+            </a>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>▤</span>
+              <span>Reports</span>
+            </a>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>◷</span>
+              <span>Case History</span>
+            </a>
+
+          </nav>
+
+          <div className={styles.sidebarDivider} />
+
+          <nav className={styles.navigation}>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>⚙</span>
+              <span>Settings</span>
+            </a>
+
+            <a className={styles.navItem} href="#">
+              <span className={styles.navIcon}>?</span>
+              <span>Help &amp; Support</span>
+            </a>
+
+          </nav>
+
+          <div className={styles.officerBlock}>
+
+            <div className={styles.officerAvatar}>
+              ♟
+            </div>
+
+            <div className={styles.officerDetails}>
+              <strong>OFFICER</strong>
+              <span>Authorized User</span>
+            </div>
+
+          </div>
+
+          <div className={styles.secureSession}>
+            <span className={styles.sessionDot} />
+            <span>SECURE SESSION</span>
+          </div>
+
+        </div>
+
+      </aside>
+
+
+      {/* =====================================================
+          MAIN AREA
+      ====================================================== */}
+
+      <main className={styles.main}>
+
+        {/* HEADER */}
+
+        <header className={styles.header}>
+
+          <div>
+            <h1>DOCUMENT EXTRACTION</h1>
+
+            <p>
+              NARCIS is extracting structured case information from
+              the uploaded investigation document.
+            </p>
+
+            <div className={styles.breadcrumb}>
+              <span>Dashboard</span>
+              <span>/</span>
+              <span>New Case</span>
+              <span>/</span>
+              <span>Upload Document</span>
+              <span>/</span>
+              <strong>Extraction</strong>
+            </div>
+          </div>
+
+          <div className={styles.headerActions}>
+
+            <div className={styles.notification}>
+              ♧
+              <span>3</span>
+            </div>
+
+            <div className={styles.help}>?</div>
+
+            <div className={styles.headerDivider} />
+
+            <div className={styles.headerOfficerAvatar}>
+              ◯
+            </div>
+
+            <div className={styles.headerOfficer}>
+              <strong>Officer</strong>
+              <span>
+                <i />
+                SECURE SESSION
+              </span>
+            </div>
+
+          </div>
+
+        </header>
+
+
+        {/* =====================================================
+            DOCUMENT STATUS
+        ====================================================== */}
+
+        <section className={styles.documentStatus}>
+
+          <div className={styles.documentInfo}>
+
+            <div className={styles.sectionLabel}>
+              CASE DOCUMENT
+            </div>
+
+            <div className={styles.documentRow}>
+
+              <div className={styles.pdfIcon}>
+                PDF
+              </div>
+
+              <div className={styles.fileDetails}>
+                <strong>case_report_2023.pdf</strong>
+
+                <span>
+                  PDF Document
+                  <b>•</b>
+                  4.8 MB
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className={styles.statusDivider} />
+
+          <div className={styles.extractionStatus}>
+
+            <div className={styles.completeIcon}>
+              ✓
+            </div>
+
+            <div>
+              <strong>EXTRACTION COMPLETE</strong>
+              <span>Extracted just now</span>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =====================================================
+            CONTENT GRID
+        ====================================================== */}
+
+        <section className={styles.contentGrid}>
+
+          {/* SOURCE DOCUMENT */}
+
+          <div className={styles.sourceCard}>
+
+            <div className={styles.cardTitle}>
+              SOURCE DOCUMENT
+            </div>
+
+            <div className={styles.documentToolbar}>
+
+              <span>□</span>
+              <span>⌕</span>
+              <span>−</span>
+              <span>+</span>
+
+              <button>Fit ▾</button>
+
+              <div className={styles.pageIndicator}>
+                Page 1 / 4
+              </div>
+
+              <span>↓</span>
+
+            </div>
+
+            <div className={styles.documentPreview}>
+
+              <div className={styles.fakePdf}>
+
+                <div className={styles.pdfHeader}>
+                  <div className={styles.fakeSeal}>
+                    NCB
+                  </div>
+
+                  <div>
+                    <strong>
+                      NARCOTICS CONTROL BUREAU
+                    </strong>
+
+                    <strong>
+                      INVESTIGATION REPORT
+                    </strong>
+                  </div>
+                </div>
+
+                <div className={styles.fakeLine} />
+
+                <p>
+                  Case Reference No.
+                  <span>NCB/CHZ/2023/1987</span>
+                </p>
+
+                <p>
+                  Date:
+                  <span>14/08/2023</span>
+                </p>
+
+                <h4>1. Case Information</h4>
+
+                <p>
+                  Agency
+                  <span>Narcotics Control Bureau (NCB)</span>
+                </p>
+
+                <p>
+                  Zonal Unit
+                  <span>Chandigarh Zonal Unit</span>
+                </p>
+
+                <p>
+                  Investigation Year
+                  <span>2023</span>
+                </p>
+
+                <h4>2. Drug Details</h4>
+
+                <p>
+                  Drug Type
+                  <span>Heroin (Diacetylmorphine)</span>
+                </p>
+
+                <p>
+                  Quantity Seized
+                  <span>20.326 Kg</span>
+                </p>
+
+                <p>
+                  Quantity Category
+                  <span>Commercial Quantity</span>
+                </p>
+
+                <h4>3. Investigation Details</h4>
+
+                <p>
+                  Source Type
+                  <span>Secret Information</span>
+                </p>
+
+                <p>
+                  Operation Type
+                  <span>International trafficking syndicate</span>
+                </p>
+
+                <h4>4. Persons Arrested</h4>
+
+                <p>
+                  Total Arrested
+                  <span>20</span>
+                </p>
+
+                <h4>5. Route Information</h4>
+
+                <p>
+                  Origin State
+                  <span>Gujarat</span>
+                </p>
+
+                <p>
+                  Destination State
+                  <span>Punjab</span>
+                </p>
+
+                <p>
+                  Transport Mode
+                  <span>Road (Vehicle)</span>
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* EXTRACTED INFORMATION */}
+
+          <div className={styles.extractedCard}>
+
+            <div className={styles.extractedHeader}>
+
+              <div>
+                <div className={styles.cardTitle}>
+                  EXTRACTED CASE INFORMATION
+                </div>
+
+                <p>
+                  Information automatically extracted from the uploaded document
+                </p>
+              </div>
+
+              <div className={styles.fieldsBadge}>
+                ✓ 18 Fields Extracted
+              </div>
+
+            </div>
+
+
+            {/* CASE INFORMATION */}
+
+            <div className={styles.infoSection}>
+
+              <h3>CASE INFORMATION</h3>
+
+              <div className={styles.infoGridFour}>
+
+                <InfoCard label="CASE ID" value="NARCIS-025" />
+                <InfoCard label="INVESTIGATION YEAR" value="2023" />
+                <InfoCard label="AGENCY" value="NCB" />
+                <InfoCard label="ZONAL UNIT" value="Chandigarh Zonal Unit" />
+
+              </div>
+
+            </div>
+
+
+            {/* DRUG INFORMATION */}
+
+            <div className={styles.infoSection}>
+
+              <h3>DRUG INFORMATION</h3>
+
+              <div className={styles.infoGridThree}>
+
+                <InfoCard label="DRUG TYPE" value="Heroin" />
+                <InfoCard label="QUANTITY" value="20.326 Kg Heroin" />
+                <InfoCard label="QUANTITY CATEGORY" value="Commercial" />
+
+              </div>
+
+            </div>
+
+
+            {/* INVESTIGATION */}
+
+            <div className={styles.infoSection}>
+
+              <h3>INVESTIGATION INFORMATION</h3>
+
+              <div className={styles.infoGridThree}>
+
+                <InfoCard label="PERSONS ARRESTED" value="20" />
+                <InfoCard label="SOURCE TYPE" value="Secret Information" />
+                <InfoCard
+                  label="OPERATION TYPE"
+                  value="International trafficking syndicate investigation and seizure"
+                />
+
+              </div>
+
+            </div>
+
+
+            {/* ROUTE */}
+
+            <div className={styles.infoSection}>
+
+              <h3>ROUTE INFORMATION</h3>
+
+              <div className={styles.infoGridFive}>
+
+                <InfoCard label="ORIGIN STATE" value="Gujarat" />
+                <InfoCard label="DESTINATION STATE" value="Punjab" />
+                <InfoCard label="TRANSPORT MODE" value="Road" />
+                <InfoCard label="ROUTE TYPE" value="Interstate" />
+                <InfoCard label="INTERSTATE TRAVEL" value="Yes" />
+
+              </div>
+
+            </div>
+
+
+            {/* LEGAL */}
+
+            <div className={styles.infoSection}>
+
+              <h3>LEGAL INFORMATION</h3>
+
+              <div className={styles.infoGridTwo}>
+
+                <InfoCard
+                  label="APPLICABLE NDPS SECTIONS"
+                  value="8(c), 21, 27A, 29"
+                />
+
+                <InfoCard
+                  label="VEHICLE TYPE"
+                  value="Unknown"
+                  warning
+                />
+
+              </div>
+
+            </div>
+
+
+            <div className={styles.verificationNotice}>
+
+              <div className={styles.noticeIcon}>i</div>
+
+              <div>
+                <strong>OFFICER VERIFICATION REQUIRED</strong>
+
+                <p>
+                  The information above was extracted from the uploaded
+                  document. It has not yet been verified. The officer will
+                  review, correct, and enrich these fields before NARCIS
+                  performs AI analysis.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* WORKFLOW */}
+
+          <aside className={styles.workflowCard}>
+
+            <div className={styles.cardTitle}>
+              NARCIS CASE WORKFLOW
+            </div>
+
+            <WorkflowStep
+              number="01"
+              title="Upload Document"
+              description=""
+              state="complete"
+            />
+
+            <WorkflowStep
+              number="02"
+              title="Document Extraction"
+              description=""
+              state="current"
+            />
+
+            <WorkflowStep
+              number="03"
+              title="Officer Verification"
+              description="Review and verify extracted information"
+            />
+
+            <WorkflowStep
+              number="04"
+              title="AI Analysis"
+              description="ML analysis + SHAP explainability + RAG intelligence"
+            />
+
+            <WorkflowStep
+              number="05"
+              title="Decision-Support Report"
+              description="Evidence package and LLM investigation report"
+            />
+
+            <WorkflowStep
+              number="06"
+              title="Officer Review"
+              description="Final officer review and case disposition"
+              last
+            />
+
+          </aside>
+
+        </section>
+
+
+        {/* =====================================================
+            BOTTOM ACTIONS
+        ====================================================== */}
+
+        <div className={styles.bottomBar}>
+
+          <button
+            className={styles.backButton}
+            onClick={() => window.location.href = "/new-case"}
+          >
+            ← &nbsp; BACK
+          </button>
+
+          <button className={styles.continueButton}>
+            CONTINUE TO VERIFICATION
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </main>
+
+
+      {/* FOOTER */}
+
+      <footer className={styles.footer}>
+        <span>◈</span>
+        <strong>NARCIS - Authorized Investigation Environment</strong>
+        <i />
+        <span>All data is encrypted and access is monitored</span>
+        <i />
+        <span>Version 1.0.0</span>
+      </footer>
+
+    </div>
+  );
+}
+
+
+/* =========================================================
+   SMALL REUSABLE UI COMPONENTS
+========================================================= */
+
+function InfoCard({
+  label,
+  value,
+  warning = false,
+}: {
+  label: string;
+  value: string;
+  warning?: boolean;
+}) {
+  return (
+    <div className={styles.infoCard}>
+
+      <span className={styles.infoLabel}>
+        {label}
+      </span>
+
+      <strong className={styles.infoValue}>
+        {value}
+      </strong>
+
+      {warning ? (
+        <span className={styles.notFound}>
+          NOT FOUND IN DOCUMENT
+        </span>
+      ) : (
+        <span className={styles.extracted}>
+          ● Extracted
+        </span>
+      )}
+
+    </div>
+  );
+}
+
+
+function WorkflowStep({
+  number,
+  title,
+  description,
+  state,
+  last = false,
+}: {
+  number: string;
+  title: string;
+  description: string;
+  state?: "complete" | "current";
+  last?: boolean;
+}) {
+  return (
+    <div
+      className={`${styles.workflowStep} ${
+        last ? styles.lastStep : ""
+      }`}
+    >
+
+      <div
+        className={`${styles.stepCircle} ${
+          state === "current"
+            ? styles.currentStep
+            : state === "complete"
+            ? styles.completeStep
+            : ""
+        }`}
+      >
+        {number}
+      </div>
+
+      <div className={styles.stepContent}>
+
+        <div className={styles.stepTitleRow}>
+
+          <strong>{title}</strong>
+
+          {state === "complete" && (
+            <span className={styles.completeLabel}>
+              ✓ COMPLETE
+            </span>
+          )}
+
+          {state === "current" && (
+            <span className={styles.currentLabel}>
+              CURRENT
+            </span>
+          )}
+
+          {!state && (
+            <span className={styles.nextLabel}>
+              NEXT
+            </span>
+          )}
+
+        </div>
+
+        {description && (
+          <p>{description}</p>
+        )}
+
+      </div>
+
+    </div>
+  );
+}

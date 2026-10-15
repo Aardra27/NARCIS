@@ -1,0 +1,273 @@
+﻿
+===========================================================================
+NARCIS PROJECT AUDIT
+===========================================================================
+Project Root : C:\Users\AARDRA\Downloads\NARCIS
+Frontend     : C:\Users\AARDRA\Downloads\NARCIS\frontend
+Backend      : C:\Users\AARDRA\Downloads\NARCIS\backend
+Generated    : 09/27/2026 20:54:19
+
+
+===========================================================================
+1. LIVE FRONTEND PAGES
+===========================================================================
+PAGE : /frontend/src/app
+FILE : frontend\src\app\page.tsx
+
+PAGE : /frontend/src/app/case-verification
+FILE : frontend\src\app\case-verification\page.tsx
+
+PAGE : /frontend/src/app/case-verification/BEFORE_RESTORE_2026-09-27_12-24-49
+FILE : frontend\src\app\case-verification\BEFORE_RESTORE_2026-09-27_12-24-49\page.tsx
+
+PAGE : /frontend/src/app/case-verification/BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08
+FILE : frontend\src\app\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+
+PAGE : /frontend/src/app/case-verification/BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21
+FILE : frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+
+PAGE : /frontend/src/app/case-verification/CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02
+FILE : frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+
+PAGE : /frontend/src/app/dashboard
+FILE : frontend\src\app\dashboard\page.tsx
+
+PAGE : /frontend/src/app/document-extraction
+FILE : frontend\src\app\document-extraction\page.tsx
+
+PAGE : /frontend/src/app/login
+FILE : frontend\src\app\login\page.tsx
+
+PAGE : /frontend/src/app/new-case
+FILE : frontend\src\app\new-case\page.tsx
+
+
+===========================================================================
+2. FRONTEND -> BACKEND API CONNECTIONS
+===========================================================================
+FILE: frontend\src\app\dashboard\page.tsx
+   FETCH -> ${API_BASE}/api/dashboard/stats
+   FETCH -> ${API_BASE}/api/dashboard/recent-cases
+   FETCH -> ${API_BASE}/api/dashboard/activity
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+   FETCH -> ${API_BASE}/api/dashboard/analysis
+
+FILE: frontend\src\app\login\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/auth/login
+
+FILE: frontend\src\app\new-case\page.tsx
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-click-debug
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-file-state-debug
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-final-extraction-20260916-021114
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020717
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-final-handler-20260916-020739
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-handler-repair-20260916-020609
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+   FETCH -> http://127.0.0.1:8000/api/cases/extract
+
+
+===========================================================================
+3. FRONTEND PAGE -> PAGE NAVIGATION
+===========================================================================
+FILE: frontend\narcis_cleanup.py
+   NAV -> /dashboard
+   NAV -> /dashboard
+
+FILE: frontend\src\app\page.tsx
+   NAV -> /login
+
+FILE: frontend\src\app\page.tsx.backup
+   NAV -> https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+   NAV -> https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+   NAV -> https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+   NAV -> https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+
+FILE: frontend\src\app\dashboard\page.tsx
+   NAV -> path
+
+FILE: frontend\src\app\document-extraction\page.tsx.backup-before-document-extraction-20260916-205749
+   NAV -> /dashboard
+   NAV -> /new-case
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\page.tsx.backup-before-frontend-layout-20260916-205203
+   NAV -> /dashboard
+   NAV -> /new-case
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+   NAV -> #
+
+FILE: frontend\src\app\login\page.tsx
+   NAV -> /dashboard
+
+FILE: frontend\src\app\new-case\page.tsx.backup-before-repair-20260916_005514
+   NAV -> /document-extraction
+   NAV -> /document-extraction
+
+FILE: frontend\src\app\new-case\page.tsx.backup-corrupted-20260916-010047
+   NAV -> /document-extraction
+   NAV -> /document-extraction
+
+
+===========================================================================
+4. BACKEND API ROUTES
+===========================================================================
+FILE: backend\main.py
+   GET -> /
+   GET -> /api/health
+
+FILE: backend\api\auth.py
+   POST -> /login
+
+FILE: backend\api\cases.py
+   POST -> /extract
+   GET -> /document/{document_id}
+
+FILE: backend\api\dashboard.py
+   GET -> /stats
+   GET -> /analysis
+   GET -> /recent-cases
+   GET -> /activity
+
+
+===========================================================================
+5. FASTAPI ROUTER REGISTRATION
+===========================================================================
+FILE: backend\main.py
+   ROUTER -> auth_router
+   ROUTER -> dashboard_router
+   ROUTER -> cases_router
+
+FILE: backend\.venv\Lib\site-packages\fastapi\applications.py
+   ROUTER -> self
+   ROUTER -> admin.router
+   ROUTER -> old_api.router
+   ROUTER -> old_api.router
+   ROUTER -> old_api.router
+   ROUTER -> users_router
+   ROUTER -> router
+
+FILE: backend\.venv\Lib\site-packages\fastapi\routing.py
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> self
+   ROUTER -> users_router
+   ROUTER -> internal_router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+   ROUTER -> router
+
+
+===========================================================================
+6. NARCIS AI PIPELINE FILES
+===========================================================================
+FOUND : backend\main.py
+   IMPORT -> models
+
+MISSING: backend\importer\extractor.py
+
+MISSING: backend\importer\mapper.py
+
+MISSING: backend\importer\validator.py
+
+MISSING: backend\agent\orchestrator.py
+
+MISSING: backend\rag\case_similarity.py
+
+MISSING: backend\rag\knowledge_retriever.py
+
+MISSING: backend\llm\test_gemini.py
+
+MISSING: backend\llm\report_generator.py
+
+
+===========================================================================
+7. BACKEND -> BACKEND FILE REFERENCES
+===========================================================================
+backend\api\cases.py -> references extractor
+backend\api\cases.py -> references mapper
+backend\api\cases.py -> references validator
+
+===========================================================================
+8. FRONTEND PACKAGE INFORMATION
+===========================================================================
+Name    : frontend
+Version : 0.1.0
+Next    : 16.2.12
+React   : 19.2.4
+
+===========================================================================
+9. CONNECTION SUMMARY
+===========================================================================
+Known intended workflow:
+
+LOGIN
+  /login
+      -> /api/auth/login
+
+DASHBOARD
+  /dashboard
+      -> /api/dashboard/stats
+      -> /api/dashboard/recent-cases
+      -> /api/dashboard/activity
+      -> /api/dashboard/analysis
+
+NEW CASE
+  /new-case
+      -> POST /api/cases/extract
+
+DOCUMENT EXTRACTION
+  /document-extraction
+      -> receives/uses extracted case information
+      -> Continue -> /case-verification
+
+CASE VERIFICATION
+  /case-verification
+      -> verification UI
+      -> should consume verified case data
+
+AI ANALYSIS
+  orchestrator.py
+      -> ML
+      -> SHAP
+      -> historical case RAG
+      -> knowledge RAG
+
+REPORT
+  report_generator.py
+      -> final investigation report
+

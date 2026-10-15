@@ -1,0 +1,1589 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 52px;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  color: #10264b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 253px;
+  padding: 28px 12px 92px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 82% 45%, rgba(20,93,160,.30), transparent 34%),
+    linear-gradient(180deg, #06182d 0%, #092443 52%, #071c35 100%);
+  color: #fff;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 210px -40px 100px 0;
+  background:
+    linear-gradient(135deg, transparent 49%, rgba(38,126,198,.16) 50%, transparent 51%) 0 0 / 82px 82px,
+    linear-gradient(45deg, transparent 49%, rgba(38,126,198,.12) 50%, transparent 51%) 0 0 / 82px 82px;
+  opacity: .65;
+  pointer-events: none;
+}
+
+.sidebarBrand,
+.navigation,
+.sidebarDivider,
+.sidebarOfficer,
+.secureSession {
+  position: relative;
+  z-index: 2;
+}
+
+.sidebarBrand {
+  padding: 2px 17px 19px;
+  border-bottom: 1px solid rgba(177,206,231,.25);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.logoArea span {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.sidebarBrand p {
+  margin: 7px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 17px;
+}
+
+.navItem {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 7px;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: transparent;
+  color: rgba(255,255,255,.93);
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background: rgba(255,255,255,.07);
+}
+
+.navActive {
+  background: linear-gradient(90deg, #0f61c4, #1267d1);
+  box-shadow: 0 8px 24px rgba(0,70,160,.25);
+}
+
+.navIcon {
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.sidebarDivider {
+  height: 1px;
+  margin: 21px 17px 8px;
+  background: rgba(177,206,231,.22);
+}
+
+.sidebarOfficer {
+  position: absolute;
+  left: 29px;
+  right: 22px;
+  bottom: 81px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.officerAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #145da0;
+  font-size: 23px;
+}
+
+.sidebarOfficer strong,
+.sidebarOfficer small {
+  display: block;
+}
+
+.sidebarOfficer strong {
+  font-size: 15px;
+}
+
+.sidebarOfficer small {
+  margin-top: 4px;
+  color: rgba(255,255,255,.7);
+  font-size: 11px;
+}
+
+.secureSession {
+  position: absolute;
+  left: 30px;
+  right: 48px;
+  bottom: 29px;
+  height: 35px;
+  border: 1px solid rgba(27,123,211,.7);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #1687e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.sessionShield {
+  font-size: 15px;
+}
+
+.sessionDot,
+.operational i,
+.statusText i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #15875f;
+}
+
+.main {
+  margin-left: 253px;
+  min-height: calc(100vh - 52px);
+  padding: 27px 25px 18px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 25px;
+  letter-spacing: -.03em;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #415677;
+  font-size: 15px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.iconButton {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: transparent;
+  color: #10264b;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #df2732;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 34px;
+  background: #d6dde7;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #112849;
+  color: #fff;
+  font-size: 20px;
+}
+
+.userMenu strong,
+.userMenu small {
+  display: block;
+}
+
+.userMenu strong {
+  font-size: 16px;
+}
+
+.userMenu small {
+  margin-top: 5px;
+  color: #1559a7;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.userMenu small span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #1266c5;
+}
+
+.chevron {
+  margin-left: 13px;
+  font-size: 21px;
+}
+
+.welcomeBar {
+  margin-top: 24px;
+  min-height: 88px;
+  padding: 17px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(18,43,73,.06);
+}
+
+.welcomeBar h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.welcomeBar p {
+  margin: 4px 0 0;
+  color: #344b70;
+  font-size: 14px;
+}
+
+.newCaseButton {
+  height: 52px;
+  padding: 0 25px;
+  border: 0;
+  border-radius: 7px;
+  background: #0d5cc5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(13,92,197,.18);
+}
+
+.newCaseButton span {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.statCard {
+  min-height: 121px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(18,43,73,.06);
+}
+
+.statIcon {
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.blueIcon {
+  background: #075bc5;
+  box-shadow: 0 7px 18px rgba(7,91,197,.20);
+}
+
+.redIcon {
+  background: #eb2731;
+  box-shadow: 0 7px 18px rgba(235,39,49,.20);
+}
+
+.statCard span,
+.statCard small {
+  display: block;
+}
+
+.statCard span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statCard strong {
+  display: block;
+  margin: 5px 0 4px;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.statCard small {
+  color: #344b70;
+  font-size: 11px;
+}
+
+.redNumber {
+  color: #e72b34;
+}
+
+.middleGrid {
+  display: grid;
+  grid-template-columns: 1.05fr .96fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  min-width: 0;
+  padding: 17px 19px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(18,43,73,.05);
+}
+
+.middleGrid .card {
+  min-height: 296px;
+  position: relative;
+  padding-bottom: 47px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+
+.periodSelect {
+  height: 30px;
+  padding: 0 9px;
+  border: 1px solid #d8e0ea;
+  border-radius: 4px;
+  background: #fff;
+  color: #263b5c;
+  font-size: 11px;
+}
+
+.priorityContent {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.donut {
+  position: relative;
+  width: 184px;
+  height: 184px;
+  flex: 0 0 184px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ec2b30 0 42%,
+    #fff 42% 42.8%,
+    #1261bd 42.8% 78.8%,
+    #fff 78.8% 79.6%,
+    #aab4c3 79.6% 100%
+  );
+}
+
+.donutCenter {
+  position: absolute;
+  inset: 55px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.donutHigh,
+.donutMedium,
+.donutLow {
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.donutHigh {
+  top: 46px;
+  right: 34px;
+}
+
+.donutMedium {
+  bottom: 30px;
+  left: 53px;
+}
+
+.donutLow {
+  top: 54px;
+  left: 35px;
+}
+
+.legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.legend > div {
+  display: grid;
+  grid-template-columns: 13px 1fr auto;
+  align-items: center;
+  gap: 9px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.highDot {
+  background: #ec2b30;
+}
+
+.mediumDot {
+  background: #1261bd;
+}
+
+.lowDot {
+  background: #aab4c3;
+}
+
+.legend strong,
+.legend small {
+  display: block;
+}
+
+.legend strong {
+  font-size: 12px;
+}
+
+.legend small {
+  margin-top: 5px;
+  color: #4d6180;
+  font-size: 10px;
+}
+
+.legend b {
+  font-size: 12px;
+}
+
+.activityList {
+  margin-top: 14px;
+}
+
+.activity {
+  display: flex;
+  min-height: 52px;
+}
+
+.activityRail {
+  position: relative;
+  width: 20px;
+  flex: 0 0 20px;
+}
+
+.activityRail::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: -8px;
+  width: 1px;
+  background: #cbd6e3;
+}
+
+.activity:last-child .activityRail::after {
+  display: none;
+}
+
+.activityRail span {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1261bd;
+  z-index: 1;
+}
+
+.activity:first-child .activityRail span {
+  background: #e82c32;
+}
+
+.activityBody {
+  flex: 1;
+}
+
+.activityTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.activityTop > span {
+  width: 35px;
+}
+
+.activityTop strong {
+  font-size: 12px;
+}
+
+.activityBody p {
+  margin: 5px 0 0 45px;
+  color: #4c607d;
+  font-size: 10px;
+}
+
+.highBadge,
+.mediumBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 43px;
+  height: 23px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.highBadge {
+  color: #e62b32;
+  background: #ffeaeb;
+}
+
+.mediumBadge {
+  color: #075bc5;
+  background: #e7f0fc;
+}
+
+.activityTop em {
+  margin-left: auto;
+}
+
+.textLink,
+.tableFooterLink {
+  border: 0;
+  background: transparent;
+  color: #075bc5;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.middleGrid .textLink {
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+}
+
+.services {
+  margin-top: 11px;
+}
+
+.service {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 29px 1fr auto;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.serviceIcon {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dce4ed;
+  color: #193f70;
+  font-size: 14px;
+}
+
+.service strong {
+  font-size: 11px;
+}
+
+.operational {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #273b5a;
+  font-size: 10px;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.casesCard,
+.quickCard {
+  min-height: 300px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.tableWrap table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.tableWrap th {
+  padding: 9px 7px;
+  color: #263b5c;
+  background: #f7f9fb;
+  border-top: 1px solid #e6ebf1;
+  border-bottom: 1px solid #e1e7ee;
+  text-align: left;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.tableWrap td {
+  padding: 11px 7px;
+  border-bottom: 1px solid #e8edf2;
+  color: #263b5c;
+  font-size: 10px;
+}
+
+.tableWrap td strong {
+  color: #10264b;
+  font-size: 11px;
+}
+
+.statusText {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusText i {
+  width: 7px;
+  height: 7px;
+  background: #0e64c8;
+}
+
+.viewButton {
+  border: 0;
+  background: transparent;
+  color: #075bc5;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.tableFooterLink {
+  display: block;
+  margin: 9px auto 0;
+}
+
+.quickCard {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.quickAction {
+  width: 100%;
+  min-height: 58px;
+  margin-top: 8px;
+  padding: 8px 11px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid #dfe5ec;
+  border-radius: 6px;
+  background: #fff;
+  text-align: left;
+  color: #10264b;
+  cursor: pointer;
+}
+
+.quickAction:first-of-type {
+  background: #075bc5;
+  border-color: #075bc5;
+  color: #fff;
+}
+
+.quickIcon {
+  width: 27px;
+  flex: 0 0 27px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.quickAction strong,
+.quickAction small {
+  display: block;
+}
+
+.quickAction strong {
+  font-size: 12px;
+}
+
+.quickAction small {
+  margin-top: 3px;
+  color: #50627c;
+  font-size: 9px;
+}
+
+.quickAction:first-of-type small {
+  color: rgba(255,255,255,.8);
+}
+
+.footer {
+  position: fixed;
+  left: 253px;
+  right: 0;
+  bottom: 0;
+  height: 52px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #061a32;
+  color: #fff;
+  z-index: 20;
+  font-size: 10px;
+}
+
+.footer strong {
+  font-size: 11px;
+}
+
+.footer i {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,.4);
+}
+
+@media (max-width: 1250px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middleGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .middleGrid .card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 25px;
+  }
+
+  .navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebarOfficer,
+  .secureSession {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 18px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .footer {
+    position: relative;
+    left: auto;
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    padding: 18px 12px 18px;
+  }
+
+  .header,
+  .welcomeBar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .statsGrid,
+  .middleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .middleGrid .card:last-child {
+    grid-column: auto;
+  }
+
+  .priorityContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcomeBar {
+    padding: 18px;
+  }
+}
+
+/* =========================================================
+   NARCIS DASHBOARD - VISUAL REFINEMENT
+   ========================================================= */
+
+/* Sidebar branding */
+.sidebar img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 8px rgba(20,93,160,.28))
+    drop-shadow(0 0 18px rgba(20,93,160,.12));
+}
+
+.sidebarBrand {
+  align-items: center;
+}
+
+.sidebarBrand strong {
+  letter-spacing: -.025em;
+}
+
+/* Sidebar navigation refinement */
+.sidebarNav button,
+.sidebarNav a {
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    color .2s ease;
+}
+
+.sidebarNav button:hover,
+.sidebarNav a:hover {
+  transform: translateX(2px);
+}
+
+/* Stat cards */
+.statCard {
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(11,31,58,.10),
+    0 0 0 1px rgba(20,93,160,.08);
+}
+
+/* Intelligence service rows */
+.service {
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.service:hover {
+  background: rgba(20,93,160,.035);
+  transform: translateX(2px);
+}
+
+/* Activity rows */
+.activityItem {
+  transition: background .2s ease;
+}
+
+.activityItem:hover {
+  background: rgba(20,93,160,.025);
+}
+
+/* Recent investigation rows */
+.tableWrap tbody tr {
+  transition: background .18s ease;
+}
+
+.tableWrap tbody tr:hover {
+  background: rgba(20,93,160,.035);
+}
+
+/* Quick actions */
+.quickAction {
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.quickAction:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(11,31,58,.08);
+  border-color: rgba(20,93,160,.22);
+}
+
+/* Primary New Case action */
+.newCaseButton {
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.newCaseButton:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 24px rgba(20,93,160,.20);
+}
+
+/* Officer area */
+.userMenu {
+  transition: background .2s ease;
+}
+
+.userMenu:hover {
+  background: rgba(20,93,160,.035);
+}
+
+/* Keep the command center visually centered on large screens */
+.main {
+  min-width: 0;
+}
+
+/* Better desktop spacing */
+.content {
+  min-width: 0;
+}
+
+/* =========================================================
+   RESPONSIVE REFINEMENT
+   ========================================================= */
+
+@media (max-width: 1250px) {
+  .statCard {
+    min-width: 0;
+  }
+
+  .contentGrid {
+    gap: 14px;
+  }
+
+  .panel {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main {
+    margin-left: 220px;
+  }
+
+  .statGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    width: 76px;
+  }
+
+  .main {
+    margin-left: 76px;
+  }
+
+  .sidebarBrand strong,
+  .sidebarBrand p,
+  .sidebarNav span,
+  .sidebarOfficer strong,
+  .sidebarOfficer small {
+    display: none;
+  }
+
+  .sidebarBrand {
+    justify-content: center;
+  }
+
+  .sidebar img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* NARCIS sidebar logo glow */
+.sidebarBrand {
+  position: relative;
+}
+
+.sidebarBrand::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 105px;
+  height: 85px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse,
+    rgba(20, 93, 160, 0.42) 0%,
+    rgba(20, 93, 160, 0.20) 35%,
+    rgba(20, 93, 160, 0.07) 58%,
+    transparent 75%
+  );
+  filter: blur(9px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sidebarBrand img {
+  position: relative;
+  z-index: 1;
+  filter:
+    drop-shadow(0 0 8px rgba(20, 93, 160, 0.55))
+    drop-shadow(0 0 20px rgba(20, 93, 160, 0.30));
+}
+
+/* NARCIS logo - white illumination */
+.sidebarBrand::before {
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0.12) 32%,
+    rgba(255, 255, 255, 0.045) 55%,
+    transparent 75%
+  );
+  filter: blur(10px);
+}
+
+.sidebarBrand img {
+  filter:
+    brightness(1.18)
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.72))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.42))
+    drop-shadow(0 0 28px rgba(255, 255, 255, 0.18));
+}
+
+/* =========================================================
+   NARCIS DASHBOARD - REFERENCE MATCH REFINEMENT
+   ========================================================= */
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+  width: 253px;
+}
+
+.main {
+  margin-left: 253px;
+}
+
+/* Keep the sidebar branding compact like the reference */
+.sidebarBrand {
+  padding-top: 2px;
+  padding-bottom: 14px;
+}
+
+/* ---------- MAIN CONTENT POSITION ---------- */
+
+.content {
+  padding-top: 18px;
+  padding-bottom: 70px;
+}
+
+/* ---------- STAT CARDS ---------- */
+
+.statCard {
+  min-height: 122px;
+  height: 122px;
+  box-sizing: border-box;
+}
+
+/* ---------- MAIN THREE-PANEL ROW ---------- */
+
+.contentGrid {
+  gap: 13px;
+}
+
+.contentGrid > * {
+  height: 298px;
+  min-height: 298px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ---------- PRIORITY PANEL ---------- */
+
+/* Keep the chart from becoming oversized */
+.contentGrid svg {
+  max-height: 205px;
+}
+
+/* ---------- ACTIVITY / SERVICE CONTENT ---------- */
+
+.contentGrid .activityItem {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.contentGrid .service {
+  min-height: 45px;
+}
+
+/* ---------- TABLE + QUICK ACTIONS ROW ---------- */
+
+.tableWrap {
+  min-height: 0;
+}
+
+/* ---------- GENERAL PANEL COMPACTNESS ---------- */
+
+.panel {
+  box-sizing: border-box;
+}
+
+/* ---------- LARGE DESKTOP ---------- */
+
+@media (min-width: 1500px) {
+  .sidebar {
+    width: 253px;
+  }
+
+  .main {
+    margin-left: 253px;
+  }
+
+  .content {
+    padding-top: 16px;
+  }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1250px) {
+  .sidebar {
+    width: 230px;
+  }
+
+  .main {
+    margin-left: 230px;
+  }
+
+  .contentGrid > * {
+    height: 300px;
+    min-height: 300px;
+  }
+}
+
+/* ---------- MOBILE / COMPACT ---------- */
+
+@media (max-width: 1000px) {
+  .contentGrid > * {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+
+/* =========================================================
+   NARCIS DASHBOARD - SHOW COMPLETE LOWER SECTION
+   ========================================================= */
+
+/* Allow the dashboard workspace to contain the complete page */
+.main {
+  height: 100vh;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Keep content compact enough for the complete dashboard */
+.content {
+  min-height: 0;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-bottom: 82px;
+}
+
+/* Compact welcome banner */
+.welcome {
+  min-height: 88px;
+  height: 88px;
+  box-sizing: border-box;
+}
+
+/* Compact statistics row */
+.statGrid {
+  gap: 13px;
+}
+
+.statCard {
+  height: 116px;
+  min-height: 116px;
+}
+
+/* Compact middle intelligence row */
+.contentGrid {
+  gap: 13px;
+  margin-bottom: 13px;
+}
+
+.contentGrid > * {
+  height: 296px;
+  min-height: 296px;
+  box-sizing: border-box;
+}
+
+/* Keep the priority visualization contained */
+.priorityContent {
+  min-height: 0;
+}
+
+/* Lower investigation + quick-action row */
+.tableWrap,
+.quickCard {
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+/* Make the investigation table compact enough to remain visible */
+.tableWrap table {
+  font-size: 12px;
+}
+
+.tableWrap th,
+.tableWrap td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Quick actions compact but fully visible */
+.quickCard {
+  padding-bottom: 12px;
+}
+
+.quickAction {
+  min-height: 48px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Footer stays visible without hiding dashboard content */
+.footer {
+  z-index: 20;
+}
+
+/* =========================================================
+   VIEWPORT FIT
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-height: 850px) {
+  .content {
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  .welcome {
+    height: 78px;
+    min-height: 78px;
+  }
+
+  .statCard {
+    height: 108px;
+    min-height: 108px;
+  }
+
+  .contentGrid > * {
+    height: 275px;
+    min-height: 275px;
+  }
+
+  .tableWrap th,
+  .tableWrap td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+
+.page {
+  animation: dashboardEnter 1200ms cubic-bezier(.22, 1, .36, 1) both;
+  will-change: opacity, transform, filter;
+}
+
+@keyframes dashboardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(.997);
+    filter: blur(4px);
+  }
+
+  30% {
+    opacity: .35;
+    transform: translateY(8px) scale(.998);
+    filter: blur(2.5px);
+  }
+
+  65% {
+    opacity: .82;
+    transform: translateY(2px) scale(1);
+    filter: blur(.8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+/* NARCIS PAGE TRANSITION */
+.page {
+  animation: dashboardEnter 650ms cubic-bezier(.22, 1, .36, 1) both;
+  will-change: opacity, transform, filter;
+}
+
+.pageLeaving {
+  animation: dashboardExit 420ms cubic-bezier(.65, 0, .35, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes dashboardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(.998);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes dashboardExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-5px) scale(1.006);
+    filter: blur(2px);
+  }
+}
+/* NARCIS SAFE SIDEBAR SCROLL FIX */
+
+/*
+   The sidebar itself is the scroll container.
+   Navigation, officer block and secure-session block
+   remain in the same document flow and therefore move
+   together when the sidebar is scrolled.
+
+   Main page layout is untouched.
+   Backend/extraction workflow is untouched.
+*/
+
+@media (min-width: 769px) {
+
+  .sidebar {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(177, 206, 231, 0.35);
+    border-radius: 6px;
+  }
+
+  /*
+     IMPORTANT:
+     The officer and secure-session elements must NOT
+     remain absolutely positioned at the bottom.
+
+     They belong to the sidebar's normal flow so they
+     scroll together with the navigation.
+  */
+
+  .sidebarOfficer {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 24px;
+  }
+
+  .secureSession {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 14px;
+
+    flex-shrink: 0;
+  }
+}
+

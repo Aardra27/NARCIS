@@ -1,0 +1,70 @@
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "pattern_name": "Drug Trafficking Route Characteristics",
+
+  "objective": "Provide structured knowledge regarding common trafficking route characteristics observed in narcotics investigations to support intelligence analysis, investigation planning and machine learning feature interpretation.",
+
+  "route_patterns": [
+    {
+      "route_type": "Interstate",
+      "risk_level": "High",
+      "description": "Movement of narcotic drugs across one or more state boundaries using road, rail, air or courier networks.",
+      "common_characteristics": [
+        "Multiple jurisdiction involvement",
+        "Long-distance transportation",
+        "Coordination between trafficking networks",
+        "Higher logistical planning"
+      ],
+      "dataset_mapping": {
+        "route_type_field": "Route_Type",
+        "interstate_field": "Interstate_Travel"
+      }
+    },
+    {
+      "route_type": "Intrastate",
+      "risk_level": "Medium",
+      "description": "Distribution occurring within a single state through regional transportation networks.",
+      "common_characteristics": [
+        "Local distribution",
+        "Short-distance transportation",
+        "Smaller operational networks"
+      ],
+      "dataset_mapping": {
+        "route_type_field": "Route_Type",
+        "interstate_field": "Interstate_Travel"
+      }
+    }
+  ],
+
+  "risk_indicators": [
+    "Frequent travel between multiple jurisdictions.",
+    "Repeated use of commercial transport services.",
+    "Frequent changes in travel schedules.",
+    "Movement inconsistent with declared occupation or purpose.",
+    "Use of multiple transport modes during a single journey."
+  ],
+
+  "investigation_guidelines": [
+    "Verify travel history.",
+    "Compare origin and destination with intelligence records.",
+    "Coordinate with relevant enforcement agencies when multiple jurisdictions are involved.",
+    "Review transport and booking documentation.",
+    "Document movement chronology during investigation."
+  ],
+
+  "dataset_mapping": {
+    "origin_city_field": "Origin_City",
+    "destination_city_field": "Destination_City",
+    "state_field": "State",
+    "route_type_field": "Route_Type",
+    "interstate_field": "Interstate_Travel"
+  },
+
+  "references": [
+    "Narcotics Control Bureau Annual Reports",
+    "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+    "NDPS Act, 1985"
+  ]
+}

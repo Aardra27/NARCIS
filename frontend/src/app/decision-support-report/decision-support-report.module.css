@@ -1,0 +1,330 @@
+@import "../ai-analysis/ai-analysis.module.css";
+
+.reportOverview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.reportOverviewLabel {
+  display: block;
+  color: #7a879e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.reportOverview h3 {
+  margin: 8px 0 0;
+  color: #10264b;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.reportMetaList {
+  display: grid;
+  gap: 10px;
+  min-width: 220px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e1e8f0;
+  border-radius: 8px;
+  background: #f9fbff;
+  color: #32507a;
+  font-size: 12px;
+}
+
+.metaRow strong {
+  color: #10264b;
+  font-size: 12px;
+  text-align: right;
+}
+
+.reportSection {
+  margin-top: 22px;
+  padding: 18px 18px 16px;
+  border: 1px solid #e1e8f0;
+  border-radius: 9px;
+  background: #fafcff;
+}
+
+.reportSection h3 {
+  margin: 0 0 10px;
+  color: #10264b;
+  font-size: 11px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.reportSection p {
+  margin: 0;
+  color: #425779;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: #425779;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 1px solid #e1e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.infoItem span {
+  color: #7a879e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.infoItem strong {
+  color: #10264b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.officerReviewBox {
+  margin-top: 22px;
+  padding: 18px 18px 16px;
+  border: 1px solid #d4dce7;
+  border-left: 4px solid #145da0;
+  border-radius: 9px;
+  background: #f7fbff;
+}
+
+.officerReviewBox h3 {
+  margin: 0 0 10px;
+  color: #10264b;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.officerReviewBox p {
+  margin: 0;
+  color: #425779;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.secondaryButton,
+.primaryButton {
+  min-height: 43px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  border: 1px solid #d4dce7;
+}
+
+.secondaryButton {
+  background: #fff;
+  color: #334d72;
+}
+
+.primaryButton {
+  border: 0;
+  background: #145da0;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(20, 93, 160, 0.18);
+}
+
+.loadingCard,
+.errorCard {
+  margin-top: 8px;
+  padding: 18px 20px;
+  border: 1px solid #dfe6ef;
+  background: #fff;
+  border-radius: 9px;
+  color: #425679;
+  font-size: 13px;
+}
+
+.errorCard {
+  border-color: #f4c7c7;
+  background: #fff7f7;
+  color: #a63c3c;
+}
+
+.workflowCard {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(18, 43, 73, 0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+  max-height: calc(100vh - 185px);
+  overflow-y: auto;
+}
+
+.workflowHeader {
+  min-height: 66px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e6ed;
+}
+
+.workflowHeaderLabel {
+  display: block;
+  color: #7a879e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  margin-right: 10px;
+}
+
+.workflowHeader h2 {
+  margin: 0;
+  color: #10264b;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.workflow {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.workflowStep {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 84px;
+}
+
+.workflowStep::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 42px;
+  bottom: -10px;
+  width: 2px;
+  background: #dce5f0;
+}
+
+.workflowStep:last-child::before {
+  display: none;
+}
+
+.workflowCircle {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid #d4deeb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #71819a;
+  font-size: 11px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.workflowComplete,
+.workflowCurrent {
+  background: #0f67d1;
+  border-color: #0f67d1;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(15, 103, 209, 0.22);
+}
+
+.workflowStepBody {
+  min-width: 0;
+  padding: 4px 0 0 14px;
+}
+
+.workflowStepBody h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.workflowStepBody p {
+  margin: 7px 0 0;
+  color: #71819b;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.workflowBadge {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.workflowCompleteBadge {
+  color: #16875d;
+  background: #e7f7ef;
+}
+
+.workflowCurrentBadge {
+  color: #145da0;
+  background: #e5f0ff;
+}
+
+.workflowPendingBadge {
+  color: #6d7d90;
+  background: #edf2f7;
+}
+
+@media (max-width: 1100px) {
+  .verificationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    max-height: none;
+  }
+}

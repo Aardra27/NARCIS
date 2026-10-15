@@ -1,0 +1,6 @@
+matplotlib
+shap
+joblib
+pandas
+numpy
+google-genai

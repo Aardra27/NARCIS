@@ -1,27 +1,8 @@
-{
-  "drugs": [
-    {
-      "drug_name": "Ganja",
-      "small_quantity": {
-        "value": 1,
-        "unit": "kg"
-      },
-      "commercial_quantity": {
-        "value": 20,
-        "unit": "kg"
-      }
-    },
-    {
-      "drug_name": "Hashish",
-      "small_quantity": {
-        "value": 100,
-        "unit": "g"
-      },
-      "commercial_quantity": {
-        "value": 1,
-        "unit": "kg"
-      }
-    },
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "commercial_quantities": [
     {
       "drug_name": "Heroin",
       "small_quantity": {
@@ -45,13 +26,35 @@
       }
     },
     {
-      "drug_name": "MDMA",
+      "drug_name": "Ganja",
       "small_quantity": {
-        "value": 0.5,
+        "value": 1000,
         "unit": "g"
       },
       "commercial_quantity": {
+        "value": 20000,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "Hashish",
+      "small_quantity": {
+        "value": 100,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 1000,
+        "unit": "g"
+      }
+    },
+    {
+      "drug_name": "MDMA",
+      "small_quantity": {
         "value": 10,
+        "unit": "g"
+      },
+      "commercial_quantity": {
+        "value": 500,
         "unit": "g"
       }
     },
@@ -73,9 +76,14 @@
         "unit": "g"
       },
       "commercial_quantity": {
-        "value": 2.5,
-        "unit": "kg"
+        "value": 2500,
+        "unit": "g"
       }
     }
-  ]
+  ],
+
+  "reference": {
+    "notification": "Government of India Notification S.O. 1055(E), 19 October 2001",
+    "act": "Narcotic Drugs and Psychotropic Substances Act, 1985"
+  }
 }

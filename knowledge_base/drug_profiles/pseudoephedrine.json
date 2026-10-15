@@ -1,0 +1,128 @@
+{
+    "version": "1.0",
+    "last_updated": "2026-08-17",
+    "drug_information": {
+        "drug_name": "Pseudoephedrine",
+        "scientific_name": "Pseudoephedrine",
+        "aliases": [
+            "Pseudoephedrine HCl"
+        ],
+        "category": "Controlled Substance / Precursor Chemical",
+        "description": "Pseudoephedrine is a controlled precursor chemical subject to regulatory controls because of its potential use in the illicit manufacture of narcotic drugs and psychotropic substances."
+    },
+    "legal_information": {
+        "applicable_ndps_sections": [
+            {
+                "section": "9A",
+                "title": "Controlled Substances",
+                "applicability": "Provides the regulatory framework for controlled substances notified by the Central Government."
+            },
+            {
+                "section": "25A",
+                "title": "Punishment for Contravention of Orders Regarding Controlled Substances",
+                "applicability": "Applies to contravention of orders relating to controlled substances."
+            }
+        ],
+        "quantity_thresholds": {
+            "small_quantity": {
+                "unit": "N/A",
+                "value": null,
+                "source": "Not applicable. Controlled substances are not categorized using the narcotic-drug/psychotropic-substance small-quantity framework."
+            },
+            "commercial_quantity": {
+                "unit": "N/A",
+                "value": null,
+                "source": "Not applicable. Controlled substances are not categorized using the narcotic-drug/psychotropic-substance commercial-quantity framework."
+            }
+        }
+    },
+    "operational_intelligence": {
+        "vehicle_types": [
+            "Container",
+            "Truck",
+            "Courier Parcel"
+        ],
+        "source_regions": [
+            "Unknown"
+        ],
+        "concealment_methods": [
+            "Container Concealment",
+            "False Declaration",
+            "Mislabelled Pharmaceutical Product"
+        ],
+        "intelligence_inputs": [
+            "Specific Information",
+            "NCB Intelligence",
+            "Customs Intelligence",
+            "Port Intelligence"
+        ],
+        "transport_modes": [
+            "Road",
+            "Sea",
+            "Container Freight",
+            "Courier"
+        ],
+        "distribution_regions": [
+            "Gujarat",
+            "South Sudan"
+        ]
+    },
+    "investigation_support": {
+        "storage_guidelines": [
+            "Store seized material in secure, appropriately labelled evidence containers.",
+            "Maintain evidence identification and movement records.",
+            "Restrict access to authorized personnel.",
+            "Maintain chain-of-custody documentation."
+        ],
+        "investigation_guidelines": [
+            "Secure the seized material and relevant documentation.",
+            "Record container, package and batch identifiers.",
+            "Document declared versus actual contents.",
+            "Collect representative samples according to applicable procedures.",
+            "Send samples to an authorized forensic laboratory.",
+            "Document manufacturer, exporter and consignee information where relevant.",
+            "Preserve financial and export documentation."
+        ],
+        "officer_precautions": [
+            "Use appropriate PPE when handling unknown powders or pharmaceutical materials.",
+            "Avoid direct contact and inhalation.",
+            "Secure containers before examination.",
+            "Document evidence handling."
+        ],
+        "evidence_types": [
+            "Seized Chemical Material",
+            "Packaging Material",
+            "Container Records",
+            "Export Documents",
+            "Company Records",
+            "Financial Records",
+            "Digital Devices",
+            "CCTV Footage"
+        ]
+    },
+    "dataset_mapping": {
+        "drug_type": "Pseudoephedrine",
+        "quantity_field": "Quantity",
+        "quantity_category_field": "Quantity_Category",
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type",
+        "concealment_method_field": "Concealment_Method",
+        "intelligence_input_field": "Intelligence_Input",
+        "evidence_type_field": "Evidence_Type",
+        "ndps_section_field": "Applicable_NDPS_Sections"
+    },
+    "references": {
+        "operational": [
+            "Narcotics Control Bureau (NCB)",
+            "Central Bureau of Narcotics (CBN)"
+        ],
+        "medical": [
+            "World Health Organization (WHO)"
+        ],
+        "legal": [
+            "NDPS Act, 1985",
+            "NDPS (Regulation of Controlled Substances) Order",
+            "Central Bureau of Narcotics controlled-substance information"
+        ]
+    }
+}

@@ -1,0 +1,558 @@
+﻿/* ============================================================
+   NARCIS DOCUMENT EXTRACTION
+   SHARED NEW-CASE VISUAL SYSTEM
+   ============================================================ */
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #061426;
+  color: #102f59;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.main {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  background: #061426;
+  padding: 28px 32px 40px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.header {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.header p {
+  margin: 7px 0 0;
+
+  color: #8fa7c7;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb,
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 0 0 18px;
+
+  color: #7f98bb;
+
+  font-size: 12px;
+}
+
+/* ============================================================
+   TOP DOCUMENT STATUS CARD
+   ============================================================ */
+
+.documentCard,
+.fileCard,
+.uploadedDocument,
+.documentHeader {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ef;
+  border-radius: 10px;
+
+  padding: 17px 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 86px;
+}
+
+/* ============================================================
+   DOCUMENT / PDF AREA
+   ============================================================ */
+
+.content,
+.mainGrid,
+.workspace,
+.documentWorkspace {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 450px;
+
+  gap: 18px;
+
+  align-items: start;
+}
+
+/* ============================================================
+   LEFT DOCUMENT CARD
+   ============================================================ */
+
+.sourceDocument,
+.documentPanel,
+.pdfPanel,
+.viewerCard {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+
+  box-shadow: 0 7px 22px rgba(0,0,0,.07);
+
+  overflow: hidden;
+}
+
+.sourceDocumentHeader,
+.documentPanelHeader,
+.viewerHeader {
+  min-height: 60px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  background: #ffffff;
+}
+
+.sourceDocumentHeader h2,
+.documentPanelHeader h2,
+.viewerHeader h2 {
+  margin: 0;
+
+  color: #102f59;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   PDF VIEWER
+   ============================================================ */
+
+.pdfViewer,
+.viewer,
+.documentViewer {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 620px;
+
+  background: #252525;
+
+  overflow: auto;
+
+  box-sizing: border-box;
+}
+
+.pdfViewer iframe,
+.viewer iframe,
+.documentViewer iframe {
+  display: block;
+
+  width: 100%;
+  height: 720px;
+
+  border: 0;
+}
+
+.pdfViewer canvas,
+.viewer canvas {
+  max-width: 100%;
+}
+
+/* ============================================================
+   RIGHT NARCIS WORKFLOW
+   MATCH NEW CASE CARD
+   ============================================================ */
+
+.workflowCard {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ef;
+  border-radius: 10px;
+
+  box-shadow: 0 7px 22px rgba(0,0,0,.07);
+
+  padding: 28px 22px;
+
+  position: sticky;
+  top: 20px;
+}
+
+/* IMPORTANT:
+   Keep workflow card visually the same scale as New Case.
+*/
+
+.workflowCard h2 {
+  margin: 0 0 25px;
+
+  color: #102f59;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   WORKFLOW
+   ============================================================ */
+
+.workflow {
+  margin-top: 0;
+}
+
+.workflowStep {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  min-height: 116px;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1dce9;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #5f7697;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  position: relative;
+  z-index: 2;
+}
+
+.workflowStep.active .stepNumber,
+.workflowStep.current .stepNumber {
+  border-color: #0965d5;
+
+  background: #0965d5;
+  color: #ffffff;
+
+  box-shadow: 0 7px 15px rgba(0,89,190,.22);
+}
+
+.workflowStep.completed .stepNumber {
+  border-color: #0965d5;
+
+  background: #0965d5;
+  color: #ffffff;
+
+  box-shadow: 0 7px 15px rgba(0,89,190,.18);
+}
+
+.stepText {
+  min-width: 0;
+
+  padding-top: 4px;
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  color: #102f59;
+
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.stepDescription {
+  margin-top: 5px;
+
+  color: #61789b;
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.currentBadge {
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  background: #e8f1ff;
+  color: #075fd0;
+
+  font-size: 8px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.completeBadge {
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  background: #e2f7ee;
+  color: #15966a;
+
+  font-size: 8px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+/* connector */
+
+.workflowLine {
+  width: 1px;
+  height: 68px;
+
+  margin-left: 23px;
+
+  background: #d4deea;
+}
+
+/* ============================================================
+   EXTRACTION CONTENT
+   ============================================================ */
+
+.extractionSection,
+.extractedData,
+.caseInformation {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ef;
+  border-radius: 10px;
+
+  padding: 24px;
+
+  box-shadow: 0 7px 22px rgba(0,0,0,.06);
+}
+
+.extractionSection h2,
+.extractedData h2,
+.caseInformation h2 {
+  margin: 0 0 18px;
+
+  color: #102f59;
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ============================================================
+   FIELD GRID
+   ============================================================ */
+
+.fieldsGrid,
+.extractedFields,
+.caseFields {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.fieldCard,
+.extractedField,
+.caseField {
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5ef;
+
+  border-radius: 7px;
+
+  padding: 15px 16px;
+}
+
+.fieldLabel {
+  margin-bottom: 7px;
+
+  color: #7186a5;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: .7px;
+}
+
+.fieldValue {
+  color: #17375f;
+
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.actions button {
+  min-height: 40px;
+
+  padding: 0 18px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1250px) {
+
+  .content,
+  .mainGrid,
+  .workspace,
+  .documentWorkspace {
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .content,
+  .mainGrid,
+  .workspace,
+  .documentWorkspace {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    position: relative;
+    top: auto;
+  }
+
+  .pdfViewer,
+  .viewer,
+  .documentViewer {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .main {
+    padding: 20px 14px 30px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  .fieldsGrid,
+  .extractedFields,
+  .caseFields {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    padding: 22px 18px;
+  }
+}

@@ -1,0 +1,110 @@
+﻿{
+  "version": "2.0",
+  "last_updated": "2026-07-31",
+
+  "sop_name": "Evidence Collection under the NDPS Act",
+
+  "objective": "To ensure proper identification, collection, documentation, preservation and transfer of evidence in narcotics investigations while maintaining evidentiary integrity.",
+
+  "legal_basis": [
+    {
+      "section": "52A",
+      "purpose": "Preparation of inventory, photography and sampling of seized narcotic drugs and psychotropic substances."
+    },
+    {
+      "section": "55",
+      "purpose": "Safe custody of seized narcotic drugs and psychotropic substances."
+    },
+    {
+      "section": "57",
+      "purpose": "Reporting of arrest and seizure."
+    }
+  ],
+
+  "procedure": [
+    {
+      "step": 1,
+      "title": "Secure the Scene",
+      "description": "Restrict unauthorized access to prevent contamination, loss or tampering of evidence."
+    },
+    {
+      "step": 2,
+      "title": "Identify Evidence",
+      "description": "Locate narcotic substances, packaging materials, weighing instruments, digital devices, financial records and other relevant evidence."
+    },
+    {
+      "step": 3,
+      "title": "Photograph Evidence",
+      "description": "Photograph all evidence in its original position before collection."
+    },
+    {
+      "step": 4,
+      "title": "Prepare Inventory",
+      "description": "Record description, quantity, packaging, markings and place of recovery as required under Section 52A."
+    },
+    {
+      "step": 5,
+      "title": "Draw Representative Samples",
+      "description": "Draw representative samples in accordance with the NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022."
+    },
+    {
+      "step": 6,
+      "title": "Seal and Label",
+      "description": "Seal all evidence using tamper-evident seals and assign a unique evidence identification number."
+    },
+    {
+      "step": 7,
+      "title": "Document Collection",
+      "description": "Record the officer collecting the evidence, date, time, location and witness details."
+    },
+    {
+      "step": 8,
+      "title": "Transfer for Safe Custody",
+      "description": "Transfer evidence to the designated evidence storage facility while maintaining chain of custody."
+    },
+    {
+      "step": 9,
+      "title": "Forward Samples",
+      "description": "Send representative samples to an authorized forensic laboratory with appropriate documentation."
+    }
+  ],
+
+  "evidence_categories": [
+    "Narcotic Drugs",
+    "Psychotropic Substances",
+    "Controlled Substances",
+    "Packaging Materials",
+    "Digital Devices",
+    "Mobile Phones",
+    "Financial Documents",
+    "Identity Documents",
+    "Call Detail Records",
+    "CCTV Footage",
+    "Fingerprints",
+    "DNA Evidence"
+  ],
+
+  "required_documents": [
+    "Seizure Memo",
+    "Evidence Inventory",
+    "Photography Record",
+    "Sample Seal Impression",
+    "Forensic Laboratory Forwarding Letter",
+    "Chain of Custody Form"
+  ],
+
+  "officer_precautions": [
+    "Wear appropriate personal protective equipment.",
+    "Prevent contamination of exhibits.",
+    "Use tamper-evident packaging.",
+    "Do not mix evidence from different seizure locations.",
+    "Maintain continuous documentation during collection."
+  ],
+
+  "references": [
+    "NDPS Act, 1985",
+    "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+    "NCB Standing Orders",
+    "NCB Training Module"
+  ]
+}

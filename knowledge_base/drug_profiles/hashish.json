@@ -1,77 +1,148 @@
-{
-  "drug_name": "Hashish",
-  "aliases": [
-    "Charas",
-    "Cannabis Resin"
-  ],
-  "scientific_name": "Cannabis Resin",
-  "category": "Cannabis Resin",
-  "description": "The separated resin obtained from the cannabis plant, commonly known as charas in India, and regulated under the NDPS Act.",
-  "small_quantity": {
-    "value": 100,
-    "unit": "g"
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-30",
+
+  "drug_information": {
+    "drug_name": "Hashish",
+    "scientific_name": "Cannabis Resin",
+    "aliases": [
+      "Hash",
+      "Charas",
+      "Cannabis Resin"
+    ],
+    "category": "Cannabis Resin (Narcotic Drug)",
+    "description": "Hashish, also known as charas or cannabis resin, is the separated resin obtained from the cannabis plant. It is classified as a narcotic drug under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985."
   },
-  "commercial_quantity": {
-    "value": 1,
-    "unit": "kg"
+
+  "legal_information": {
+    "quantity_thresholds": {
+      "small_quantity": {
+        "value": 100,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      },
+      "commercial_quantity": {
+        "value": 1000,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      }
+    },
+    "applicable_ndps_sections": [
+      {
+        "section": "8(c)",
+        "title": "Prohibition of Certain Operations",
+        "applicability": "Prohibits unauthorized cultivation, possession, sale, purchase, transport, storage and distribution."
+      },
+      {
+        "section": "20(b)",
+        "title": "Punishment for Contravention in Relation to Cannabis Plant and Cannabis",
+        "applicability": "Applies to offences involving cannabis resin (hashish/charas)."
+      }
+    ]
   },
-  "common_transport_modes": [
-    "Road",
-    "Rail",
-    "Bus",
-    "Courier"
-  ],
-  "common_vehicle_types": [
-    "Car",
-    "Motorcycle",
-    "Bus",
-    "Train",
-    "Courier Parcel"
-  ],
-  "common_concealment_methods": [
-    "Hidden Vehicle Compartment",
-    "Backpack",
-    "Courier Parcel",
-    "Food Container",
-    "Clothing Concealment",
-    "False Bottom Luggage"
-  ],
-  "major_trafficking_states": [
-    "Himachal Pradesh",
-    "Jammu and Kashmir",
-    "Uttarakhand",
-    "Delhi",
-    "Punjab",
-    "Maharashtra"
-  ],
-  "common_source_regions": [
-    "Himalayan Cannabis Cultivation Areas",
-    "Interstate Distribution Networks"
-  ],
-  "typical_intelligence_sources": [
-    "Confidential Informant",
-    "NCB Intelligence",
-    "State Police Intelligence",
-    "Surveillance",
-    "Local Police Information"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Call Detail Records",
-    "Vehicle Search",
-    "Witness Statement",
-    "CCTV Footage"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "20(b)"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Department of Revenue - Small and Commercial Quantities",
-    "NCB Annual Reports",
-    "Public NCB and State Police Seizure Reports"
-  ]
+
+  "operational_intelligence": {
+    "transport_modes": [
+      "Road",
+      "Rail",
+      "Air",
+      "Courier"
+    ],
+    "vehicle_types": [
+      "Car",
+      "Motorcycle",
+      "Bus",
+      "Truck",
+      "Train",
+      "Flight",
+      "Courier Parcel"
+    ],
+    "concealment_methods": [
+      "False Bottom Luggage",
+      "Hidden Vehicle Compartment",
+      "Courier Parcel",
+      "Food Package",
+      "Clothing Concealment"
+    ],
+    "source_regions": [
+      "Himachal Pradesh",
+      "Jammu and Kashmir",
+      "Uttarakhand"
+    ],
+    "distribution_regions": [
+      "Delhi",
+      "Mumbai",
+      "Goa",
+      "Bengaluru",
+      "Chandigarh"
+    ],
+    "intelligence_inputs": [
+      "State Police Intelligence",
+      "NCB Intelligence",
+      "Confidential Informant",
+      "Surveillance",
+      "Interstate Coordination"
+    ]
+  },
+
+  "investigation_support": {
+    "evidence_types": [
+      "Seized Drug Sample",
+      "Packaging Material",
+      "Digital Devices",
+      "Financial Records",
+      "Call Detail Records",
+      "Fingerprints",
+      "DNA Evidence",
+      "CCTV Footage"
+    ],
+    "investigation_guidelines": [
+      "Secure the scene and prevent contamination.",
+      "Photograph seized material before handling.",
+      "Maintain chain of custody.",
+      "Collect representative samples for forensic examination.",
+      "Record weight, packaging and identifying marks."
+    ],
+    "officer_precautions": [
+      "Wear disposable gloves.",
+      "Use appropriate PPE.",
+      "Avoid direct skin contact.",
+      "Seal evidence immediately.",
+      "Report accidental exposure."
+    ],
+    "storage_guidelines": [
+      "Store in tamper-evident evidence bags.",
+      "Assign unique evidence IDs.",
+      "Store in a secure evidence room.",
+      "Restrict access to authorized personnel.",
+      "Maintain evidence movement logs."
+    ]
+  },
+
+  "dataset_mapping": {
+    "drug_type": "Hashish",
+    "quantity_field": "Quantity",
+    "quantity_category_field": "Quantity_Category",
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "concealment_method_field": "Concealment_Method",
+    "intelligence_input_field": "Intelligence_Input",
+    "evidence_type_field": "Evidence_Type",
+    "ndps_section_field": "Applicable_NDPS_Sections"
+  },
+
+  "references": {
+    "legal": [
+      "NDPS Act, 1985",
+      "Government of India Notification S.O. 1055(E), 19 October 2001"
+    ],
+    "operational": [
+      "Narcotics Control Bureau (NCB)",
+      "United Nations Office on Drugs and Crime (UNODC)"
+    ],
+    "medical": [
+      "World Health Organization (WHO)",
+      "National Institute on Drug Abuse (NIDA)"
+    ]
+  }
 }

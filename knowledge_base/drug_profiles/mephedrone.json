@@ -1,0 +1,132 @@
+{
+    "version": "1.0",
+    "last_updated": "2026-08-17",
+    "drug_information": {
+        "drug_name": "Mephedrone",
+        "scientific_name": "4-Methylmethcathinone",
+        "aliases": [
+            "4-MMC",
+            "M-Cat",
+            "Meow Meow"
+        ],
+        "category": "Psychotropic Substance",
+        "description": "Mephedrone (4-Methylmethcathinone) is a synthetic psychoactive substance classified as a psychotropic substance under the NDPS framework. Unauthorized possession, manufacture, sale, transport, storage and distribution are prohibited."
+    },
+    "legal_information": {
+        "applicable_ndps_sections": [
+            {
+                "section": "8(c)",
+                "title": "Prohibition of Certain Operations",
+                "applicability": "Prohibits unauthorized possession, manufacture, sale, purchase, transport, storage, use and related operations involving narcotic drugs and psychotropic substances."
+            },
+            {
+                "section": "22",
+                "title": "Punishment for Contravention in Relation to Psychotropic Substances",
+                "applicability": "Applies to offences involving psychotropic substances, with punishment depending on the applicable quantity category."
+            }
+        ],
+        "quantity_thresholds": {
+            "small_quantity": {
+                "unit": "g",
+                "value": 2,
+                "source": "NDPS quantity notification; corroborated by Indian judicial decisions concerning Mephedrone."
+            },
+            "commercial_quantity": {
+                "unit": "g",
+                "value": 50,
+                "source": "NDPS quantity notification; corroborated by Indian judicial decisions concerning Mephedrone."
+            }
+        }
+    },
+    "operational_intelligence": {
+        "vehicle_types": [
+            "Car",
+            "Motorcycle",
+            "Truck",
+            "Courier Parcel"
+        ],
+        "source_regions": [
+            "Unknown"
+        ],
+        "concealment_methods": [
+            "Package Concealment",
+            "Premises Concealment",
+            "Courier Parcel"
+        ],
+        "intelligence_inputs": [
+            "Specific Information",
+            "NCB Intelligence",
+            "Field Intelligence",
+            "Surveillance"
+        ],
+        "transport_modes": [
+            "Road",
+            "Rail",
+            "Air",
+            "Courier"
+        ],
+        "distribution_regions": [
+            "Maharashtra",
+            "Mumbai"
+        ]
+    },
+    "investigation_support": {
+        "storage_guidelines": [
+            "Store in tamper-evident sealed evidence bags.",
+            "Label each exhibit with a unique evidence ID.",
+            "Keep in secure evidence storage.",
+            "Restrict access to authorized personnel.",
+            "Maintain detailed evidence movement logs."
+        ],
+        "investigation_guidelines": [
+            "Secure the scene and prevent contamination.",
+            "Photograph and document seized materials before handling.",
+            "Collect representative samples following applicable NDPS procedures.",
+            "Maintain an unbroken chain of custody.",
+            "Record weight, packaging and identifying marks.",
+            "Document witness statements and seizure documentation.",
+            "Send representative samples to an authorized forensic laboratory."
+        ],
+        "officer_precautions": [
+            "Wear appropriate PPE.",
+            "Avoid direct contact with unknown substances.",
+            "Avoid inhalation or accidental exposure.",
+            "Seal evidence immediately after collection.",
+            "Report accidental exposure immediately."
+        ],
+        "evidence_types": [
+            "Seized Drug Sample",
+            "Packaging Material",
+            "Digital Devices",
+            "Financial Records",
+            "Call Detail Records",
+            "Fingerprints",
+            "DNA Evidence",
+            "CCTV Footage"
+        ]
+    },
+    "dataset_mapping": {
+        "drug_type": "Mephedrone",
+        "quantity_field": "Quantity",
+        "quantity_category_field": "Quantity_Category",
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type",
+        "concealment_method_field": "Concealment_Method",
+        "intelligence_input_field": "Intelligence_Input",
+        "evidence_type_field": "Evidence_Type",
+        "ndps_section_field": "Applicable_NDPS_Sections"
+    },
+    "references": {
+        "operational": [
+            "Narcotics Control Bureau (NCB)"
+        ],
+        "medical": [
+            "World Health Organization (WHO)"
+        ],
+        "legal": [
+            "NDPS Act, 1985",
+            "Government of India quantity notification",
+            "Central Bureau of Narcotics"
+        ]
+    }
+}

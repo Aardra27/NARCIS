@@ -1,0 +1,125 @@
+﻿{
+  "registry_version": "1.0",
+  "last_updated": "2026-08-01",
+
+  "purpose": "Maintains the master registry of trusted sources used for constructing the NARCIS Verified Case Library. Every case must reference a source defined in this registry.",
+
+  "trusted_sources": [
+
+    {
+      "source_id": "NCB_AR_2023",
+      "title": "NCB Annual Report 2023-24",
+      "publisher": "Narcotics Control Bureau",
+      "document_type": "Annual Report",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Case Library",
+        "Drug Profiles",
+        "Trafficking Patterns",
+        "Operational Intelligence"
+      ]
+    },
+
+    {
+      "source_id": "NCB_PRESS",
+      "title": "NCB Official Press Releases",
+      "publisher": "Narcotics Control Bureau",
+      "document_type": "Press Release",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Case Library"
+      ]
+    },
+
+    {
+      "source_id": "NDPS_ACT_1985",
+      "title": "Narcotic Drugs and Psychotropic Substances Act, 1985",
+      "publisher": "Government of India",
+      "document_type": "Act",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Legal Information",
+        "Case Validation",
+        "SOP"
+      ]
+    },
+
+    {
+      "source_id": "NDPS_RULES_2022",
+      "title": "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+      "publisher": "Government of India",
+      "document_type": "Rules",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "SOP",
+        "Evidence Handling",
+        "Chain of Custody"
+      ]
+    },
+
+    {
+      "source_id": "UNODC_WDR",
+      "title": "United Nations Office on Drugs and Crime - World Drug Report",
+      "publisher": "UNODC",
+      "document_type": "International Report",
+      "country": "International",
+      "trust_level": "High",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Drug Trends",
+        "Trafficking Patterns",
+        "Operational Intelligence"
+      ]
+    },
+
+    {
+      "source_id": "SC_JUDGMENTS",
+      "title": "Supreme Court of India NDPS Judgments",
+      "publisher": "Supreme Court of India",
+      "document_type": "Judgment",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Legal Interpretation",
+        "Case Law"
+      ]
+    },
+
+    {
+      "source_id": "HC_JUDGMENTS",
+      "title": "High Court NDPS Judgments",
+      "publisher": "Various High Courts",
+      "document_type": "Judgment",
+      "country": "India",
+      "trust_level": "Official",
+      "verification_status": "Verified",
+      "usable_for": [
+        "Case Law",
+        "Legal Interpretation"
+      ]
+    }
+
+  ],
+
+  "validation_policy": {
+
+    "minimum_trust_level": "High",
+
+    "allow_multiple_sources": true,
+
+    "require_source_reference": true,
+
+    "allow_ai_generated_content": false,
+
+    "allow_dataset_standardization": true
+  }
+}

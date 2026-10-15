@@ -1,4 +1,4 @@
-def calculate_priority(
+﻿def calculate_priority(
     quantity_category,
     previous_ndps_firs,
     total_criminal_cases,
@@ -7,30 +7,41 @@ def calculate_priority(
     intelligence_input
 ):
     """
-    Research-informed rule-based scoring for Investigation Priority.
+    Calculate synthetic investigation priority.
+
+    This scoring function is for the research-informed synthetic
+    dataset only. It is not a real-world law-enforcement risk score.
     """
 
     score = 0
 
-    # Quantity (highest importance)
+    # Quantity category
     if quantity_category == "Commercial":
         score += 35
     elif quantity_category == "Intermediate":
         score += 18
-    else:
+    elif quantity_category == "Small":
         score += 5
+    elif quantity_category == "Not Applicable":
+        # Used for controlled precursor chemicals such as
+        # Pseudoephedrine where small/commercial thresholds
+        # are not applicable.
+        score += 0
 
     # Previous NDPS FIRs
     score += previous_ndps_firs * 12
 
-    # Other criminal history (capped)
-    score += min(total_criminal_cases * 2, 10)
+    # Previous criminal cases
+    score += min(
+        total_criminal_cases * 2,
+        10
+    )
 
     # Previous seizure linkage
     if previous_seizure_link == "Yes":
         score += 10
 
-    # Interstate trafficking
+    # Interstate travel
     if interstate_travel == "Yes":
         score += 10
 
@@ -38,24 +49,25 @@ def calculate_priority(
     if intelligence_input != "No Intelligence":
         score += 8
 
-    # Final Priority
+    # Final priority
     if score >= 60:
         return "High"
+
     elif score >= 30:
         return "Medium"
+
     else:
         return "Low"
 
 
 if __name__ == "__main__":
-
-    priority = calculate_priority(
-        quantity_category="Commercial",
-        previous_ndps_firs=2,
-        total_criminal_cases=4,
-        previous_seizure_link="Yes",
-        interstate_travel="Yes",
-        intelligence_input="NCB Intelligence"
+    result = calculate_priority(
+        "Commercial",
+        1,
+        2,
+        "Yes",
+        "Yes",
+        "NCB Intelligence"
     )
 
-    print(priority)
+    print("Test Priority:", result)

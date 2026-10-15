@@ -1,0 +1,20 @@
+﻿NARCIS BACKUP
+========================================================
+
+Created:
+2026-09-16 20:27:51
+
+Purpose:
+Backup before appending Document Extraction workflow to New Case.
+
+IMPORTANT:
+These are copies of the current files.
+No original source files were modified by this script.
+
+Files:
+frontend\src\app\new-case\page.tsx
+frontend\src\app\new-case\new-case.module.css
+frontend\src\app\document-extraction\page.tsx
+frontend\src\app\document-extraction\document-extraction.module.css
+
+========================================================

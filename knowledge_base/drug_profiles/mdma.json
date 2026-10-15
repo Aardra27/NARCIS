@@ -1,80 +1,148 @@
-{
-  "drug_name": "MDMA",
-  "aliases": [
-    "Ecstasy",
-    "Molly"
-  ],
-  "scientific_name": "3,4-Methylenedioxymethamphetamine",
-  "category": "Psychotropic Substance",
-  "description": "A synthetic psychoactive drug classified as a psychotropic substance under the NDPS Act.",
-  "small_quantity": {
-    "value": 0.5,
-    "unit": "g"
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "drug_information": {
+    "drug_name": "MDMA",
+    "scientific_name": "3,4-Methylenedioxymethamphetamine",
+    "aliases": [
+      "Ecstasy",
+      "Molly",
+      "E",
+      "XTC"
+    ],
+    "category": "Psychotropic Substance",
+    "description": "MDMA is a synthetic psychoactive substance with stimulant and hallucinogenic properties. It is regulated as a psychotropic substance under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985."
   },
-  "commercial_quantity": {
-    "value": 10,
-    "unit": "g"
+
+  "legal_information": {
+    "quantity_thresholds": {
+      "small_quantity": {
+        "value": 10,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      },
+      "commercial_quantity": {
+        "value": 500,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      }
+    },
+    "applicable_ndps_sections": [
+      {
+        "section": "8(c)",
+        "title": "Prohibition of Certain Operations",
+        "applicability": "Prohibits unauthorized manufacture, possession, sale, purchase, transport, storage and distribution."
+      },
+      {
+        "section": "22",
+        "title": "Punishment for Contravention in Relation to Psychotropic Substances",
+        "applicability": "Applies to offences involving MDMA."
+      }
+    ]
   },
-  "common_transport_modes": [
-    "Road",
-    "Air",
-    "Courier",
-    "Rail"
-  ],
-  "common_vehicle_types": [
-    "Car",
-    "Motorcycle",
-    "Bus",
-    "Flight",
-    "Train",
-    "Courier Parcel"
-  ],
-  "common_concealment_methods": [
-    "Parcel",
-    "Courier Package",
-    "False Bottom Luggage",
-    "Hidden Vehicle Compartment",
-    "Food Packet",
-    "Cosmetic Container",
-    "Clothing Concealment"
-  ],
-  "major_trafficking_states": [
-    "Kerala",
-    "Karnataka",
-    "Goa",
-    "Maharashtra",
-    "Telangana",
-    "Delhi"
-  ],
-  "common_source_regions": [
-    "Domestic Synthetic Drug Manufacturing Networks",
-    "Interstate Distribution Networks"
-  ],
-  "typical_intelligence_sources": [
-    "NCB Intelligence",
-    "State Police Intelligence",
-    "Cyber Intelligence",
-    "Confidential Informant",
-    "Surveillance"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Chat Messages",
-    "Digital Payment Records",
-    "Courier Documents",
-    "Call Detail Records",
-    "CCTV Footage"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "22"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Department of Revenue - Small and Commercial Quantities",
-    "NCB Annual Reports",
-    "Public NCB and State Police Seizure Reports"
-  ]
+
+  "operational_intelligence": {
+    "transport_modes": [
+      "Road",
+      "Air",
+      "Courier",
+      "Rail"
+    ],
+    "vehicle_types": [
+      "Car",
+      "Motorcycle",
+      "Bus",
+      "Train",
+      "Flight",
+      "Courier Parcel"
+    ],
+    "concealment_methods": [
+      "False Bottom Luggage",
+      "Courier Parcel",
+      "Food Package",
+      "Clothing Concealment",
+      "Hidden Vehicle Compartment"
+    ],
+    "source_regions": [
+      "International Synthetic Drug Networks",
+      "Domestic Clandestine Laboratories"
+    ],
+    "distribution_regions": [
+      "Goa",
+      "Mumbai",
+      "Bengaluru",
+      "Delhi",
+      "Hyderabad"
+    ],
+    "intelligence_inputs": [
+      "NCB Intelligence",
+      "State Police Intelligence",
+      "Confidential Informant",
+      "Cyber Intelligence",
+      "Surveillance"
+    ]
+  },
+
+  "investigation_support": {
+    "evidence_types": [
+      "Tablet or Powder Sample",
+      "Packaging Material",
+      "Digital Devices",
+      "Financial Records",
+      "Call Detail Records",
+      "Fingerprints",
+      "DNA Evidence",
+      "CCTV Footage"
+    ],
+    "investigation_guidelines": [
+      "Secure the scene.",
+      "Photograph all seized material.",
+      "Maintain chain of custody.",
+      "Collect representative samples.",
+      "Record package markings.",
+      "Submit samples for forensic analysis."
+    ],
+    "officer_precautions": [
+      "Wear disposable gloves.",
+      "Use appropriate PPE.",
+      "Avoid direct contact with unknown powders.",
+      "Seal evidence immediately.",
+      "Report accidental exposure."
+    ],
+    "storage_guidelines": [
+      "Store in tamper-evident evidence bags.",
+      "Assign a unique evidence ID.",
+      "Store in a secure evidence room.",
+      "Restrict access to authorized personnel.",
+      "Maintain evidence movement logs."
+    ]
+  },
+
+  "dataset_mapping": {
+    "drug_type": "MDMA",
+    "quantity_field": "Quantity",
+    "quantity_category_field": "Quantity_Category",
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "concealment_method_field": "Concealment_Method",
+    "intelligence_input_field": "Intelligence_Input",
+    "evidence_type_field": "Evidence_Type",
+    "ndps_section_field": "Applicable_NDPS_Sections"
+  },
+
+  "references": {
+    "legal": [
+      "NDPS Act, 1985",
+      "Government of India Notification S.O. 1055(E), 19 October 2001"
+    ],
+    "operational": [
+      "Narcotics Control Bureau (NCB)",
+      "United Nations Office on Drugs and Crime (UNODC)"
+    ],
+    "medical": [
+      "World Health Organization (WHO)",
+      "National Institute on Drug Abuse (NIDA)"
+    ]
+  }
 }

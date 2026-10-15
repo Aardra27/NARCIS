@@ -1,80 +1,147 @@
-{
-  "drug_name": "Opium",
-  "aliases": [
-    "Afeem",
-    "Raw Opium"
-  ],
-  "scientific_name": "Papaver somniferum Latex",
-  "category": "Natural Narcotic Drug",
-  "description": "The coagulated latex obtained from the opium poppy (Papaver somniferum), regulated under the NDPS Act.",
-  "small_quantity": {
-    "value": 25,
-    "unit": "g"
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "drug_information": {
+    "drug_name": "Opium",
+    "scientific_name": "Papaver somniferum Latex",
+    "aliases": [
+      "Afeem",
+      "Raw Opium"
+    ],
+    "category": "Natural Narcotic Drug (Opioid)",
+    "description": "Opium is the coagulated latex obtained from the opium poppy (Papaver somniferum). It is classified as a narcotic drug under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985. Unauthorized cultivation, production, possession, sale, purchase, transport and distribution are prohibited except as permitted by law."
   },
-  "commercial_quantity": {
-    "value": 2.5,
-    "unit": "kg"
+
+  "legal_information": {
+    "quantity_thresholds": {
+      "small_quantity": {
+        "value": 25,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      },
+      "commercial_quantity": {
+        "value": 2500,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      }
+    },
+    "applicable_ndps_sections": [
+      {
+        "section": "8(c)",
+        "title": "Prohibition of Certain Operations",
+        "applicability": "Prohibits unauthorized cultivation, production, possession, sale, purchase, transport, storage and distribution."
+      },
+      {
+        "section": "18",
+        "title": "Punishment for Contravention in Relation to Opium Poppy and Opium",
+        "applicability": "Applies to offences involving opium and opium poppy."
+      }
+    ]
   },
-  "common_transport_modes": [
-    "Road",
-    "Rail",
-    "Bus",
-    "Courier"
-  ],
-  "common_vehicle_types": [
-    "Car",
-    "Motorcycle",
-    "Truck",
-    "Bus",
-    "Train",
-    "Courier Parcel"
-  ],
-  "common_concealment_methods": [
-    "Hidden Vehicle Compartment",
-    "False Bottom Luggage",
-    "Food Container",
-    "Parcel",
-    "Agricultural Produce",
-    "Clothing Concealment"
-  ],
-  "major_trafficking_states": [
-    "Rajasthan",
-    "Madhya Pradesh",
-    "Uttar Pradesh",
-    "Punjab",
-    "Haryana",
-    "Delhi"
-  ],
-  "common_source_regions": [
-    "Licensed Opium Cultivation Areas",
-    "Interstate Distribution Networks"
-  ],
-  "typical_intelligence_sources": [
-    "NCB Intelligence",
-    "State Police Intelligence",
-    "Confidential Informant",
-    "Surveillance",
-    "Local Police Information"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Call Detail Records",
-    "Vehicle Search",
-    "Witness Statement",
-    "Digital Payment Records",
-    "CCTV Footage"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "18"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Department of Revenue - Small and Commercial Quantities",
-    "Central Bureau of Narcotics",
-    "NCB Annual Reports",
-    "Public NCB and State Police Seizure Reports"
-  ]
+
+  "operational_intelligence": {
+    "transport_modes": [
+      "Road",
+      "Rail",
+      "Courier",
+      "Air"
+    ],
+    "vehicle_types": [
+      "Car",
+      "Motorcycle",
+      "Bus",
+      "Truck",
+      "Train",
+      "Courier Parcel"
+    ],
+    "concealment_methods": [
+      "False Bottom Luggage",
+      "Hidden Vehicle Compartment",
+      "Food Package",
+      "Courier Parcel",
+      "Clothing Concealment"
+    ],
+    "source_regions": [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Uttar Pradesh"
+    ],
+    "distribution_regions": [
+      "Delhi",
+      "Punjab",
+      "Haryana",
+      "Rajasthan",
+      "Maharashtra"
+    ],
+    "intelligence_inputs": [
+      "NCB Intelligence",
+      "State Police Intelligence",
+      "Confidential Informant",
+      "Surveillance",
+      "Interstate Coordination"
+    ]
+  },
+
+  "investigation_support": {
+    "evidence_types": [
+      "Seized Drug Sample",
+      "Packaging Material",
+      "Digital Devices",
+      "Financial Records",
+      "Call Detail Records",
+      "Fingerprints",
+      "DNA Evidence",
+      "CCTV Footage"
+    ],
+    "investigation_guidelines": [
+      "Secure the scene before evidence collection.",
+      "Photograph all seized materials.",
+      "Maintain an unbroken chain of custody.",
+      "Collect representative samples for forensic examination.",
+      "Record weight, packaging and identifying marks.",
+      "Document witness statements and seizure memo."
+    ],
+    "officer_precautions": [
+      "Wear disposable gloves.",
+      "Use appropriate PPE.",
+      "Avoid direct skin contact.",
+      "Seal evidence immediately after collection.",
+      "Report accidental exposure."
+    ],
+    "storage_guidelines": [
+      "Store in tamper-evident evidence bags.",
+      "Assign a unique evidence ID.",
+      "Store in a secure evidence room.",
+      "Restrict access to authorized personnel.",
+      "Maintain evidence movement logs."
+    ]
+  },
+
+  "dataset_mapping": {
+    "drug_type": "Opium",
+    "quantity_field": "Quantity",
+    "quantity_category_field": "Quantity_Category",
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "concealment_method_field": "Concealment_Method",
+    "intelligence_input_field": "Intelligence_Input",
+    "evidence_type_field": "Evidence_Type",
+    "ndps_section_field": "Applicable_NDPS_Sections"
+  },
+
+  "references": {
+    "legal": [
+      "NDPS Act, 1985",
+      "Government of India Notification S.O. 1055(E), 19 October 2001"
+    ],
+    "operational": [
+      "Narcotics Control Bureau (NCB)",
+      "United Nations Office on Drugs and Crime (UNODC)"
+    ],
+    "medical": [
+      "World Health Organization (WHO)",
+      "National Institute on Drug Abuse (NIDA)"
+    ]
+  }
 }

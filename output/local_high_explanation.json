@@ -1,0 +1,73 @@
+{
+    "investigation_id": "699b9bde",
+    "actual_priority": "High",
+    "predicted_priority": "High",
+    "probabilities": {
+        "High": 1.0,
+        "Low": 0.0,
+        "Medium": 0.0
+    },
+    "base_value": 0.33327562500000024,
+    "top_factors": [
+        {
+            "feature": "Previous_NDPS_FIRs",
+            "value": "2",
+            "shap_value": 0.22455883382578787,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Quantity_Category",
+            "value": "Commercial",
+            "shap_value": 0.2063696478368463,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Total_Criminal_Cases",
+            "value": "3",
+            "shap_value": 0.09327675210971258,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Quantity",
+            "value": "102.08",
+            "shap_value": 0.09203085552509199,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Previous_Seizure_Link",
+            "value": "Yes",
+            "shap_value": 0.04752970479729389,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Interstate_Travel",
+            "value": "No",
+            "shap_value": -0.02776198067673599,
+            "effect": "decreased support for High"
+        },
+        {
+            "feature": "Applicable_NDPS_Sections",
+            "value": "8(c), 22",
+            "shap_value": 0.022798920982266428,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Drug_Type",
+            "value": "Methamphetamine",
+            "shap_value": 0.01187102898076019,
+            "effect": "increased support for High"
+        },
+        {
+            "feature": "Age",
+            "value": "18",
+            "shap_value": -0.008698744354772706,
+            "effect": "decreased support for High"
+        },
+        {
+            "feature": "Route_Type",
+            "value": "Intrastate",
+            "shap_value": -0.0076584171575803175,
+            "effect": "decreased support for High"
+        }
+    ]
+}

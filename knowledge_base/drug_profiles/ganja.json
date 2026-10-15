@@ -1,75 +1,146 @@
-{
-  "drug_name": "Ganja",
-  "aliases": [
-    "Cannabis",
-    "Marijuana",
-    "Weed"
-  ],
-  "scientific_name": "Cannabis sativa",
-  "category": "Cannabis",
-  "description": "Dried flowering or fruiting tops of the cannabis plant excluding seeds and leaves when not accompanied by the tops.",
-  "small_quantity": {
-    "value": 1,
-    "unit": "kg"
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-30",
+
+  "drug_information": {
+    "drug_name": "Ganja",
+    "scientific_name": "Cannabis (Flowering or Fruiting Tops)",
+    "aliases": [
+      "Marijuana",
+      "Weed",
+      "Grass",
+      "Pot"
+    ],
+    "category": "Cannabis (Narcotic Drug)",
+    "description": "Ganja refers to the flowering or fruiting tops of the cannabis plant, excluding the seeds and leaves when not accompanied by the tops. It is regulated under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985."
   },
-  "commercial_quantity": {
-    "value": 20,
-    "unit": "kg"
+
+  "legal_information": {
+    "quantity_thresholds": {
+      "small_quantity": {
+        "value": 1000,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      },
+      "commercial_quantity": {
+        "value": 20000,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      }
+    },
+    "applicable_ndps_sections": [
+      {
+        "section": "8(c)",
+        "title": "Prohibition of Certain Operations",
+        "applicability": "Prohibits unauthorized cultivation, possession, sale, purchase, transport and distribution."
+      },
+      {
+        "section": "20(b)",
+        "title": "Punishment for Contravention in Relation to Cannabis Plant and Cannabis",
+        "applicability": "Applies to offences involving ganja."
+      }
+    ]
   },
-  "common_transport_modes": [
-    "Road",
-    "Rail",
-    "Private Vehicle",
-    "Bus",
-    "Courier"
-  ],
-  "common_vehicle_types": [
-    "Car",
-    "Motorcycle",
-    "Truck",
-    "Bus",
-    "Train"
-  ],
-  "common_concealment_methods": [
-    "Travel Bag",
-    "Luggage",
-    "Hidden Vehicle Compartment",
-    "Agricultural Produce",
-    "Parcel"
-  ],
-  "major_trafficking_states": [
-    "Odisha",
-    "Andhra Pradesh",
-    "Telangana",
-    "Chhattisgarh",
-    "Maharashtra",
-    "Kerala"
-  ],
-  "common_source_regions": [
-    "Domestic Cultivation Areas"
-  ],
-  "typical_intelligence_sources": [
-    "Confidential Informant",
-    "Police Intelligence",
-    "NCB Intelligence",
-    "Surveillance"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Call Records",
-    "Vehicle Search",
-    "Witness Statement"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "20(b)"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Central Bureau of Narcotics Notifications",
-    "Department of Revenue - Small and Commercial Quantities",
-    "NCB Annual Reports"
-  ]
+
+  "operational_intelligence": {
+    "transport_modes": [
+      "Road",
+      "Rail",
+      "Courier",
+      "Air"
+    ],
+    "vehicle_types": [
+      "Car",
+      "Motorcycle",
+      "Bus",
+      "Truck",
+      "Train",
+      "Courier Parcel"
+    ],
+    "concealment_methods": [
+      "Travel Bag",
+      "False Bottom Luggage",
+      "Food Package",
+      "Hidden Vehicle Compartment",
+      "Courier Parcel"
+    ],
+    "source_regions": [
+      "Odisha",
+      "Andhra Pradesh",
+      "Kerala",
+      "Himachal Pradesh"
+    ],
+    "distribution_regions": [
+      "Delhi",
+      "Mumbai",
+      "Bengaluru",
+      "Chennai",
+      "Kochi"
+    ],
+    "intelligence_inputs": [
+      "State Police Intelligence",
+      "NCB Intelligence",
+      "Confidential Informant",
+      "Surveillance",
+      "Public Tip-off"
+    ]
+  },
+
+  "investigation_support": {
+    "evidence_types": [
+      "Seized Plant Material",
+      "Packaging Material",
+      "Digital Devices",
+      "Financial Records",
+      "Call Detail Records",
+      "Photographs",
+      "CCTV Footage"
+    ],
+    "investigation_guidelines": [
+      "Photograph seized material before handling.",
+      "Weigh and document the seizure accurately.",
+      "Maintain chain of custody.",
+      "Collect representative samples for forensic examination.",
+      "Record package markings and seizure location."
+    ],
+    "officer_precautions": [
+      "Wear gloves.",
+      "Avoid contamination of evidence.",
+      "Seal evidence immediately.",
+      "Label every exhibit correctly."
+    ],
+    "storage_guidelines": [
+      "Store in sealed evidence bags.",
+      "Keep in a secure evidence room.",
+      "Assign unique evidence IDs.",
+      "Maintain evidence movement records."
+    ]
+  },
+
+  "dataset_mapping": {
+    "drug_type": "Ganja",
+    "quantity_field": "Quantity",
+    "quantity_category_field": "Quantity_Category",
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "concealment_method_field": "Concealment_Method",
+    "intelligence_input_field": "Intelligence_Input",
+    "evidence_type_field": "Evidence_Type",
+    "ndps_section_field": "Applicable_NDPS_Sections"
+  },
+
+  "references": {
+    "legal": [
+      "NDPS Act, 1985",
+      "Government of India Notification S.O. 1055(E), 19 October 2001"
+    ],
+    "operational": [
+      "Narcotics Control Bureau (NCB)",
+      "United Nations Office on Drugs and Crime (UNODC)"
+    ],
+    "medical": [
+      "World Health Organization (WHO)",
+      "National Institute on Drug Abuse (NIDA)"
+    ]
+  }
 }

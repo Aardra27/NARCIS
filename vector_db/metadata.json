@@ -1,0 +1,229 @@
+﻿[
+    {
+        "file": "case001.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case001.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Opium & Poppy Straw",
+            "NCB_Zonal_Unit": "Indore Zonal Unit",
+            "Quantity": "10.286 Kg Opium; 7.220 Kg Poppy Straw",
+            "Persons_Arrested": "03",
+            "Source_Type": "Secret Information",
+            "Applicable_NDPS_Sections": "8/15/18/25/27A/29",
+            "Quantity_Category": "Commercial (Opium); Above Small Quantity and Below Commercial Quantity (Poppy Straw)",
+            "Operation_Type": "Seizure and follow-up recovery",
+            "Origin_State": "Madhya Pradesh",
+            "Destination_State": "Punjab",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Interstate",
+            "Interstate_Travel": "Yes"
+        }
+    },
+    {
+        "file": "case002.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case002.json",
+        "case": {
+            "Investigation_Year": "2022",
+            "Agency": "NCB",
+            "Drug_Type": "Heroin",
+            "NCB_Zonal_Unit": "Chandigarh Zonal Unit",
+            "Quantity": "20.326 Kg Heroin",
+            "Persons_Arrested": "20",
+            "Source_Type": "Secret Information",
+            "Applicable_NDPS_Sections": "8(c), 21, 27A, 29",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "International trafficking syndicate investigation and seizure",
+            "Origin_State": "Gujarat",
+            "Destination_State": "Punjab",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Interstate",
+            "Interstate_Travel": "Yes",
+            "_verification": {
+                "verified": true,
+                "verification_method": "Officer verification",
+                "unknown_fields": [
+                    "Vehicle_Type"
+                ]
+            }
+        }
+    },
+    {
+        "file": "case003.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case003.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Ganja",
+            "NCB_Zonal_Unit": "Guwahati Zonal Unit",
+            "Quantity": "2126.66 Kg Ganja",
+            "Persons_Arrested": "02",
+            "Source_Type": "Specific Information",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Truck interception and follow-up investigation",
+            "Origin_State": "Tripura",
+            "Destination_State": "West Bengal",
+            "Vehicle_Type": "Truck",
+            "Transport_Mode": "Road",
+            "Route_Type": "Interstate",
+            "Interstate_Travel": "Yes"
+        }
+    },
+    {
+        "file": "case004.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case004.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Hashish / Charas",
+            "NCB_Zonal_Unit": "Mumbai Zonal Unit",
+            "Quantity": "1.170 Kg Charas",
+            "Persons_Arrested": "02",
+            "Source_Type": "Information",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Shop/godown and house search with follow-up investigation",
+            "Origin_State": "Odisha",
+            "Destination_State": "Maharashtra",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Interstate",
+            "Interstate_Travel": "Yes"
+        }
+    },
+    {
+        "file": "case005.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case005.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Cocaine",
+            "NCB_Zonal_Unit": "Mumbai Zonal Unit",
+            "Quantity": "5 Kg Cocaine",
+            "Persons_Arrested": "02",
+            "Source_Type": "Active Intelligence / Specific Input",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "International trafficking / hotel interception and baggage search",
+            "Origin_State": "Brazil",
+            "Destination_State": "Maharashtra",
+            "Vehicle_Type": "Aircraft",
+            "Transport_Mode": "Air",
+            "Route_Type": "International",
+            "Interstate_Travel": "No"
+        }
+    },
+    {
+        "file": "case006.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case006.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Mephedrone",
+            "NCB_Zonal_Unit": "Mumbai Zonal Unit",
+            "Quantity": "20 Kg Mephedrone",
+            "Persons_Arrested": "06",
+            "Source_Type": "Specific Information",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Syndicate investigation, interception, house search and financial investigation",
+            "Origin_State": "Maharashtra",
+            "Destination_State": "Maharashtra",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Intrastate",
+            "Interstate_Travel": "No"
+        }
+    },
+    {
+        "file": "case007.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case007.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Methamphetamine",
+            "NCB_Zonal_Unit": "Cochin Zonal Unit",
+            "Quantity": "2525.675 Kgs Methamphetamine",
+            "Persons_Arrested": "06",
+            "Source_Type": "Specific Information",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Maritime interception and seizure",
+            "Origin_State": "Pakistan",
+            "Destination_State": "India",
+            "Vehicle_Type": "Vessel",
+            "Transport_Mode": "Sea",
+            "Route_Type": "International",
+            "Interstate_Travel": "No"
+        }
+    },
+    {
+        "file": "case008.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case008.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Pseudoephedrine",
+            "NCB_Zonal_Unit": "Ahmedabad Zonal Unit",
+            "Quantity": "39,60,000 capsules (475.2 kg Pseudoephedrine HCL)",
+            "Persons_Arrested": "02",
+            "Source_Type": "Specific Input",
+            "Applicable_NDPS_Sections": "9A, 25A, 26, 29, 38",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Container inspection, forensic sampling and seizure",
+            "Origin_State": "Gujarat",
+            "Destination_State": "South Sudan",
+            "Vehicle_Type": "Container",
+            "Transport_Mode": "Sea",
+            "Route_Type": "International",
+            "Interstate_Travel": "No"
+        }
+    },
+    {
+        "file": "case009.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case009.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "Alprazolam",
+            "NCB_Zonal_Unit": "Mumbai Zonal Unit",
+            "Quantity": "199.3 kg Alprazolam",
+            "Persons_Arrested": "02",
+            "Source_Type": "Investigation / Follow-up Search",
+            "Applicable_NDPS_Sections": "Unknown",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Clandestine laboratory seizure and multi-state syndicate investigation",
+            "Origin_State": "Maharashtra",
+            "Destination_State": "Telangana",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Interstate",
+            "Interstate_Travel": "Yes"
+        }
+    },
+    {
+        "file": "case010.json",
+        "path": "C:\\Users\\AARDRA\\Downloads\\NARCIS\\knowledge_base\\case_library\\case010.json",
+        "case": {
+            "Investigation_Year": "2023",
+            "Agency": "NCB",
+            "Drug_Type": "MDMA",
+            "NCB_Zonal_Unit": "Chennai Zonal Unit",
+            "Quantity": "310 gram MDMA",
+            "Persons_Arrested": "Unknown",
+            "Source_Type": "Specific Information",
+            "Applicable_NDPS_Sections": "8(c), 22(b)/22(c), 29",
+            "Quantity_Category": "Commercial",
+            "Operation_Type": "Interception and follow-up seizures",
+            "Origin_State": "Tamil Nadu",
+            "Destination_State": "Tamil Nadu",
+            "Vehicle_Type": "Unknown",
+            "Transport_Mode": "Road",
+            "Route_Type": "Intrastate",
+            "Interstate_Travel": "No"
+        }
+    }
+]

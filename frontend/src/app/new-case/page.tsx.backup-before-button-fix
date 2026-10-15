@@ -1,0 +1,498 @@
+﻿"use client";
+
+import { useRouter } from "next/navigation";
+
+import { ChangeEvent, DragEvent, useEffect, useRef, useState } from "react";
+import styles from "./new-case.module.css";
+
+const navigation = [
+  { icon: "▦", label: "Dashboard" },
+  { icon: "＋", label: "New Case", active: true },
+  { icon: "□", label: "Cases" },
+  { icon: "⌘", label: "Intelligence" },
+  { icon: "▤", label: "Reports" },
+  { icon: "◷", label: "Case History" },
+];
+
+function Icon({ type }: { type: string }) {
+  const common = {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+  };
+
+  const paths: Record<string, React.ReactNode> = {
+    upload: (
+      <>
+        <path d="M12 16V4" />
+        <path d="m7 9 5-5 5 5" />
+        <path d="M5 20h14" />
+      </>
+    ),
+    bell: (
+      <>
+        <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
+        <path d="M10 21h4" />
+      </>
+    ),
+    user: (
+      <>
+        <circle cx="12" cy="8" r="3.2" />
+        <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
+      </>
+    ),
+    close: (
+      <>
+        <path d="m6 6 12 12" />
+        <path d="m18 6-12 12" />
+      </>
+    ),
+    info: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 10v6" />
+        <path d="M12 7h.01" />
+      </>
+    ),
+    shield: (
+      <>
+        <path d="M12 3 19 6v5c0 5-3 8-7 10-4-2-7-5-7-10V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </>
+    ),
+  };
+
+  return <svg {...common}>{paths[type] ?? paths.info}</svg>;
+}
+
+export default function NewCasePage() {
+  const router = useRouter();
+  const [entering, setEntering] = useState(true);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      setEntering(false);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  
+  const [isExtracting, setIsExtracting] = useState(false);
+const [dragging, setDragging] = useState(false);
+
+  const handleFile = (file: File | undefined) => {
+    if (!file) return;
+
+    if (file.type !== "application/pdf") {
+      alert("Please select a PDF document.");
+      return;
+    }
+
+    if (file.size > 25 * 1024 * 1024) {
+      alert("Maximum file size is 25 MB.");
+      return;
+    }
+
+    setSelectedFile(file);
+  };
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    handleFile(event.target.files?.[0]);
+  };
+
+  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setDragging(false);
+    handleFile(event.dataTransfer.files?.[0]);
+  };
+
+  const removeFile = () => {
+    setSelectedFile(null);
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  return (
+    <main className={`${styles.page} ${entering ? styles.pageEntering : styles.pageReady}`}>
+
+      {/* =========================================================
+          EXACT DASHBOARD SIDEBAR STRUCTURE
+          ========================================================= */}
+      <aside className={styles.sidebar}>
+
+        <div className={styles.sidebarBrand}>
+          <div className={styles.logoArea}>
+            <img
+              src="/narcis-logo.png"
+              alt="NARCIS"
+              className={styles.logo}
+            />
+            <span>NARCIS</span>
+          </div>
+
+          <p>
+            Narcotics Analysis, Risk Classification
+            <br />
+            and Intelligent Support System
+          </p>
+        </div>
+
+        <nav className={styles.navigation}>
+          {navigation.map((item) => (
+            <button
+              key={item.label}
+              className={`${styles.navItem} ${
+                item.active ? styles.navActive : ""
+              }`}
+              type="button"
+              onClick={() => {
+                if (item.label === "Dashboard") {
+                  router.push("/dashboard");
+                }
+              }}
+            >
+              <span className={styles.navIcon}>{item.icon}</span>
+              <span>{item.label}</span>
+            </button>
+          ))}
+        </nav>
+
+        <div className={styles.sidebarDivider} />
+
+        <nav className={styles.navigation}>
+          <button className={styles.navItem} type="button">
+            <span className={styles.navIcon}>⚙</span>
+            <span>Settings</span>
+          </button>
+
+          <button className={styles.navItem} type="button">
+            <span className={styles.navIcon}>?</span>
+            <span>Help &amp; Support</span>
+          </button>
+        </nav>
+
+        <div className={styles.sidebarOfficer}>
+          <div className={styles.officerAvatar}>
+            <span>♟</span>
+          </div>
+
+          <div>
+            <strong>OFFICER</strong>
+            <small>Authorized User</small>
+          </div>
+        </div>
+
+        <div className={styles.secureSession}>
+          <span className={styles.sessionShield}>♙</span>
+          <span className={styles.sessionDot} />
+          SECURE SESSION
+        </div>
+      </aside>
+
+      {/* =========================================================
+          MAIN CONTENT
+          ========================================================= */}
+      <section className={styles.main}>
+
+        {/* EXACT DASHBOARD HEADER STRUCTURE */}
+        <header className={styles.header}>
+          <div>
+            <h1>NEW CASE</h1>
+            <p>
+              Upload an investigation document to begin the NARCIS analysis workflow
+            </p>
+          </div>
+
+          <div className={styles.headerActions}>
+            <button className={styles.iconButton} type="button">
+              <Icon type="bell" />
+              <span className={styles.notificationBadge}>3</span>
+            </button>
+
+            <button className={styles.iconButton} type="button">
+              ?
+            </button>
+
+            <div className={styles.headerDivider} />
+
+            <div className={styles.userMenu}>
+              <div className={styles.userAvatar}>
+                <Icon type="user" />
+              </div>
+
+              <div>
+                <strong>Officer</strong>
+                <small>
+                  <span />
+                  SECURE SESSION
+                </small>
+              </div>
+
+              <span className={styles.chevron}>⌄</span>
+            </div>
+          </div>
+        </header>
+
+        <div className={styles.breadcrumb}>
+          <span>Dashboard</span>
+          <b>/</b>
+          <strong>New Case</strong>
+          <b>/</b>
+          <span>Upload Document</span>
+        </div>
+
+        {/* =======================================================
+            NEW CASE CONTENT
+            ======================================================= */}
+        <div className={styles.mainGrid}>
+
+          <section className={styles.uploadCard}>
+            <div className={styles.cardHeader}>
+              <h3>UPLOAD INVESTIGATION DOCUMENT</h3>
+            </div>
+
+            <div className={styles.cardIntro}>
+              <p>
+                Upload the investigation document containing the case information.
+                NARCIS will extract relevant case details for officer verification.
+              </p>
+            </div>
+
+            <div
+              className={`${styles.dropZone} ${
+                dragging ? styles.dragging : ""
+              }`}
+              onDragOver={(event) => {
+                event.preventDefault();
+                setDragging(true);
+              }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={handleDrop}
+              onClick={() => fileInputRef.current?.click()}
+            >
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".pdf,application/pdf"
+                onChange={handleInputChange}
+                hidden
+              />
+
+              {!selectedFile ? (
+                <>
+                  <div className={styles.pdfIcon}>
+                    <div className={styles.fileShape}>
+                      <span>PDF</span>
+                    </div>
+
+                    <div className={styles.uploadBadge}>
+                      <Icon type="upload" />
+                    </div>
+                  </div>
+
+                  <h3>DRAG &amp; DROP YOUR PDF HERE</h3>
+
+                  <span className={styles.or}>or</span>
+
+                  <button
+                    type="button"
+                    className={styles.browseButton}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      fileInputRef.current?.click();
+                    }}
+                  >
+                    Browse Files
+                  </button>
+
+                  <div className={styles.fileRules}>
+                    <span>Supported format: PDF</span>
+                    <span>Maximum file size: 25 MB</span>
+                  </div>
+                </>
+              ) : (
+                <div className={styles.selectedFile}>
+                  <div className={styles.selectedPdf}>PDF</div>
+
+                  <div className={styles.fileDetails}>
+                    <strong>{selectedFile.name}</strong>
+
+                    <span>
+                      {(selectedFile.size / (1024 * 1024)).toFixed(1)} MB
+                    </span>
+
+                    <small>Ready for secure processing</small>
+                  </div>
+
+                  <button
+                    type="button"
+                    className={styles.removeFile}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      removeFile();
+                    }}
+                  >
+                    <Icon type="close" />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className={styles.processingInfo}>
+              <div className={styles.infoIcon}>
+                <Icon type="info" />
+              </div>
+
+              <div>
+                <h3>DOCUMENT PROCESSING</h3>
+                <p>
+                  NARCIS will extract case information from the uploaded document.
+                </p>
+                <p>
+                  Extracted fields will be presented to the officer for
+                  verification before analysis.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <aside className={styles.workflowCard}>
+            <div className={styles.cardHeader}>
+              <h3>NARCIS CASE WORKFLOW</h3>
+            </div>
+
+            <div className={styles.workflow}>
+
+              <div className={`${styles.workflowStep} ${styles.current}`}>
+                <div className={styles.stepNumber}>01</div>
+                <div className={styles.stepText}>
+                  <div className={styles.stepTitle}>
+                    <strong>Upload Document</strong>
+                    <span className={styles.currentBadge}>CURRENT</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.workflowLine} />
+
+              <div className={styles.workflowStep}>
+                <div className={styles.stepNumber}>02</div>
+                <div className={styles.stepText}>
+                  <strong>Document Extraction</strong>
+                  <span>
+                    Extract case information from uploaded document
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.workflowLine} />
+
+              <div className={styles.workflowStep}>
+                <div className={styles.stepNumber}>03</div>
+                <div className={styles.stepText}>
+                  <strong>Officer Verification</strong>
+                  <span>
+                    Officer verifies and enriches extracted information
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.workflowLine} />
+
+              <div className={styles.workflowStep}>
+                <div className={styles.stepNumber}>04</div>
+                <div className={styles.stepText}>
+                  <strong>AI Analysis</strong>
+                  <span>
+                    ML analysis + SHAP explainability + RAG intelligence
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.workflowLine} />
+
+              <div className={styles.workflowStep}>
+                <div className={styles.stepNumber}>05</div>
+                <div className={styles.stepText}>
+                  <strong>Decision-Support Report</strong>
+                  <span>
+                    Evidence package and LLM investigation report
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.workflowLine} />
+
+              <div className={styles.workflowStep}>
+                <div className={styles.stepNumber}>06</div>
+                <div className={styles.stepText}>
+                  <strong>Officer Review</strong>
+                  <span>
+                    Final officer review and case disposition
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </aside>
+        </div>
+
+        <section className={styles.securityCard}>
+          <div className={styles.securityIcon}>
+            <Icon type="shield" />
+          </div>
+
+          <div>
+            <h3>SECURE DOCUMENT PROCESSING</h3>
+            <p>
+              Your uploaded investigation documents are processed within the
+              authorized NARCIS investigation environment.
+            </p>
+          </div>
+        </section>
+
+        <footer className={styles.footerActions}>
+          <button type="button" className={styles.cancelButton}>
+            <Icon type="close" />
+            CANCEL
+          </button>
+
+          <button
+            type="button"
+            className={styles.continueButton}
+            disabled={!selectedFile}
+          >
+            CONTINUE TO EXTRACTION
+            <span>→</span>
+          </button>
+        </footer>
+      </section>
+
+      {/* EXACT DASHBOARD FOOTER */}
+      <footer className={styles.footer}>
+        <span>♧</span>
+        <strong>
+          NARCIS - Authorized Investigation Environment
+        </strong>
+        <i />
+        <span>
+          All data is encrypted and access is monitored
+        </span>
+        <i />
+        <span>Version 1.0.0</span>
+      </footer>
+
+    </main>
+  );
+}
+
+

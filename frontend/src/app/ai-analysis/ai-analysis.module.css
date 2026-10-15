@@ -1,0 +1,798 @@
+@import "../case-verification/case-verification.module.css";
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7fa;
+  color: #10264b;
+}
+
+.main {
+  min-height: 100vh;
+  margin-left: 253px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 27px 25px 78px;
+}
+
+.main::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #eef2f6;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #aeb9c7;
+  border-radius: 8px;
+  border: 3px solid #eef2f6;
+}
+
+.verificationHero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 20px 22px;
+  background: #fff;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(18, 43, 73, 0.05);
+}
+
+.verificationHeroLabel {
+  display: block;
+  color: #7a879e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.verificationHero h2 {
+  margin: 6px 0 0;
+  color: #10264b;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.verificationHero p {
+  margin: 8px 0 0;
+  color: #5f7087;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.verificationStatus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 210px;
+  padding: 14px 16px;
+  border: 1px solid #dfe7f3;
+  border-radius: 8px;
+  background: #f6fbff;
+}
+
+.verificationStatusIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1d69d4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.verificationStatus strong,
+.verificationStatus small {
+  display: block;
+}
+
+.verificationStatus strong {
+  color: #145da0;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.verificationStatus small {
+  margin-top: 4px;
+  color: #67809c;
+  font-size: 10px;
+}
+
+.verificationGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: stretch;
+}
+
+.verificationCard {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(18, 43, 73, 0.05);
+  padding: 18px 18px 22px;
+  box-sizing: border-box;
+}
+
+.verificationCardHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+.verificationCardHeader h2 {
+  margin: 7px 0 0;
+  color: #10264b;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+}
+
+.verificationCardHeader p {
+  margin: 8px 0 0;
+  color: #7687a2;
+  font-size: 11px;
+}
+
+.fieldSection {
+  margin-top: 18px;
+  padding-top: 4px;
+}
+
+.fieldSectionTitle {
+  margin-bottom: 12px;
+}
+
+.fieldSectionTitle h3 {
+  margin: 0;
+  color: #10264b;
+  font-size: 10px;
+  letter-spacing: 0.42px;
+}
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field {
+  min-height: 72px;
+  padding: 12px 12px 10px;
+  background: #f8fbff;
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.fieldLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.fieldLabel {
+  color: #7d8ea5;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+}
+
+.fieldInput {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #10264b;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.resultSectionHeader {
+  margin-top: 26px;
+  margin-bottom: 12px;
+  padding-top: 4px;
+}
+
+.resultSectionHeader h3 {
+  margin: 0;
+  color: #10264b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.resultCard {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(18, 43, 73, 0.05);
+  padding: 18px 18px 20px;
+  box-sizing: border-box;
+}
+
+.resultCardMeta {
+  color: #7d8ea5;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.resultMainLabel {
+  margin-top: 12px;
+  color: #67809c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.predictionValue {
+  margin-top: 8px;
+  color: #0e3d70;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.probabilityList,
+.shapGraphList,
+.factorList,
+.historyList,
+.knowledgeGrid {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.probabilityRow,
+.shapRow {
+  display: grid;
+  gap: 8px;
+}
+
+.probabilityRow {
+  grid-template-columns: 140px minmax(0, 1fr) 72px;
+  align-items: center;
+}
+
+.shapRow {
+  gap: 10px;
+}
+
+.probabilityLabel,
+.shapRowHeader span,
+.shapDirectionRow span,
+.factorHeaderRow span,
+.historyHeader span,
+.knowledgeHeader span {
+  color: #5f7087;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.probabilityBarTrack,
+.shapBarTrack {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #edf3fa;
+  border: 1px solid #d8e3f0;
+}
+
+.probabilityBarFill,
+.shapBarPositive,
+.shapBarNegative {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.probabilityBarFill {
+  background: linear-gradient(90deg, #2d73e6 0%, #58a7ff 100%);
+}
+
+.probabilityValue,
+.positiveValue,
+.negativeValue,
+.factorHeaderRow strong,
+.historyHeader strong,
+.knowledgeHeader strong,
+.evidenceStatusRow strong {
+  font-weight: 700;
+}
+
+.positiveValue {
+  color: #16875d;
+}
+
+.negativeValue {
+  color: #be5b47;
+}
+
+.probabilityValue {
+  color: #173f64;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.resultParagraph,
+.resultNoteBlock p,
+.readingGrid p,
+.emptyStateSmall,
+.historyDetails ul,
+.knowledgeList,
+.explanationInterpretation {
+  margin: 8px 0 0;
+  color: #56708d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.resultNoteBlock {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-left: 3px solid #0f67d1;
+  border-radius: 8px;
+  background: #f4f9ff;
+}
+
+.explanationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.explanationFactCard {
+  display: grid;
+  gap: 8px;
+  min-height: 100%;
+  padding: 14px 14px 12px;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  background: #f9fbff;
+}
+
+.explanationInterpretation {
+  margin-top: 4px;
+  color: #4d6480;
+}
+
+.resultNoteBlock strong {
+  color: #0f3d66;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.shapRowHeader,
+.shapDirectionRow,
+.factorHeaderRow,
+.historyHeader,
+.knowledgeHeader,
+.evidenceStatusRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shapRowHeader {
+  color: #163759;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.shapBarPositive {
+  background: linear-gradient(90deg, #1ca76b 0%, #6ce0a4 100%);
+}
+
+.shapBarNegative {
+  background: linear-gradient(90deg, #d26652 0%, #f0a08e 100%);
+}
+
+.shapDirectionRow {
+  color: #5f7087;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.factorRow,
+.historyCard,
+.knowledgeCard {
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  background: #f9fbff;
+  padding: 14px 14px 12px;
+  box-sizing: border-box;
+}
+
+.factorHeaderRow {
+  padding: 4px 0;
+}
+
+.readingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.readingGrid > div {
+  padding: 12px 12px 10px;
+  border: 1px solid #e2eaf3;
+  border-radius: 8px;
+  background: #f5f9ff;
+}
+
+.readingGrid strong {
+  color: #103767;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.historyCard {
+  display: grid;
+  gap: 12px;
+}
+
+.historyHeader {
+  color: #10264b;
+  font-size: 12px;
+}
+
+.historyDetailGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.historyDetailGrid > div {
+  display: grid;
+  gap: 4px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e1e8f0;
+}
+
+.historyDetailGrid label,
+.historyDetails label {
+  color: #7d8ea5;
+  font-size: 8px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.historyDetailGrid span {
+  color: #10264b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.historyDetails ul {
+  padding-left: 16px;
+}
+
+.knowledgeGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.knowledgeCard {
+  display: grid;
+  gap: 8px;
+}
+
+.knowledgeHeader {
+  color: #122c4e;
+  font-size: 12px;
+}
+
+.knowledgeHeader span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #edf5ff;
+  color: #0f67d1;
+  text-transform: capitalize;
+}
+
+.knowledgeList {
+  padding-left: 16px;
+}
+
+.emptyState {
+  color: #67809c;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.emptyStateSmall {
+  font-size: 11px;
+}
+
+.evidenceStatusRow {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #eefaf3;
+  border: 1px solid #d4ebde;
+}
+
+.evidenceStatusLabel {
+  color: #2d5a4a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.evidenceStatusRow strong {
+  color: #146d4d;
+  font-size: 18px;
+}
+
+.workflowActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.secondaryButton,
+.primaryButton {
+  min-height: 43px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  border: 1px solid #d4dce7;
+}
+
+.secondaryButton {
+  background: #fff;
+  color: #334d72;
+}
+
+.secondaryButton:hover {
+  background: #f5f8fc;
+}
+
+.primaryButton {
+  border: 0;
+  background: #145da0;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(20, 93, 160, 0.18);
+}
+
+.primaryButton:hover {
+  background: #104d88;
+}
+
+.workflowCard {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #dfe6ef;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px rgba(18, 43, 73, 0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+  max-height: calc(100vh - 185px);
+  overflow-y: auto;
+}
+
+.workflowHeader {
+  min-height: 66px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e1e6ed;
+}
+
+.workflowHeaderLabel {
+  display: block;
+  color: #7a879e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  margin-right: 10px;
+}
+
+.workflowHeader h2 {
+  margin: 0;
+  color: #10264b;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.workflow {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.workflowStep {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 84px;
+}
+
+.workflowStep::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 42px;
+  bottom: -10px;
+  width: 2px;
+  background: #dce5f0;
+}
+
+.workflowStep:last-child::before {
+  display: none;
+}
+
+.workflowCircle {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border: 1px solid #d4deeb;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #71819a;
+  font-size: 11px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.workflowComplete {
+  background: #0f67d1;
+  border-color: #0f67d1;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(15, 103, 209, 0.22);
+}
+
+.workflowCurrent {
+  background: #0f67d1;
+  border-color: #0f67d1;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(15, 103, 209, 0.22);
+}
+
+.workflowStepBody {
+  min-width: 0;
+  padding: 4px 0 0 14px;
+}
+
+.workflowStepBody h3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.workflowStepBody p {
+  margin: 7px 0 0;
+  color: #71819b;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.workflowBadge {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.workflowCompleteBadge {
+  color: #16875d;
+  background: #e7f7ef;
+}
+
+.workflowCurrentBadge {
+  color: #145da0;
+  background: #e5f0ff;
+}
+
+.imageSectionTitle {
+  margin: 12px 0 0;
+  color: #10264b;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.shapImageWrapper {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #dfe6ef;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.shapImage {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #dfe6ef;
+  background: #fff;
+  object-fit: contain;
+}
+
+.footer {
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: calc(100% - 253px);
+  height: auto;
+  min-height: 52px;
+  margin-left: 253px;
+  padding: 14px 16px;
+  z-index: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-sizing: border-box;
+  background: #071c35;
+  color: #fff;
+  font-size: 10px;
+}
+
+.footer strong {
+  font-size: 11px;
+}
+
+.footer i {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 1100px) {
+  .verificationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    max-height: none;
+  }
+}

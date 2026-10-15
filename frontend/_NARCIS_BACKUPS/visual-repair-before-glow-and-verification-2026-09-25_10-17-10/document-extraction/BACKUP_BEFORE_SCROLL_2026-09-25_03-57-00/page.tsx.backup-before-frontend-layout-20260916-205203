@@ -1,0 +1,473 @@
+﻿"use client";
+
+import { useState } from "react";
+import styles from "./document-extraction.module.css";
+
+export default function DocumentExtractionPage() {
+  const [currentStep] = useState(2);
+
+  const steps = [
+    {
+      number: "01",
+      title: "Upload Document",
+      description: "Upload the investigation document",
+      status: "complete",
+    },
+    {
+      number: "02",
+      title: "Document Extraction",
+      description: "Extract case information from uploaded document",
+      status: "current",
+    },
+    {
+      number: "03",
+      title: "Officer Verification",
+      description: "Officer verifies and enriches extracted information",
+      status: "next",
+    },
+    {
+      number: "04",
+      title: "AI Analysis",
+      description: "ML analysis + SHAP explainability + RAG intelligence",
+      status: "next",
+    },
+    {
+      number: "05",
+      title: "Decision-Support Report",
+      description: "Evidence package and LLM investigation report",
+      status: "next",
+    },
+    {
+      number: "06",
+      title: "Officer Review",
+      description: "Final officer review and case disposition",
+      status: "next",
+    },
+  ];
+
+  const extractedFields = [
+    ["CASE ID", "NARCIS-025"],
+    ["INVESTIGATION YEAR", "2023"],
+    ["AGENCY", "NCB"],
+    ["ZONAL UNIT", "Chandigarh Zonal Unit"],
+    ["DRUG TYPE", "Heroin"],
+    ["QUANTITY", "20.326 Kg Heroin"],
+    ["QUANTITY CATEGORY", "Commercial"],
+    ["PERSONS ARRESTED", "20"],
+    ["SOURCE TYPE", "Secret Information"],
+    [
+      "OPERATION TYPE",
+      "International trafficking syndicate investigation and seizure",
+    ],
+    ["ORIGIN STATE", "Gujarat"],
+    ["DESTINATION STATE", "Punjab"],
+    ["TRANSPORT MODE", "Road"],
+    ["ROUTE TYPE", "Interstate"],
+    ["INTERSTATE TRAVEL", "Yes"],
+    ["APPLICABLE NDPS SECTIONS", "8(c), 21, 27A, 29"],
+    ["VEHICLE TYPE", "Unknown"],
+  ];
+
+  return (
+    <main className={styles.page}>
+      {/* ================= SIDEBAR ================= */}
+
+      <aside className={styles.sidebar}>
+        <div className={styles.sidebarInner}>
+          <div className={styles.brand}>
+            <div className={styles.brandMark}>
+              <span>N</span>
+            </div>
+
+            <div>
+              <div className={styles.brandName}>NARCIS</div>
+              <div className={styles.brandSubtitle}>
+                Narcotics Analysis, Risk Classification
+                <br />
+                and Intelligent Support System
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.sidebarDivider} />
+
+          <nav className={styles.navigation}>
+            <a href="/dashboard" className={styles.navItem}>
+              <span className={styles.navIcon}>▦</span>
+              <span>Dashboard</span>
+            </a>
+
+            <a href="/new-case" className={`${styles.navItem} ${styles.active}`}>
+              <span className={styles.navIcon}>▤</span>
+              <span>New Case</span>
+            </a>
+
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>□</span>
+              <span>Cases</span>
+            </a>
+
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>⌘</span>
+              <span>Intelligence</span>
+            </a>
+
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>▤</span>
+              <span>Reports</span>
+            </a>
+
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>◷</span>
+              <span>Case History</span>
+            </a>
+          </nav>
+
+          <div className={styles.sidebarDivider} />
+
+          <nav className={styles.navigation}>
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>⚙</span>
+              <span>Settings</span>
+            </a>
+
+            <a href="#" className={styles.navItem}>
+              <span className={styles.navIcon}>?</span>
+              <span>Help &amp; Support</span>
+            </a>
+          </nav>
+
+          <div className={styles.officerBlock}>
+            <div className={styles.officerAvatar}>♟</div>
+
+            <div className={styles.officerInfo}>
+              <strong>OFFICER</strong>
+              <span>Authorized User</span>
+            </div>
+          </div>
+
+          <div className={styles.secureSession}>
+            <span className={styles.sessionDot} />
+            <span>SECURE SESSION</span>
+          </div>
+        </div>
+      </aside>
+
+      {/* ================= MAIN CONTENT ================= */}
+
+      <section className={styles.content}>
+        {/* HEADER */}
+
+        <header className={styles.header}>
+          <div>
+            <h1>DOCUMENT EXTRACTION</h1>
+            <p>
+              NARCIS is extracting structured case information from the
+              uploaded investigation document.
+            </p>
+
+            <div className={styles.breadcrumbs}>
+              <span>Dashboard</span>
+              <b>/</b>
+              <span>New Case</span>
+              <b>/</b>
+              <span>Upload Document</span>
+              <b>/</b>
+              <strong>Extraction</strong>
+            </div>
+          </div>
+
+          <div className={styles.headerRight}>
+            <div className={styles.notification}>♧<span>3</span></div>
+            <div className={styles.help}>?</div>
+
+            <div className={styles.headerDivider} />
+
+            <div className={styles.headerOfficerAvatar}>●</div>
+
+            <div className={styles.headerOfficer}>
+              <strong>Officer</strong>
+              <span>
+                <i /> SECURE SESSION
+              </span>
+            </div>
+          </div>
+        </header>
+
+        {/* DOCUMENT STATUS */}
+
+        <section className={styles.documentBanner}>
+          <div className={styles.documentInfo}>
+            <span className={styles.sectionLabel}>CASE DOCUMENT</span>
+
+            <div className={styles.documentRow}>
+              <div className={styles.pdfIcon}>PDF</div>
+
+              <div>
+                <strong>case_report_2023.pdf</strong>
+                <span>PDF Document&nbsp;&nbsp;•&nbsp;&nbsp;4.8 MB</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.extractionStatus}>
+            <div className={styles.statusIcon}>✓</div>
+
+            <div>
+              <strong>EXTRACTION COMPLETE</strong>
+              <span>Extracted just now</span>
+            </div>
+          </div>
+        </section>
+
+        {/* THREE COLUMN AREA */}
+
+        <section className={styles.workspace}>
+          {/* SOURCE DOCUMENT */}
+
+          <div className={styles.sourceCard}>
+            <div className={styles.cardTitle}>SOURCE DOCUMENT</div>
+
+            <div className={styles.pdfToolbar}>
+              <span>▱</span>
+              <span>⌕</span>
+              <span>−</span>
+              <span>+</span>
+
+              <button>Fit ▾</button>
+
+              <span className={styles.pageNumber}>Page 1 / 4</span>
+              <span>↓</span>
+            </div>
+
+            <div className={styles.pdfPreview}>
+              <div className={styles.fakePdf}>
+                <div className={styles.fakePdfHeader}>
+                  <div className={styles.fakeSeal}>✥</div>
+
+                  <div>
+                    <strong>NARCOTICS CONTROL BUREAU</strong>
+                    <strong>INVESTIGATION REPORT</strong>
+                  </div>
+                </div>
+
+                <div className={styles.fakeLine} />
+
+                <p>Case Reference No. &nbsp; NCB/CHZ/2023/1987</p>
+                <p>Date: 14/08/2023</p>
+
+                <h4>1. Case Information</h4>
+
+                <div className={styles.fakeTable}>
+                  <span>Agency</span>
+                  <b>Narcotics Control Bureau (NCB)</b>
+
+                  <span>Zonal Unit</span>
+                  <b>Chandigarh Zonal Unit</b>
+
+                  <span>Investigation Year</span>
+                  <b>2023</b>
+
+                  <span>Case ID</span>
+                  <b>NCB/CHZ/2023/1987</b>
+                </div>
+
+                <h4>2. Drug Details</h4>
+
+                <div className={styles.fakeTable}>
+                  <span>Drug Type</span>
+                  <b>Heroin (Diacetylmorphine)</b>
+
+                  <span>Quantity Seized</span>
+                  <b>20.326 Kg</b>
+
+                  <span>Quantity Category</span>
+                  <b>Commercial Quantity</b>
+                </div>
+
+                <h4>3. Investigation Details</h4>
+
+                <div className={styles.fakeTable}>
+                  <span>Source Type</span>
+                  <b>Secret Information</b>
+
+                  <span>Operation Type</span>
+                  <b>International trafficking syndicate investigation</b>
+                </div>
+
+                <h4>4. Persons Arrested</h4>
+                <p>Total Arrested: 20</p>
+              </div>
+            </div>
+          </div>
+
+          {/* EXTRACTED INFORMATION */}
+
+          <div className={styles.extractedCard}>
+            <div className={styles.extractedHeader}>
+              <div>
+                <div className={styles.cardTitle}>EXTRACTED CASE INFORMATION</div>
+                <p>
+                  Information automatically extracted from the uploaded
+                  document
+                </p>
+              </div>
+
+              <div className={styles.fieldBadge}>✓ 18 Fields Extracted</div>
+            </div>
+
+            <div className={styles.fieldsArea}>
+              <h3>CASE INFORMATION</h3>
+
+              <div className={styles.fieldGrid}>
+                {extractedFields.slice(0, 4).map(([label, value]) => (
+                  <div className={styles.field} key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                    <small>● Extracted</small>
+                  </div>
+                ))}
+              </div>
+
+              <h3>DRUG INFORMATION</h3>
+
+              <div className={styles.fieldGrid}>
+                {extractedFields.slice(4, 7).map(([label, value]) => (
+                  <div className={styles.field} key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                    <small>● Extracted</small>
+                  </div>
+                ))}
+              </div>
+
+              <h3>INVESTIGATION INFORMATION</h3>
+
+              <div className={styles.fieldGrid}>
+                {extractedFields.slice(7, 10).map(([label, value]) => (
+                  <div className={styles.field} key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                    <small>● Extracted</small>
+                  </div>
+                ))}
+              </div>
+
+              <h3>ROUTE INFORMATION</h3>
+
+              <div className={styles.fieldGrid}>
+                {extractedFields.slice(10, 15).map(([label, value]) => (
+                  <div className={styles.field} key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                    <small>● Extracted</small>
+                  </div>
+                ))}
+              </div>
+
+              <h3>LEGAL INFORMATION</h3>
+
+              <div className={styles.fieldGrid}>
+                {extractedFields.slice(15).map(([label, value]) => (
+                  <div className={styles.field} key={label}>
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                    <small>● Extracted</small>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className={styles.verificationNotice}>
+              <div className={styles.infoCircle}>i</div>
+
+              <div>
+                <strong>OFFICER VERIFICATION REQUIRED</strong>
+                <p>
+                  The information above was extracted from the uploaded
+                  document. The officer will review, correct, and enrich these
+                  fields before NARCIS performs AI analysis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* WORKFLOW */}
+
+          <aside className={styles.workflowCard}>
+            <div className={styles.workflowTitle}>NARCIS CASE WORKFLOW</div>
+
+            <div className={styles.workflow}>
+              {steps.map((step, index) => (
+                <div className={styles.workflowStep} key={step.number}>
+                  <div
+                    className={`${styles.stepCircle} ${
+                      step.status === "current"
+                        ? styles.stepCurrent
+                        : step.status === "complete"
+                        ? styles.stepComplete
+                        : ""
+                    }`}
+                  >
+                    {step.status === "complete" ? "✓" : step.number}
+                  </div>
+
+                  {index < steps.length - 1 && (
+                    <div className={styles.stepLine} />
+                  )}
+
+                  <div className={styles.stepContent}>
+                    <div className={styles.stepHeading}>
+                      <strong>{step.title}</strong>
+
+                      {step.status === "current" && (
+                        <span className={styles.currentBadge}>CURRENT</span>
+                      )}
+
+                      {step.status === "next" && index === 2 && (
+                        <span className={styles.nextBadge}>NEXT</span>
+                      )}
+                    </div>
+
+                    <p>{step.description}</p>
+
+                    {step.status === "complete" && (
+                      <span className={styles.completeText}>✓ COMPLETE</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+        </section>
+
+        {/* BOTTOM ACTIONS */}
+
+        <div className={styles.bottomBar}>
+          <button className={styles.backButton} onClick={() => history.back()}>
+            ←&nbsp;&nbsp; BACK
+          </button>
+
+          <button className={styles.continueButton}>
+            CONTINUE TO VERIFICATION&nbsp;&nbsp; →
+          </button>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+
+      <footer className={styles.footer}>
+        <span>◈</span>
+        <strong>NARCIS - Authorized Investigation Environment</strong>
+
+        <i />
+
+        <span>All data is encrypted and access is monitored</span>
+
+        <i />
+
+        <span>Version 1.0.0</span>
+      </footer>
+    </main>
+  );
+}

@@ -1,0 +1,115 @@
+﻿{
+  "version": "2.0",
+  "last_updated": "2026-07-31",
+
+  "sop_name": "Chain of Custody under the NDPS Act",
+
+  "objective": "To maintain the integrity, authenticity and traceability of seized narcotic drugs, psychotropic substances and associated evidence from the time of seizure until final disposal or production before the Court.",
+
+  "legal_basis": [
+    {
+      "section": "52A",
+      "purpose": "Preparation of inventory, photography, sampling and certification of seized narcotic drugs and psychotropic substances."
+    },
+    {
+      "section": "55",
+      "purpose": "Safe custody of seized narcotic drugs, psychotropic substances and related articles."
+    },
+    {
+      "section": "57",
+      "purpose": "Reporting of arrest and seizure to superior officers."
+    }
+  ],
+
+  "procedure": [
+    {
+      "step": 1,
+      "title": "Assign Evidence Identification",
+      "description": "Assign a unique identification number to every seized exhibit immediately after seizure."
+    },
+    {
+      "step": 2,
+      "title": "Document Evidence",
+      "description": "Record description, quantity, packaging, identifying marks, seizure location, date, time and seizing officer."
+    },
+    {
+      "step": 3,
+      "title": "Seal Evidence",
+      "description": "Seal every exhibit using tamper-evident seals and record the seal impression in official documentation."
+    },
+    {
+      "step": 4,
+      "title": "Prepare Inventory",
+      "description": "Prepare inventory and photographic documentation in accordance with Section 52A of the NDPS Act."
+    },
+    {
+      "step": 5,
+      "title": "Transfer to Safe Custody",
+      "description": "Deposit seized material in the designated malkhana or authorized storage facility without unnecessary delay."
+    },
+    {
+      "step": 6,
+      "title": "Record Every Transfer",
+      "description": "Document every transfer of custody including officer names, designation, date, time, purpose and signatures."
+    },
+    {
+      "step": 7,
+      "title": "Forward Samples",
+      "description": "Forward representative samples to an authorized forensic laboratory with proper forwarding documents and seal verification."
+    },
+    {
+      "step": 8,
+      "title": "Produce Before Court",
+      "description": "Produce evidence before the competent Court whenever required while maintaining complete custody records."
+    },
+    {
+      "step": 9,
+      "title": "Final Disposal",
+      "description": "Dispose of seized narcotic drugs and psychotropic substances in accordance with judicial orders and applicable NDPS Rules."
+    }
+  ],
+
+  "chain_of_custody_record": [
+    "Evidence Identification Number",
+    "Case Number",
+    "Description of Evidence",
+    "Quantity",
+    "Packaging Details",
+    "Seal Number",
+    "Date and Time of Seizure",
+    "Seizing Officer",
+    "Transfer History",
+    "Receiving Officer",
+    "Storage Location",
+    "Forensic Laboratory Reference",
+    "Court Production Details",
+    "Final Disposal Details"
+  ],
+
+  "required_documents": [
+    "Seizure Memo",
+    "Evidence Inventory",
+    "Chain of Custody Form",
+    "Sample Seal Impression",
+    "Forwarding Letter to Forensic Laboratory",
+    "Forensic Acknowledgement Receipt",
+    "Court Submission Record",
+    "Evidence Disposal Certificate"
+  ],
+
+  "officer_responsibilities": [
+    "Maintain continuous custody documentation.",
+    "Prevent unauthorized access to evidence.",
+    "Verify seal integrity during every transfer.",
+    "Immediately report damaged or broken seals.",
+    "Ensure evidence remains secure until final disposal."
+  ],
+
+  "references": [
+    "Narcotic Drugs and Psychotropic Substances Act, 1985",
+    "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+    "Narcotics Control Bureau Standing Orders",
+    "Narcotics Control Bureau Training Module",
+    "Directorate of Forensic Science Services Guidelines"
+  ]
+}

@@ -42,14 +42,69 @@ GENDERS = [
 ]
 
 
+def get_drug_name(drug):
+    return drug["drug_name"]
+
+
+def get_quantity_thresholds(drug):
+    small = drug["small_quantity"]["value"]
+    commercial = drug["commercial_quantity"]["value"]
+
+    return small, commercial
+
+
+def get_intelligence_sources(drug):
+    sources = drug.get(
+        "typical_intelligence_sources",
+        []
+    )
+
+    if not sources:
+        sources = ["Confidential Information"]
+
+    return sources
+
+
+def get_concealment_methods(drug):
+    methods = drug.get(
+        "common_concealment_methods",
+        []
+    )
+
+    if not methods:
+        methods = ["Unknown"]
+
+    return methods
+
+
+def get_ndps_sections(drug):
+    sections = drug.get(
+        "applicable_ndps_sections",
+        []
+    )
+
+    if not sections:
+        sections = ["Unknown"]
+
+    return sections
+
+
 def random_quantity(drug):
     """
-    Generate quantities with more realistic distribution.
-    Small and Intermediate cases are more common than Commercial.
+    Generate a research-informed synthetic quantity.
+
+    For Pseudoephedrine, quantity thresholds are legally not
+    applicable, so a synthetic seized quantity is generated
+    independently.
     """
 
-    commercial = drug["commercial_quantity"]["value"]
-    small = drug["small_quantity"]["value"]
+    if get_drug_name(drug) == "Pseudoephedrine":
+        return round(
+            random.uniform(1000, 100000),
+            2
+        )
+
+    small, commercial = get_quantity_thresholds(drug)
 
     category = random.choices(
         population=["Small", "Intermediate", "Commercial"],
@@ -58,13 +113,25 @@ def random_quantity(drug):
     )[0]
 
     if category == "Small":
-        quantity = random.uniform(0.2, small)
+        quantity = random.uniform(
+            max(0.2, small * 0.05),
+            small
+        )
 
     elif category == "Intermediate":
-        quantity = random.uniform(
-            small + 0.1,
-            commercial - 0.1
-        )
+        lower = small + max(0.1, small * 0.01)
+        upper = commercial - max(0.1, commercial * 0.01)
+
+        if lower >= upper:
+            quantity = random.uniform(
+                small,
+                commercial
+            )
+        else:
+            quantity = random.uniform(
+                lower,
+                upper
+            )
 
     else:
         quantity = random.uniform(
@@ -77,8 +144,10 @@ def random_quantity(drug):
 
 def quantity_category(drug, quantity):
 
-    small = drug["small_quantity"]["value"]
-    commercial = drug["commercial_quantity"]["value"]
+    if get_drug_name(drug) == "Pseudoephedrine":
+        return "Not Applicable"
+
+    small, commercial = get_quantity_thresholds(drug)
 
     if quantity <= small:
         return "Small"
@@ -91,7 +160,9 @@ def quantity_category(drug, quantity):
 
 def generate_record():
 
-    drug = random.choice(list(drugs.values()))
+    drug = random.choice(
+        list(drugs.values())
+    )
 
     origin_state = random_state()
     destination_state = random_state()
@@ -104,11 +175,18 @@ def generate_record():
 
     route = random_route_type()
 
-    interstate = "Yes" if interstate_travel(route) else "No"
+    interstate = (
+        "Yes"
+        if interstate_travel(route)
+        else "No"
+    )
 
     quantity = random_quantity(drug)
 
-    qty_category = quantity_category(drug, quantity)
+    qty_category = quantity_category(
+        drug,
+        quantity
+    )
 
     previous_ndps = random.choices(
         population=[0, 1, 2, 3],
@@ -116,22 +194,30 @@ def generate_record():
         k=1
     )[0]
 
-    criminal_cases = previous_ndps + random.choices(
-        population=[0, 1, 2, 3, 4],
-        weights=[35, 30, 20, 10, 5],
-        k=1
-    )[0]
+    criminal_cases = (
+        previous_ndps
+        + random.choices(
+            population=[0, 1, 2, 3, 4],
+            weights=[35, 30, 20, 10, 5],
+            k=1
+        )[0]
+    )
 
-    seizure_link = random.choice(["Yes", "No"])
+    seizure_link = random.choice(
+        ["Yes", "No"]
+    )
 
-    sources = drug["typical_intelligence_sources"]
+    sources = get_intelligence_sources(
+        drug
+    )
 
     intelligence = random.choices(
         population=["No Intelligence"] + sources,
-        weights=[50] + [50 / len(sources)] * len(sources),
+        weights=[50] + [
+            50 / len(sources)
+        ] * len(sources),
         k=1
     )[0]
-
 
     priority = calculate_priority(
         qty_category,
@@ -139,111 +225,145 @@ def generate_record():
         criminal_cases,
         seizure_link,
         interstate,
-        intelligence,
-
+        intelligence
     )
 
     return {
 
-        "Investigation_ID": str(uuid.uuid4())[:8],
+        "Investigation_ID":
+            str(uuid.uuid4())[:8],
 
-        "Investigation_Year": random.randint(
-            2020,
-            datetime.now().year
-        ),
+        "Investigation_Year":
+            random.randint(
+                2020,
+                datetime.now().year
+            ),
 
-        "State": destination_state,
+        "Origin_State":
+            origin_state,
 
-        "Origin_City": origin_city,
+        "Destination_State":
+            destination_state,
 
-        "Destination_City": destination_city,
+        "Origin_City":
+            origin_city,
 
-        "Agency": random_agency(),
+        "Destination_City":
+            destination_city,
 
-        "Investigation_Status": random.choice(
-            INVESTIGATION_STATUS
-        ),
+        "Agency":
+            random_agency(),
 
-        "Source_Type": random.choice(
-            SOURCE_TYPES
-        ),
+        "Investigation_Status":
+            random.choice(
+                INVESTIGATION_STATUS
+            ),
 
-        "Suspect_ID": f"SUS-{random.randint(10000,99999)}",
+        "Source_Type":
+            random.choice(
+                SOURCE_TYPES
+            ),
 
-        "Age": random.choices(
-            population=list(range(18, 71)),
-            weights=[
-                2 if age <= 22 else
-                4 if age <= 30 else
-                5 if age <= 40 else
-                3 if age <= 50 else
-                2
-                for age in range(18, 71)
-            ],
-            k=1
-        )[0],
+        "Suspect_ID":
+            f"SUS-{random.randint(10000, 99999)}",
 
-        "Gender": random.choice(GENDERS),
+        "Age":
+            random.choices(
+                population=list(
+                    range(18, 71)
+                ),
+                weights=[
+                    2 if age <= 22 else
+                    4 if age <= 30 else
+                    5 if age <= 40 else
+                    3 if age <= 50 else
+                    2
+                    for age in range(18, 71)
+                ],
+                k=1
+            )[0],
 
-        "Occupation": random_occupation(),
+        "Gender":
+            random.choice(GENDERS),
 
-        "Network_ID": f"NET-{random.randint(100,999)}",
+        "Occupation":
+            random_occupation(),
 
-        "Known_Associate_Count": random.randint(0,10),
+        "Network_ID":
+            f"NET-{random.randint(100, 999)}",
 
-        "Previous_NDPS_FIRs": previous_ndps,
+        "Known_Associate_Count":
+            random.randint(0, 10),
 
-        "Total_Criminal_Cases": criminal_cases,
+        "Previous_NDPS_FIRs":
+            previous_ndps,
 
-        "Previous_Seizure_Link": seizure_link,
+        "Total_Criminal_Cases":
+            criminal_cases,
 
-        "Transport_Mode": transport_mode,
+        "Previous_Seizure_Link":
+            seizure_link,
 
-        "Vehicle_Type": vehicle,
+        "Transport_Mode":
+            transport_mode,
 
-        "Route_Type": route,
+        "Vehicle_Type":
+            vehicle,
 
-        "Interstate_Travel": interstate,
+        "Route_Type":
+            route,
 
-        "Travel_Frequency": random.choices(
-            population=[
-                "Rare",
-                "Occasional",
-                "Frequent"
-            ],
-            weights=[
-                35,
-                50,
-                15
-            ],
-            k=1
-        )[0],
+        "Interstate_Travel":
+            interstate,
 
-        "Drug_Type": drug["drug_name"],
+        "Travel_Frequency":
+            random.choices(
+                population=[
+                    "Rare",
+                    "Occasional",
+                    "Frequent"
+                ],
+                weights=[
+                    35,
+                    50,
+                    15
+                ],
+                k=1
+            )[0],
 
-        "Quantity": quantity,
+        "Drug_Type":
+            get_drug_name(drug),
 
-        "Quantity_Category": qty_category,
+        "Quantity":
+            quantity,
 
-        "Concealment_Method": random.choice(
-            drug["common_concealment_methods"]
-        ),
+        "Quantity_Category":
+            qty_category,
 
-        "Intelligence_Input": intelligence,
+        "Concealment_Method":
+            random.choice(
+                get_concealment_methods(
+                    drug
+                )
+            ),
 
-        "Evidence_Type": ", ".join(
-            random_evidence()
-        ),
+        "Intelligence_Input":
+            intelligence,
 
+        "Evidence_Type":
+            ", ".join(
+                random_evidence()
+            ),
 
-        "Applicable_NDPS_Sections": ", ".join(
-            drug["applicable_ndps_sections"]
-        ),
+        "Applicable_NDPS_Sections":
+            ", ".join(
+                get_ndps_sections(drug)
+            ),
 
-        "Investigation_Priority": priority
+        "Investigation_Priority":
+            priority
     }
 
 
 if __name__ == "__main__":
-
     print(generate_record())

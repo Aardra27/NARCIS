@@ -1,81 +1,145 @@
-{
-  "drug_name": "Cocaine",
-  "aliases": [
-    "Coke",
-    "Snow",
-    "Blow"
-  ],
-  "scientific_name": "Benzoylmethylecgonine",
-  "category": "Manufactured Narcotic Drug",
-  "description": "A powerful stimulant narcotic drug derived from coca leaves and regulated under the NDPS Act.",
-  "small_quantity": {
-    "value": 2,
-    "unit": "g"
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-30",
+
+  "drug_information": {
+    "drug_name": "Cocaine",
+    "scientific_name": "Benzoylmethylecgonine",
+    "aliases": [
+      "Coke",
+      "Snow",
+      "Blow",
+      "Crack Cocaine"
+    ],
+    "category": "Manufactured Narcotic Drug (Stimulant)",
+    "description": "Cocaine is a powerful stimulant derived from coca leaves. It is classified as a manufactured narcotic drug under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985. Unauthorized production, possession, sale, purchase, transport, storage and distribution are prohibited except where permitted for medical or scientific purposes."
   },
-  "commercial_quantity": {
-    "value": 100,
-    "unit": "g"
+
+  "legal_information": {
+    "quantity_thresholds": {
+      "small_quantity": {
+        "value": 2,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      },
+      "commercial_quantity": {
+        "value": 100,
+        "unit": "g",
+        "source": "Government of India Notification S.O. 1055(E), 19 October 2001"
+      }
+    },
+    "applicable_ndps_sections": [
+      {
+        "section": "8(c)",
+        "title": "Prohibition of Certain Operations",
+        "applicability": "Prohibits unauthorized production, possession, sale, purchase, transport, storage and distribution of narcotic drugs."
+      },
+      {
+        "section": "21",
+        "title": "Punishment for Contravention in Relation to Manufactured Drugs",
+        "applicability": "Applies to offences involving cocaine."
+      }
+    ]
   },
-  "common_transport_modes": [
-    "Air",
-    "Road",
-    "Courier",
-    "Rail"
-  ],
-  "common_vehicle_types": [
-    "Flight",
-    "Car",
-    "Motorcycle",
-    "Bus",
-    "Train",
-    "Courier Parcel"
-  ],
-  "common_concealment_methods": [
-    "False Bottom Luggage",
-    "Cosmetic Container",
-    "Courier Parcel",
-    "Clothing Concealment",
-    "Food Packet",
-    "Hidden Vehicle Compartment"
-  ],
-  "major_trafficking_states": [
-    "Delhi",
-    "Maharashtra",
-    "Goa",
-    "Karnataka",
-    "Kerala",
-    "Gujarat"
-  ],
-  "common_source_regions": [
-    "International Air Passenger Route",
-    "International Courier Network",
-    "Interstate Distribution Networks"
-  ],
-  "typical_intelligence_sources": [
-    "NCB Intelligence",
-    "Customs Intelligence",
-    "Airport Intelligence Unit",
-    "State Police Intelligence",
-    "Confidential Informant"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Passport",
-    "Flight Ticket",
-    "Digital Payment Records",
-    "Call Detail Records",
-    "CCTV Footage"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "21"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Department of Revenue - Small and Commercial Quantities",
-    "NCB Annual Reports",
-    "Public NCB, DRI and State Police Seizure Reports"
-  ]
+
+  "operational_intelligence": {
+    "transport_modes": [
+      "Air",
+      "Road",
+      "Courier",
+      "Sea"
+    ],
+    "vehicle_types": [
+      "Flight",
+      "Car",
+      "Truck",
+      "Courier Parcel",
+      "Container Ship"
+    ],
+    "concealment_methods": [
+      "False Bottom Luggage",
+      "Courier Parcel",
+      "Hidden Vehicle Compartment",
+      "Cosmetic Container",
+      "Food Package"
+    ],
+    "source_regions": [
+      "South America"
+    ],
+    "distribution_regions": [
+      "Delhi",
+      "Mumbai",
+      "Goa",
+      "Bengaluru"
+    ],
+    "intelligence_inputs": [
+      "NCB Intelligence",
+      "Airport Intelligence",
+      "Customs Intelligence",
+      "Confidential Informant",
+      "Surveillance"
+    ]
+  },
+
+  "investigation_support": {
+    "evidence_types": [
+      "Seized Drug Sample",
+      "Packaging Material",
+      "Digital Devices",
+      "Financial Records",
+      "Call Detail Records",
+      "Fingerprints",
+      "DNA Evidence",
+      "CCTV Footage"
+    ],
+    "investigation_guidelines": [
+      "Secure the scene and prevent contamination.",
+      "Photograph and document all seized materials.",
+      "Maintain an unbroken chain of custody.",
+      "Collect representative samples.",
+      "Record package markings.",
+      "Send samples for forensic examination."
+    ],
+    "officer_precautions": [
+      "Wear disposable gloves.",
+      "Use appropriate PPE.",
+      "Avoid inhalation and direct skin contact.",
+      "Seal evidence immediately after collection.",
+      "Report accidental exposure."
+    ],
+    "storage_guidelines": [
+      "Store in tamper-evident evidence bags.",
+      "Assign a unique evidence ID.",
+      "Keep in a secure evidence room.",
+      "Restrict access to authorized personnel.",
+      "Maintain evidence movement logs."
+    ]
+  },
+
+  "dataset_mapping": {
+    "drug_type": "Cocaine",
+    "quantity_field": "Quantity",
+    "quantity_category_field": "Quantity_Category",
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "concealment_method_field": "Concealment_Method",
+    "intelligence_input_field": "Intelligence_Input",
+    "evidence_type_field": "Evidence_Type",
+    "ndps_section_field": "Applicable_NDPS_Sections"
+  },
+
+  "references": {
+    "legal": [
+      "NDPS Act, 1985",
+      "Government of India Notification S.O. 1055(E), 19 October 2001"
+    ],
+    "operational": [
+      "Narcotics Control Bureau (NCB)",
+      "United Nations Office on Drugs and Crime (UNODC)"
+    ],
+    "medical": [
+      "World Health Organization (WHO)",
+      "National Institute on Drug Abuse (NIDA)"
+    ]
+  }
 }

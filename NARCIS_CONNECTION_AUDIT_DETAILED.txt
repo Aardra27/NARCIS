@@ -1,0 +1,604 @@
+﻿NARCIS DETAILED CONNECTION AUDIT
+===============================================================================
+Generated : 09/27/2026 20:56:43
+Root      : C:\Users\AARDRA\Downloads\NARCIS
+Frontend  : C:\Users\AARDRA\Downloads\NARCIS\frontend
+Backend   : C:\Users\AARDRA\Downloads\NARCIS\backend
+
+===============================================================================
+1. LIVE FRONTEND WORKFLOW PAGES
+===============================================================================
+[FOUND]     /login
+            frontend\src\app\login\page.tsx
+[FOUND]     /dashboard
+            frontend\src\app\dashboard\page.tsx
+[FOUND]     /new-case
+            frontend\src\app\new-case\page.tsx
+[FOUND]     /document-extraction
+            frontend\src\app\document-extraction\page.tsx
+[FOUND]     /case-verification
+            frontend\src\app\case-verification\page.tsx
+[NOT FOUND] /ai-analysis
+[NOT FOUND] /risk-shap
+[NOT FOUND] /historical-intelligence
+[NOT FOUND] /legal-sop
+[NOT FOUND] /decision-support
+[NOT FOUND] /reports
+[NOT FOUND] /officer-review
+[NOT FOUND] /case-history
+
+===============================================================================
+2. FRONTEND -> BACKEND API CONNECTIONS
+===============================================================================
+
+FILE: frontend\src\app\dashboard\page.tsx
+   API -> ${API_BASE}/api/dashboard/stats
+   API -> ${API_BASE}/api/dashboard/recent-cases
+   API -> ${API_BASE}/api/dashboard/activity
+   API -> ${API_BASE}/api/dashboard/analysis
+   API -> ${API_BASE}/api/dashboard/analysis
+
+FILE: frontend\src\app\login\page.tsx
+   API -> http://127.0.0.1:8000/api/auth/login
+
+FILE: frontend\src\app\new-case\page.tsx
+   API -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx
+   API -> http://127.0.0.1:8000/api/cases/extract
+
+FILE: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   API -> http://127.0.0.1:8000/api/cases/extract
+
+===============================================================================
+3. FRONTEND PAGE NAVIGATION
+===============================================================================
+
+FILE: frontend\src\app\page.tsx
+   NAV -> /login
+
+FILE: frontend\src\app\case-verification\page.tsx
+   NAV -> /ai-analysis
+   NAV -> /dashboard
+   NAV -> /new-case
+   NAV -> /document-extraction
+
+FILE: frontend\src\app\case-verification\BACKUP_BEFORE_DOCUMENT_SHELL_REBUILD_2026-09-25_04-45-17\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\BACKUP_BEFORE_EXACT_DOCUMENT_SIDEBAR_2026-09-25_14-26-58\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\BACKUP_BEFORE_LEFT_PANEL_FIX_2026-09-25_12-12-45\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\BACKUP_BEFORE_RESTORE_2026-09-27_12-28-06\page.tsx
+   NAV -> /ai-analysis
+   NAV -> /dashboard
+   NAV -> /new-case
+   NAV -> /document-extraction
+
+FILE: frontend\src\app\case-verification\BEFORE_RESTORE_2026-09-27_12-24-49\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\BEFORE_VERIFICATION_SHELL_FIX_2026-09-25_05-01-08\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\BROKEN_VERSION_BEFORE_RESTORE_2026-09-25_04-51-21\page.tsx
+   NAV -> /ai-analysis
+   NAV -> /dashboard
+   NAV -> /new-case
+   NAV -> /document-extraction
+
+FILE: frontend\src\app\case-verification\CASE_VERIFICATION_BEFORE_SHELL_RESTORE_2026-09-25_04-57-02\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\case-verification\EMERGENCY_BACKUP_2026-09-25_04-55-03\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_2026-09-25_03-57-00\backup-before-scroll-sidebar-fix-20260925-035222\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction\BACKUP_BEFORE_SCROLL_FIX_2026-09-25_04-03-49\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction_BACKUP_FINAL_SCROLL_2026-09-25_04-09-52\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction_BACKUP_PAGE_SCROLL_2026-09-25_04-08-51\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\document-extraction_BACKUP_WHOLEPAGE_2026-09-25_04-11-59\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\login\page.tsx
+   NAV -> /dashboard
+
+FILE: frontend\src\app\new-case\page.tsx
+   NAV -> /document-extraction
+   NAV -> /dashboard
+
+FILE: frontend\src\app\new-case\backup-before-document-extraction-fix-20260925-035222\page.tsx
+   NAV -> /document-extraction
+   NAV -> /dashboard
+
+FILE: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\case-verification\page.tsx
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\document-extraction\page.tsx
+   NAV -> /new-case
+   NAV -> /case-verification
+   NAV -> /dashboard
+   NAV -> /new-case
+
+FILE: frontend\src\app\UI_BACKUP_BEFORE_FINAL_LAYOUT_FIX_2026-09-25_10-02-38\new-case\page.tsx
+   NAV -> /document-extraction
+   NAV -> /dashboard
+
+===============================================================================
+4. BACKEND API ROUTES
+===============================================================================
+backend\main.py
+   ROUTE -> /
+backend\main.py
+   ROUTE -> /api/health
+backend\api\auth.py
+   ROUTE -> /login
+backend\api\cases.py
+   ROUTE -> /extract
+backend\api\cases.py
+   ROUTE -> /document/{document_id}
+backend\api\dashboard.py
+   ROUTE -> /stats
+backend\api\dashboard.py
+   ROUTE -> /analysis
+backend\api\dashboard.py
+   ROUTE -> /recent-cases
+backend\api\dashboard.py
+   ROUTE -> /activity
+
+===============================================================================
+5. FASTAPI ROUTER REGISTRATION
+===============================================================================
+main.py imports:
+   from fastapi import FastAPI
+   from fastapi.middleware.cors import CORSMiddleware
+   from backend.database.database import Base, engine
+   from backend.database import models
+   from backend.api.auth import router as auth_router
+   from backend.api.dashboard import router as dashboard_router
+   from backend.api.cases import router as cases_router
+
+Router registration:
+   app.include_router(auth_router)
+   app.include_router(dashboard_router)
+   app.include_router(cases_router)
+
+===============================================================================
+6. CASE EXTRACTION BACKEND CHAIN
+===============================================================================
+FILE: backend\api\cases.py
+
+Imports:
+   from pathlib import Path
+   import sys
+   import uuid
+   from fastapi import APIRouter, File, HTTPException, UploadFile
+   from extractor import extract_text
+   from mapper import build_case_dictionary
+   from validator import validate_case
+   from fastapi.responses import FileResponse
+
+Extractor / mapper / validator references:
+   [REFERENCED] extractor
+   [REFERENCED] mapper
+   [REFERENCED] validator
+
+===============================================================================
+7. NARCIS AI PIPELINE FILE CHECK
+===============================================================================
+[MISSING] backend\importer\extractor.py
+[MISSING] backend\importer\mapper.py
+[MISSING] backend\importer\validator.py
+[MISSING] backend\agent\orchestrator.py
+[MISSING] backend\rag\case_similarity.py
+[MISSING] backend\rag\knowledge_retriever.py
+[MISSING] backend\llm\test_gemini.py
+[MISSING] backend\llm\report_generator.py
+
+===============================================================================
+8. SEARCH FOR ALTERNATE AI FILE LOCATIONS
+===============================================================================
+
+SEARCH: extractor.py
+   FOUND -> extractor.py
+   FOUND -> importer\extractor.py
+
+SEARCH: mapper.py
+   FOUND -> importer\mapper.py
+
+SEARCH: validator.py
+   FOUND -> validator.py
+   FOUND -> importer\validator.py
+
+SEARCH: orchestrator.py
+   FOUND -> agent\orchestrator.py
+
+SEARCH: case_similarity.py
+   FOUND -> rag\case_similarity.py
+
+SEARCH: knowledge_retriever.py
+   FOUND -> rag\knowledge_retriever.py
+
+SEARCH: test_gemini.py
+   FOUND -> llm\test_gemini.py
+
+SEARCH: report_generator.py
+   FOUND -> agent\report_generator.py
+   FOUND -> llm\report_generator.py
+
+===============================================================================
+9. SEARCH FOR AI COMPONENT REFERENCES
+===============================================================================
+
+PATTERN: RandomForest
+   NARCIS_conversation_context.html:268
+      RandomForest
+   ccode\code.py:167
+      RandomForest
+   ml\train_model.py:5
+      from sklearn.ensemble import RandomForestClassifier
+   ml\train_model.py:80
+      model = RandomForestClassifier(
+   models\saved_models\random_forest.pkl:1
+      ��k      �sklearn.ensemble._forest��RandomForestClassifier���)��}�(�	estimator��sklearn.tree._classes��DecisionTreeClassifier���)��}�(�	criterion��gini��splitter��best��	max_depth�N�min_samples_split�K�min_samples_leaf�K�min_weight_fraction_leaf�G        �max_features�N�max_leaf_nodes�N�random_state�N�min_impurity_decrease�G        �class_weight�N�	ccp_alpha�G        �
+
+PATTERN: random_forest
+   agent\orchestrator.py:27
+      / "random_forest.pkl"
+   agent\__pycache__\orchestrator.cpython-314.pyc:10
+      P8                  ! ]4      t]! R4       ]! R4       ]! R4       ]PA                  4       '       g   ]!! R] 24      h]PD                  ! ]4      t#]! R]$! ]#4       R24       ^ R^R^R/t%R t&R t'R t(R1R lt)R t*]+R8X  d�   ]R ,          R!,          R",          t,],PA                  4       '       g   ]!! R#], 24      h]-! ],R$R%R&7      ;_uu_ 4       t.]P8                  ! ].4      t/RRR4       ])! ]/],R'7      t0]*! ]04       ]R,          t1]1Pe                  R(R)7       ]1R*,          t3]-! ]3R+R,R&7      ;_uu_ 4       t.]Ph                  ! ]0].^R-]R.7       RRR4       ]! 4        ]! R/]3 24       R# R#   + '       g   i     L�; i  + '       g   i     L9; i)2�    N)�Path�outputz)Historical_Drug_Investigation_Dataset.csv�models�saved_modelszrandom_forest.pkl�encoderszlabel_encoders.pklzfeature_columns.pkl�rag)�retrieve_similar_cases)�retrieve_all_knowledgezNARCIS AGENTIC ORCHESTRATORzPROTOTYPE EVIDENCE ASSEMBLYzLoading ML components...z  Random Forest       : loadedz  Label encoders      : loadedz  Feature columns     : loadedzDataset not found:
+   explainability\local_explainer.py:7
+      MODEL_PATH = Path("models/saved_models/random_forest.pkl")
+   explainability\shap_explainer.py:20
+      "random_forest.pkl"
+   explainability\test_local_explanation.py:25
+      / "random_forest.pkl"
+   ml\predict.py:17
+      "random_forest.pkl"
+   ml\train_model.py:94
+      "random_forest.pkl"
+
+PATTERN: predict_priority
+   agent\orchestrator.py:384
+      def predict_priority(case):
+   agent\orchestrator.py:577
+      ml_result = predict_priority(
+   agent\__pycache__\orchestrator.cpython-314.pyc:102
+      predict_proba�zipr#   �roundr+   �PRIORITY_LABELSr   r%   r"   �iloc�to_dict)r<   �featuresrT   rU   �probability_dict�class_id�probabilitys   &      rQ   �predict_priorityrc   �  s�   � �"���H� ������	�J� �'�'����	�M� ��!$�
+
+PATTERN: shap
+   NARCIS_CONNECTION_AUDIT.txt:696
+      -> SHAP
+   NARCIS_conversation_context.html:131
+      ML + RAG + SHAP
+   NARCIS_conversation_context.html:241
+      FAISS shape = (10,384)
+   NARCIS_conversation_context.html:280
+      SHAP:
+   NARCIS_conversation_context.html:293
+      Top SHAP factors:
+   NARCIS_conversation_context.html:394
+      8. Risk Classification &amp; SHAP Explainability
+   NARCIS_conversation_context.html:698
+      ML analysis + SHAP explainability + RAG intelligence
+   NARCIS_conversation_context.html:922
+      SHAP EXPLAINABILITY
+   NARCIS_conversation_context.html:929
+      Explainability = SHAP TreeExplainer
+   NARCIS_conversation_context.html:947
+      03 SHAP Explanation - QUEUED
+      ... additional matches omitted ...
+
+PATTERN: SHAP
+   NARCIS_CONNECTION_AUDIT.txt:696
+      -> SHAP
+   NARCIS_conversation_context.html:131
+      ML + RAG + SHAP
+   NARCIS_conversation_context.html:241
+      FAISS shape = (10,384)
+   NARCIS_conversation_context.html:280
+      SHAP:
+   NARCIS_conversation_context.html:293
+      Top SHAP factors:
+   NARCIS_conversation_context.html:394
+      8. Risk Classification &amp; SHAP Explainability
+   NARCIS_conversation_context.html:698
+      ML analysis + SHAP explainability + RAG intelligence
+   NARCIS_conversation_context.html:922
+      SHAP EXPLAINABILITY
+   NARCIS_conversation_context.html:929
+      Explainability = SHAP TreeExplainer
+   NARCIS_conversation_context.html:947
+      03 SHAP Explanation - QUEUED
+      ... additional matches omitted ...
+
+PATTERN: FAISS
+   NARCIS_conversation_context.html:241
+      FAISS shape = (10,384)
+   ccode\code.py:140
+      FAISS shape = (10,384)
+   rag\case_similarity.py:4
+      import faiss
+   rag\case_similarity.py:31
+      f"FAISS index not found:\n{INDEX_FILE}"
+   rag\case_similarity.py:40
+      print("Loading FAISS index...")
+   rag\case_similarity.py:42
+      index = faiss.read_index(
+   rag\case_similarity.py:59
+      "FAISS index and metadata count do not match."
+   rag\embeddings.py:3
+      import faiss
+   rag\embeddings.py:189
+      # BUILD FAISS INDEX
+   rag\embeddings.py:193
+      print("Building FAISS index...")
+      ... additional matches omitted ...
+
+PATTERN: faiss
+   NARCIS_conversation_context.html:241
+      FAISS shape = (10,384)
+   ccode\code.py:140
+      FAISS shape = (10,384)
+   rag\case_similarity.py:4
+      import faiss
+   rag\case_similarity.py:31
+      f"FAISS index not found:\n{INDEX_FILE}"
+   rag\case_similarity.py:40
+      print("Loading FAISS index...")
+   rag\case_similarity.py:42
+      index = faiss.read_index(
+   rag\case_similarity.py:59
+      "FAISS index and metadata count do not match."
+   rag\embeddings.py:3
+      import faiss
+   rag\embeddings.py:189
+      # BUILD FAISS INDEX
+   rag\embeddings.py:193
+      print("Building FAISS index...")
+      ... additional matches omitted ...
+
+PATTERN: case_similarity
+   NARCIS_CONNECTION_AUDIT.txt:43
+      [MISSING] rag\case_similarity.py
+   NARCIS_CONNECTION_AUDIT.txt:697
+      -> case_similarity.py
+   agent\orchestrator.py:57
+      from case_similarity import retrieve_similar_cases
+   agent\__pycache__\orchestrator.cpython-314.pyc:272
+      MODEL_PATH�ENCODER_PATH�FEATURE_COLUMNS_PATH�RAG_DIRr"   �path�insert�case_similarityr	   �knowledge_retrieverr
+   frontend\NARCIS_CONNECTION_AUDIT_20260927-205439.txt:209
+      MISSING: backend\rag\case_similarity.py
+   rag\__pycache__\case_similarity.cpython-314.pyc:22
+      SEARCH_FIELDS�get�append�join)�case�lines�field�values   &   �.\rag\case_similarity.py�case_to_textr   u   s\   � ��E��������
+
+PATTERN: knowledge_retriever
+   NARCIS_CONNECTION_AUDIT.txt:45
+      [MISSING] rag\knowledge_retriever.py
+   NARCIS_CONNECTION_AUDIT.txt:698
+      -> knowledge_retriever.py
+   agent\orchestrator.py:58
+      from knowledge_retriever import retrieve_all_knowledge
+   agent\__pycache__\orchestrator.cpython-314.pyc:272
+      MODEL_PATH�ENCODER_PATH�FEATURE_COLUMNS_PATH�RAG_DIRr"   �path�insert�case_similarityr	   �knowledge_retrieverr
+   frontend\NARCIS_CONNECTION_AUDIT_20260927-205439.txt:211
+      MISSING: backend\rag\knowledge_retriever.py
+   rag\__pycache__\knowledge_retriever.cpython-314.pyc:9
+      drug_profiles�legal�sop�trafficking_patternsc                �   � \        V RRR7      ;_uu_ 4       p\        P                  ! V4      uuRRR4       #   + '       g   i     R# ; i)zCLoad a JSON knowledge file, including files containing a UTF-8 BOM.�rz	utf-8-sig)�encodingN)�open�json�load)�path�fs   & �;C:\Users\AARDRA\Downloads\NARCIS\rag\knowledge_retriever.py�	load_jsonr      s-   � �
+
+PATTERN: gemini
+   NARCIS_CONNECTION_AUDIT.txt:47
+      [MISSING] llm\test_gemini.py
+   NARCIS_conversation_context.html:310
+      Gemini 3.6/3.7 Flash returned 503 high demand.
+   NARCIS_conversation_context.html:311
+      Gemini 3.5 Flash works.
+   ccode\code.py:209
+      Gemini 3.6/3.7 Flash returned 503 high demand.
+   ccode\code.py:210
+      Gemini 3.5 Flash works.
+   frontend\NARCIS_CONNECTION_AUDIT_20260927-205439.txt:213
+      MISSING: backend\llm\test_gemini.py
+   llm\report_generator.py:10
+      # GEMINI-POWERED PROTOTYPE
+   llm\report_generator.py:34
+      print("GEMINI-POWERED PROTOTYPE")
+   llm\report_generator.py:47
+      # GEMINI CLIENT
+   llm\report_generator.py:50
+      api_key = os.getenv("GEMINI_API_KEY")
+      ... additional matches omitted ...
+
+PATTERN: google.generativeai
+   NO MATCHES
+
+PATTERN: prototype_evidence_package
+   NARCIS_conversation_context.html:307
+      output/prototype_evidence_package.json
+   NARCIS_CURRENT_SOURCE_CONTEXT.txt:8301
+      evidence_path = OUTPUT_DIR / "prototype_evidence_package.json"
+   agent\orchestrator.py:864
+      / "prototype_evidence_package.json"
+   agent\__pycache__\orchestrator.cpython-314.pyc:270
+      �rz	utf-8-sig)�encoding)r�   T)�exist_okzprototype_evidence_package.json�wzutf-8F)�indent�ensure_ascii�defaultzEvidence package saved to:
+   backend\api\dashboard.py:61
+      evidence_path = OUTPUT_DIR / "prototype_evidence_package.json"
+   backend\api\__pycache__\dashboard.cpython-314.pyc:40
+      Ec                  ��   � \         R ,          p V P                  4       '       g   R# V P                  RRR7      ;_uu_ 4       p\        P                  ! V4      uuRRR4       #   + '       g   i     R# ; i)zprototype_evidence_package.jsonNr   r   r
+   ccode\code.py:206
+      output/prototype_evidence_package.json
+   llm\report_generator.py:18
+      / "prototype_evidence_package.json"
+   llm\report_generator_backup.py:14
+      / "prototype_evidence_package.json"
+   llm\report_generator_before_model_change.py:18
+      / "prototype_evidence_package.json"
+      ... additional matches omitted ...
+
+PATTERN: final_investigation_report
+   NARCIS_conversation_context.html:316
+      output/final_investigation_report.json
+   NARCIS_CURRENT_SOURCE_CONTEXT.txt:8311
+      report_path = OUTPUT_DIR / "final_investigation_report.json"
+   backend\api\dashboard.py:71
+      report_path = OUTPUT_DIR / "final_investigation_report.json"
+   backend\api\__pycache__\dashboard.cpython-314.pyc:43
+      7�	6�	6�	6��   �A"�"A3	c                  ��   � \         R ,          p V P                  4       '       g   R# V P                  RRR7      ;_uu_ 4       p\        P                  ! V4      uuRRR4       #   + '       g   i     R# ; i)zfinal_investigation_report.jsonNr   r   r
+   ccode\code.py:215
+      output/final_investigation_report.json
+   llm\report_generator.py:24
+      / "final_investigation_report.json"
+   llm\report_generator_backup.py:20
+      / "final_investigation_report.json"
+   llm\report_generator_before_model_change.py:24
+      / "final_investigation_report.json"
+   llm\report_generator_before_model_change2.py:24
+      / "final_investigation_report.json"
+   llm\__pycache__\report_generator.cpython-314.pyc:11
+       RB24       K-  	  ]! RC4       ]! RW4       ]! ] PS                  RDRE4      4       ]! RF4       ]! RW4       ] PS                  RG. 4       F  t.]! RH]. 24       K  	  ]! RI4       ]! RW4       ]! ] PS                  RJRE4      4       ]! RK4       ]! RW4       ]! ] PS                  RLRE4      4       ]! RM4       ]! RW4       ] PS                  RN. 4       F  t.]! RH]. 24       K  	  ]! RO4       ]! RW4       ] PS                  RP. 4       F  t.]! RH]. 24       K  	  ]! RQ4       ]! RW4       ] PS                  RR. 4       F  t.]! RH]. 24       K  	  ]! R4       ]! RU4       ]! RS4       ]! RU4       ]! RT4       ]! ]4       R#   + '       g   i     EL�; i  ]PB                   d�    ]t"]"PG                  R4      '       d   ]"]$! R4      R P;                  4       t"]"PG                  R4      '       d   ]"R,          P;                  4       t"]"PK                  R4      '       d   ]"RRV P;                  4       t" ]P>                  ! ]"4      t  EL�  ]PB                   d   t&]! R4       ]! ]4       ]! R4      ]&hRt&A&ii ; ii ; i  + '       g   i     EL�; i)Y�    )�PathN)�genai�outputzprototype_evidence_package.jsonzfinal_investigation_report.jsonzNARCIS LLM REPORT GENERATORzGEMINI-POWERED PROTOTYPEz
+      ... additional matches omitted ...
+
+===============================================================================
+10. CURRENT FRONTEND/BACKEND CONNECTION VERDICT
+===============================================================================
+LOGIN
+   /login
+      -> POST /api/auth/login
+      -> backend/api/auth.py
+
+DASHBOARD
+   /dashboard
+      -> GET /api/dashboard/stats
+      -> GET /api/dashboard/recent-cases
+      -> GET /api/dashboard/activity
+      -> GET /api/dashboard/analysis
+      -> backend/api/dashboard.py
+
+NEW CASE
+   /new-case
+      -> POST /api/cases/extract
+      -> backend/api/cases.py
+      -> extractor
+      -> mapper
+      -> validator
+
+DOCUMENT EXTRACTION
+   /document-extraction
+      -> frontend workflow stage
+      -> inspect current page for API usage above
+      -> likely consumes extraction result from New Case
+
+CASE VERIFICATION
+   /case-verification
+      -> inspect current API usage above
+      -> currently known to contain local/static initialData
+      -> NOT SAFE TO CONNECT TO AI YET
+
+AI ANALYSIS
+   orchestrator.py
+      -> ML
+      -> SHAP
+      -> historical case RAG
+      -> knowledge RAG
+      -> evidence package
+
+REPORT
+   report_generator.py
+      -> final investigation report
+
+
+===============================================================================
+11. REQUIRED NEXT CONNECTIONS
+===============================================================================
+PHASE 1 - VERIFY EXISTING EXTRACTION
+   /new-case
+       -> POST /api/cases/extract
+       -> importer/extractor.py
+       -> importer/mapper.py
+       -> importer/validator.py
+
+PHASE 2 - PASS EXTRACTED CASE THROUGH WORKFLOW
+   /new-case
+       -> /document-extraction
+       -> extracted case/document state
+       -> /case-verification
+
+PHASE 3 - CONNECT VERIFICATION
+   /case-verification
+       -> load extracted case
+       -> allow officer correction
+       -> save verified case
+       -> THEN send verified case to AI analysis
+
+PHASE 4 - CONNECT AI
+   verified case
+       -> agent/orchestrator.py
+       -> ML
+       -> SHAP
+       -> case_similarity.py
+       -> knowledge_retriever.py
+       -> evidence package
+
+PHASE 5 - CONNECT REPORT
+   evidence package
+       -> llm/report_generator.py
+       -> final report
+
+PHASE 6 - ONLY THEN CONNECT
+   AI Analysis
+   Decision Support
+   Reports
+   Officer Review
+   Case History

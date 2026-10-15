@@ -1,0 +1,26 @@
+{
+    "Investigation_Year": "2023",
+    "Agency": "NCB",
+    "Drug_Type": "Pseudoephedrine",
+    "NCB_Zonal_Unit": "Ahmedabad Zonal Unit",
+    "Quantity": "39,60,000 capsules (475.2 kg Pseudoephedrine HCL",
+    "Persons_Arrested": "02",
+    "Source_Type": "Specific Input",
+    "Applicable_NDPS_Sections": "9A, 25A, 26, 29",
+    "Quantity_Category": "Unknown",
+    "Operation_Type": "Unknown",
+    "Origin_State": "Gujarat",
+    "Destination_State": "Unknown",
+    "Vehicle_Type": "Container",
+    "Transport_Mode": "Unknown",
+    "Route_Type": "Unknown",
+    "Interstate_Travel": "Unknown",
+    "Case_ID": "",
+    "Location": "",
+    "Incident_Date": "",
+    "_verification": {
+        "verified": true,
+        "verification_timestamp": "2026-10-15T13:35:13Z",
+        "verification_method": "Officer verification"
+    }
+}

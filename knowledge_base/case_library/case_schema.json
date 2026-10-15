@@ -1,0 +1,170 @@
+﻿{
+  "schema_version": "1.0",
+  "last_updated": "2026-08-01",
+
+  "purpose": "Defines the standard structure, validation rules and dataset mapping requirements for all verified investigation cases stored in the NARCIS Knowledge Base.",
+
+  "description": "Every case must be derived from publicly available official or judicial sources. Personally identifiable information shall not be stored. Additional fields may be standardized only to maintain compatibility with the NARCIS machine learning dataset.",
+
+  "required_sections": [
+    "case_information",
+    "source_validation",
+    "incident_summary",
+    "investigation",
+    "legal_information",
+    "dataset_mapping",
+    "lessons_learned",
+    "references"
+  ],
+
+  "case_information": {
+    "required_fields": [
+      "case_id",
+      "title",
+      "case_type",
+      "investigating_agency",
+      "investigation_period",
+      "case_status",
+      "source_type"
+    ]
+  },
+
+  "source_validation": {
+    "required_fields": [
+      "based_on",
+      "case_reference",
+      "verification_status",
+      "source_confidence",
+      "dataset_standardized_fields"
+    ],
+
+    "allowed_verification_status": [
+      "Verified",
+      "Pending Review",
+      "AI Assisted"
+    ],
+
+    "allowed_source_confidence": [
+      "High",
+      "Medium",
+      "Low"
+    ]
+  },
+
+  "incident_summary": {
+    "required_fields": [
+      "drug_type",
+      "quantity_seized",
+      "quantity_category",
+      "transport_mode",
+      "vehicle_type",
+      "route_type",
+      "interstate_travel",
+      "concealment_method",
+      "origin_region",
+      "operation_type"
+    ]
+  },
+
+  "investigation": {
+    "required_fields": [
+      "intelligence_input",
+      "source_type",
+      "persons_arrested",
+      "network_type",
+      "investigation_actions",
+      "evidence_collected"
+    ],
+
+    "optional_fields": [
+      "financial_evidence",
+      "follow_up_actions",
+      "network_assessment"
+    ]
+  },
+
+  "legal_information": {
+    "required_fields": [
+      "applicable_ndps_sections",
+      "quantity_category",
+      "prosecution_stage"
+    ]
+  },
+
+  "dataset_mapping": {
+    "required_fields": [
+      "Drug_Type",
+      "Quantity_Category",
+      "Transport_Mode",
+      "Vehicle_Type",
+      "Route_Type",
+      "Interstate_Travel",
+      "Concealment_Method",
+      "Intelligence_Input",
+      "Evidence_Type",
+      "Applicable_NDPS_Sections",
+      "Investigation_Priority"
+    ]
+  },
+
+  "allowed_values": {
+
+    "Drug_Type": [
+      "Heroin",
+      "Cocaine",
+      "Ganja",
+      "Hashish",
+      "MDMA",
+      "Methamphetamine",
+      "Opium",
+      "Mephedrone"
+    ],
+
+    "Quantity_Category": [
+      "Small",
+      "Intermediate",
+      "Commercial"
+    ],
+
+    "Transport_Mode": [
+      "Road",
+      "Rail",
+      "Air",
+      "Courier"
+    ],
+
+    "Route_Type": [
+      "Intrastate",
+      "Interstate",
+      "International"
+    ],
+
+    "Interstate_Travel": [
+      "Yes",
+      "No"
+    ],
+
+    "Investigation_Priority": [
+      "Low",
+      "Medium",
+      "High"
+    ]
+  },
+
+  "validation_rules": [
+
+    "Every case must be based on an official public source.",
+
+    "Personally identifiable information must not be included.",
+
+    "Dataset mapping must use existing dataset field names only.",
+
+    "Drug quantity category shall be consistent with NDPS thresholds.",
+
+    "NDPS sections shall correspond to the reported offence.",
+
+    "Evidence types shall reflect documented investigation findings.",
+
+    "Fields added solely for dataset compatibility shall be listed under source_validation.dataset_standardized_fields."
+  ]
+}

@@ -1,0 +1,107 @@
+﻿{
+  "version": "1.0",
+  "last_updated": "2026-07-31",
+
+  "pattern_name": "Transportation Methods in Narcotics Trafficking",
+
+  "objective": "Provide operational intelligence regarding common transportation methods, vehicle usage and movement patterns observed in narcotics trafficking investigations to support risk assessment and investigation planning.",
+
+  "transport_patterns": [
+    {
+      "transport_mode": "Road",
+      "risk_level": "High",
+      "common_vehicles": [
+        "Car",
+        "SUV",
+        "Motorcycle",
+        "Bus",
+        "Truck"
+      ],
+      "common_usage": "Most frequently used for interstate distribution due to extensive highway connectivity and operational flexibility.",
+      "dataset_mapping": {
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type"
+      }
+    },
+    {
+      "transport_mode": "Rail",
+      "risk_level": "Medium",
+      "common_vehicles": [
+        "Passenger Train",
+        "Parcel Coach"
+      ],
+      "common_usage": "Used for transporting concealed narcotics over long distances through passenger or parcel services.",
+      "dataset_mapping": {
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type"
+      }
+    },
+    {
+      "transport_mode": "Air",
+      "risk_level": "High",
+      "common_vehicles": [
+        "Commercial Flight"
+      ],
+      "common_usage": "Primarily associated with international trafficking, courier networks and passenger baggage concealment.",
+      "dataset_mapping": {
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type"
+      }
+    },
+    {
+      "transport_mode": "Courier",
+      "risk_level": "High",
+      "common_vehicles": [
+        "Courier Parcel",
+        "Logistics Shipment"
+      ],
+      "common_usage": "Increasingly used for concealed shipments through commercial logistics services.",
+      "dataset_mapping": {
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type"
+      }
+    }
+  ],
+
+  "route_characteristics": [
+    {
+      "route_type": "Interstate",
+      "description": "Movement of narcotic substances across state boundaries requiring coordination between enforcement agencies.",
+      "related_dataset_field": "Interstate_Travel"
+    },
+    {
+      "route_type": "Intrastate",
+      "description": "Distribution occurring within a single state through local transportation networks.",
+      "related_dataset_field": "Interstate_Travel"
+    }
+  ],
+
+  "investigation_indicators": [
+    "Frequent interstate travel.",
+    "Repeated movement along known trafficking corridors.",
+    "Inconsistent travel history.",
+    "Use of hired or borrowed vehicles.",
+    "Frequent courier bookings under different identities."
+  ],
+
+  "investigation_guidelines": [
+    "Verify ownership of the vehicle.",
+    "Examine travel history and route consistency.",
+    "Coordinate with neighboring state agencies for interstate cases.",
+    "Inspect hidden compartments and modified vehicle structures.",
+    "Review transport documentation where applicable."
+  ],
+
+  "dataset_mapping": {
+    "transport_mode_field": "Transport_Mode",
+    "vehicle_type_field": "Vehicle_Type",
+    "interstate_field": "Interstate_Travel",
+    "route_type_field": "Route_Type"
+  },
+
+  "references": [
+    "Narcotics Control Bureau Annual Reports",
+    "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+    "NDPS Act, 1985"
+  ]
+}

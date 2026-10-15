@@ -1,0 +1,133 @@
+{
+    "version": "1.0",
+    "last_updated": "2026-08-17",
+    "drug_information": {
+        "drug_name": "Alprazolam",
+        "scientific_name": "Alprazolam",
+        "aliases": [
+            "Xanax",
+            "Alprax"
+        ],
+        "category": "Psychotropic Substance (Benzodiazepine)",
+        "description": "Alprazolam is a benzodiazepine psychotropic substance listed under the NDPS framework. Unauthorized possession, manufacture, sale, transport, storage and distribution are prohibited."
+    },
+    "legal_information": {
+        "applicable_ndps_sections": [
+            {
+                "section": "8(c)",
+                "title": "Prohibition of Certain Operations",
+                "applicability": "Prohibits unauthorized operations involving narcotic drugs and psychotropic substances."
+            },
+            {
+                "section": "22",
+                "title": "Punishment for Contravention in Relation to Psychotropic Substances",
+                "applicability": "Applies to offences involving psychotropic substances, with punishment depending on the applicable quantity category."
+            }
+        ],
+        "quantity_thresholds": {
+            "small_quantity": {
+                "unit": "g",
+                "value": 5,
+                "source": "Government of India NDPS quantity notification."
+            },
+            "commercial_quantity": {
+                "unit": "g",
+                "value": 100,
+                "source": "Government of India NDPS quantity notification."
+            }
+        }
+    },
+    "operational_intelligence": {
+        "vehicle_types": [
+            "Car",
+            "Truck",
+            "Courier Parcel"
+        ],
+        "source_regions": [
+            "Unknown"
+        ],
+        "concealment_methods": [
+            "Clandestine Laboratory",
+            "Hidden Storage",
+            "Packaging Concealment"
+        ],
+        "intelligence_inputs": [
+            "NCB Intelligence",
+            "Specific Information",
+            "Surveillance",
+            "Multi-state Coordination"
+        ],
+        "transport_modes": [
+            "Road",
+            "Rail",
+            "Air",
+            "Courier"
+        ],
+        "distribution_regions": [
+            "Maharashtra",
+            "Pune",
+            "Telangana"
+        ]
+    },
+    "investigation_support": {
+        "storage_guidelines": [
+            "Store seized material in tamper-evident sealed evidence containers.",
+            "Label each exhibit with a unique evidence ID.",
+            "Maintain secure evidence storage.",
+            "Restrict access to authorized personnel.",
+            "Maintain detailed evidence movement logs."
+        ],
+        "investigation_guidelines": [
+            "Secure the premises and prevent contamination.",
+            "Photograph and document seized material and laboratory equipment.",
+            "Collect representative samples following applicable procedures.",
+            "Maintain chain of custody.",
+            "Record weight, packaging and identifying marks.",
+            "Document laboratory equipment and raw materials.",
+            "Preserve financial and property records where relevant.",
+            "Send samples to an authorized forensic laboratory."
+        ],
+        "officer_precautions": [
+            "Wear appropriate PPE.",
+            "Avoid direct contact with unknown powders or pharmaceutical substances.",
+            "Use appropriate precautions when entering suspected clandestine laboratories.",
+            "Seal evidence promptly.",
+            "Report accidental exposure immediately."
+        ],
+        "evidence_types": [
+            "Seized Drug Sample",
+            "Raw Materials",
+            "Manufacturing Equipment",
+            "Packaging Material",
+            "Financial Records",
+            "Property Records",
+            "Digital Devices",
+            "Call Detail Records",
+            "CCTV Footage"
+        ]
+    },
+    "dataset_mapping": {
+        "drug_type": "Alprazolam",
+        "quantity_field": "Quantity",
+        "quantity_category_field": "Quantity_Category",
+        "transport_mode_field": "Transport_Mode",
+        "vehicle_type_field": "Vehicle_Type",
+        "concealment_method_field": "Concealment_Method",
+        "intelligence_input_field": "Intelligence_Input",
+        "evidence_type_field": "Evidence_Type",
+        "ndps_section_field": "Applicable_NDPS_Sections"
+    },
+    "references": {
+        "operational": [
+            "Narcotics Control Bureau (NCB)"
+        ],
+        "medical": [
+            "World Health Organization (WHO)"
+        ],
+        "legal": [
+            "NDPS Act, 1985",
+            "Government of India quantity notification",
+            "Central Bureau of Narcotics"
+        ]
+    }
+}

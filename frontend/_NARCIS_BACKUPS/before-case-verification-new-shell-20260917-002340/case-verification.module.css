@@ -1,0 +1,2132 @@
+﻿.page {
+  min-height: 100vh;
+  padding-bottom: 52px;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  color: #10264b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================================
+   DASHBOARD SHELL
+   These values intentionally match dashboard.module.css
+   ============================================================ */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 253px;
+  padding: 28px 12px 92px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 82% 45%,
+      rgba(20,93,160,.30),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #06182d 0%,
+      #092443 52%,
+      #071c35 100%
+    );
+
+  color: #fff;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 210px -40px 100px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49%,
+      rgba(38,126,198,.16) 50%,
+      transparent 51%
+    ) 0 0 / 82px 82px,
+
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(38,126,198,.12) 50%,
+      transparent 51%
+    ) 0 0 / 82px 82px;
+
+  opacity: .65;
+  pointer-events: none;
+}
+
+.sidebarBrand,
+.navigation,
+.sidebarDivider,
+.sidebarOfficer,
+.secureSession {
+  position: relative;
+  z-index: 2;
+}
+
+.sidebarBrand {
+  padding: 2px 17px 19px;
+  border-bottom: 1px solid rgba(177,206,231,.25);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.logoArea span {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.sidebarBrand p {
+  margin: 7px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 17px;
+}
+
+.navItem {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 7px;
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  background: transparent;
+  color: rgba(255,255,255,.93);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background: rgba(255,255,255,.07);
+}
+
+.navActive {
+  background: linear-gradient(
+    90deg,
+    #0f61c4,
+    #1267d1
+  );
+
+  box-shadow:
+    0 8px 24px rgba(0,70,160,.25);
+}
+
+.navIcon {
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.sidebarDivider {
+  height: 1px;
+  margin: 21px 17px 8px;
+  background: rgba(177,206,231,.22);
+}
+
+.sidebarOfficer {
+  position: absolute;
+  left: 29px;
+  right: 22px;
+  bottom: 81px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.officerAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #145da0;
+  font-size: 23px;
+}
+
+.sidebarOfficer strong,
+.sidebarOfficer small {
+  display: block;
+}
+
+.sidebarOfficer strong {
+  font-size: 15px;
+}
+
+.sidebarOfficer small {
+  margin-top: 4px;
+  color: rgba(255,255,255,.7);
+  font-size: 11px;
+}
+
+.secureSession {
+  position: absolute;
+  left: 30px;
+  right: 48px;
+  bottom: 29px;
+
+  height: 35px;
+
+  border: 1px solid rgba(27,123,211,.7);
+  border-radius: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #1687e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.sessionShield {
+  font-size: 15px;
+}
+
+.sessionDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #15875f;
+}
+
+/* ============================================================
+   MAIN + HEADER
+   EXACT DASHBOARD VALUES
+   ============================================================ */
+
+.main {
+  margin-left: 253px;
+  min-height: calc(100vh - 52px);
+  padding: 27px 25px 82px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  gap: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #415677;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  flex-shrink: 0;
+}
+
+.iconButton {
+  position: relative;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  background: transparent;
+  color: #10264b;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.iconButton svg {
+  width: 26px;
+  height: 26px;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #df2732;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 34px;
+  background: #d6dde7;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #112849;
+  color: #fff;
+  font-size: 20px;
+}
+
+.userAvatar svg {
+  width: 23px;
+  height: 23px;
+}
+
+.userMenu strong,
+.userMenu small {
+  display: block;
+}
+
+.userMenu strong {
+  font-size: 16px;
+}
+
+.userMenu small {
+  margin-top: 5px;
+  color: #1559a7;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.userMenu small span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #1266c5;
+}
+
+.chevron {
+  margin-left: 13px;
+  font-size: 21px;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 14px;
+
+  color: #607392;
+  font-size: 11px;
+}
+
+.breadcrumb b {
+  color: #b3bdca;
+  font-weight: 400;
+}
+
+.breadcrumb strong {
+  color: #1559a7;
+  font-weight: 600;
+}
+
+/* ============================================================
+   NEW CASE MAIN GRID
+   ============================================================ */
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: stretch;
+}
+
+/* ============================================================
+   DASHBOARD CARD LANGUAGE
+   ============================================================ */
+
+.uploadCard,
+.workflowCard {
+  min-width: 0;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  box-sizing: border-box;
+}
+
+.uploadCard {
+  padding: 17px 19px;
+}
+
+.workflowCard {
+  padding: 17px 19px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+
+.cardIntro p {
+  margin: 6px 0 0;
+  color: #344b70;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   UPLOAD ZONE
+   ============================================================ */
+
+.dropZone {
+  width: 100%;
+  height: 330px;
+  margin-top: 14px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #5c9bff;
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbfdff 0%,
+      #f8fbff 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.dropZone:hover,
+.dropZone.dragging {
+  background: #f2f7ff;
+  border-color: #0965d5;
+}
+
+.pdfIcon {
+  position: relative;
+  width: 88px;
+  height: 94px;
+  margin-bottom: 14px;
+}
+
+.fileShape {
+  position: absolute;
+  left: 11px;
+  top: 0;
+
+  width: 61px;
+  height: 78px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #9daabd;
+  border-radius: 5px;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileShape::after {
+  content: "";
+
+  position: absolute;
+  right: -3px;
+  top: -3px;
+
+  width: 21px;
+  height: 21px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+  border-left: 3px solid #9daabd;
+  border-bottom: 3px solid #9daabd;
+}
+
+.fileShape span {
+  position: relative;
+  z-index: 2;
+
+  padding: 6px 5px;
+  border-radius: 4px;
+
+  background: #ef3038;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.uploadBadge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+
+  background: #0965d5;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow:
+    0 3px 10px rgba(0,70,170,.20);
+}
+
+.uploadBadge svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dropZone > h3 {
+  margin: 0;
+  color: #10264b;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.or {
+  margin: 6px 0 10px;
+  color: #52698e;
+  font-size: 13px;
+}
+
+.browseButton {
+  min-width: 145px;
+  height: 42px;
+
+  border: 1px solid #0d61ca;
+  border-radius: 6px;
+
+  background: #fff;
+  color: #0d5cc5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.browseButton:hover {
+  background: #f3f8ff;
+}
+
+.fileRules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 12px;
+
+  color: #50688f;
+  font-size: 12px;
+}
+
+/* ============================================================
+   SELECTED FILE
+   ============================================================ */
+
+.selectedFile {
+  width: 82%;
+  max-width: 560px;
+
+  padding: 17px;
+  box-sizing: border-box;
+
+  border: 1px solid #cbd8e9;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #fff;
+}
+
+.selectedPdf {
+  padding: 10px 8px;
+  border-radius: 5px;
+
+  background: #ef3038;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fileDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fileDetails strong {
+  color: #10264b;
+  font-size: 13px;
+}
+
+.fileDetails span,
+.fileDetails small {
+  color: #617493;
+  font-size: 11px;
+}
+
+.removeFile {
+  border: 0;
+  background: transparent;
+  color: #7b879a;
+  cursor: pointer;
+}
+
+.removeFile svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================================
+   PROCESSING
+   ============================================================ */
+
+.processingInfo {
+  margin-top: 13px;
+
+  padding: 12px 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #d3e2fa;
+  border-radius: 7px;
+
+  background: #f1f6ff;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.infoIcon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+
+  border-radius: 50%;
+  background: #0864ce;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+}
+
+.infoIcon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.processingInfo h3 {
+  margin: 0 0 4px;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.processingInfo p {
+  margin: 2px 0;
+  color: #3b527a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   WORKFLOW
+   ============================================================ */
+
+.workflow {
+  margin-top: 20px;
+}
+
+.workflowStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 58px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd6e5;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #50668c;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 12px;
+}
+
+.current .stepNumber {
+  border-color: #0965d5;
+  background: #0965d5;
+  color: #fff;
+
+  box-shadow:
+    0 5px 12px rgba(0,89,190,.22);
+}
+
+.stepText {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.stepText strong {
+  display: block;
+  color: #122754;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.stepText > span:not(.currentBadge) {
+  display: block;
+  margin-top: 5px;
+  color: #536b91;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currentBadge {
+  padding: 4px 7px;
+  border-radius: 4px;
+
+  background: #e8f1ff;
+  color: #075fd0;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.workflowLine {
+  width: 1px;
+  height: 22px;
+  margin-left: 20px;
+  background: #d4dce8;
+}
+
+/* ============================================================
+   SECURITY + ACTIONS
+   ============================================================ */
+
+.securityCard {
+  min-height: 82px;
+  margin-top: 14px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #f1f6ff;
+  border: 1px solid #d3e2fa;
+  border-radius: 8px;
+}
+
+.securityIcon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  border-radius: 50%;
+  background: #0965d5;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+}
+
+.securityIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.securityCard h3 {
+  margin: 0 0 4px;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.securityCard p {
+  margin: 0;
+  color: #435b83;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.footerActions {
+  height: 62px;
+  margin-top: 14px;
+  padding: 0 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+}
+
+.cancelButton,
+.continueButton {
+  height: 40px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cancelButton {
+  min-width: 116px;
+
+  border: 1px solid #2e75dc;
+  background: #fff;
+  color: #10264b;
+
+  cursor: pointer;
+}
+
+.cancelButton svg {
+  width: 15px;
+  height: 15px;
+}
+
+.continueButton {
+  min-width: 215px;
+
+  border: 0;
+  background: #0d5cc5;
+  color: #fff;
+
+  box-shadow:
+    0 7px 18px rgba(13,92,197,.18);
+
+  cursor: pointer;
+}
+
+.continueButton span {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.continueButton:disabled {
+  background: #c7ceda;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   EXACT DASHBOARD FOOTER
+   ============================================================ */
+
+.footer {
+  position: fixed;
+  left: 253px;
+  right: 0;
+  bottom: 0;
+
+  height: 52px;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  background: #061a32;
+  color: #fff;
+
+  z-index: 20;
+  font-size: 10px;
+}
+
+.footer strong {
+  font-size: 11px;
+}
+
+.footer i {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,.4);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1250px) {
+  .mainGrid {
+    grid-template-columns: 1fr 360px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    order: 2;
+  }
+
+  .sidebar {
+    width: 210px;
+  }
+
+  .main {
+    margin-left: 210px;
+  }
+
+  .footer {
+    left: 210px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 20px 15px 70px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .footer {
+    left: 0;
+    position: relative;
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   NARCIS DASHBOARD-MATCHED WORKSPACE
+   ========================================================= */
+
+/* The Dashboard uses a full-height scrolling workspace.
+   New Case must behave identically. */
+
+.page {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  min-height: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scrollbar-gutter: stable;
+
+  transition:
+    opacity .26s cubic-bezier(.65,0,.35,1),
+    transform .26s cubic-bezier(.65,0,.35,1),
+    filter .26s cubic-bezier(.65,0,.35,1);
+}
+
+/* Force the same visible browser scrollbar behavior
+   as the Dashboard workspace. */
+
+.main::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #eef2f6;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #aeb9c7;
+  border-radius: 8px;
+  border: 3px solid #eef2f6;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #8998aa;
+}
+
+/* =========================================================
+   EXACT DASHBOARD NARCIS LOGO GLOW
+   ========================================================= */
+
+.sidebarBrand {
+  position: relative;
+}
+
+.sidebarBrand::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 30px;
+
+  width: 105px;
+  height: 85px;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255, 255, 255, 0.24) 0%,
+      rgba(255, 255, 255, 0.12) 32%,
+      rgba(255, 255, 255, 0.045) 55%,
+      transparent 75%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sidebarBrand img {
+  position: relative;
+  z-index: 1;
+
+  filter:
+    brightness(1.18)
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.72))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.42))
+    drop-shadow(0 0 28px rgba(255, 255, 255, 0.18));
+}
+
+/* Keep brand text above the glow */
+.sidebarBrand .logoArea,
+.sidebarBrand p {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SMOOTH NEW CASE ENTRANCE
+   ========================================================= */
+
+.pageEntering .main {
+  opacity: 0;
+  transform: translateY(7px);
+  filter: blur(1.5px);
+}
+
+.pageReady .main {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* =========================================================
+   KEEP FIXED SIDEBAR + FIXED FOOTER OUTSIDE SCROLL
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 253px;
+  right: 0;
+  bottom: 0;
+}
+
+/* =========================================================
+   DASHBOARD-MATCHED CONTENT WIDTH
+   ========================================================= */
+
+.main {
+  margin-left: 253px;
+  padding: 27px 25px 82px;
+}
+
+/* Make sure the page has enough vertical workspace.
+   Content scrolls instead of being compressed. */
+
+.main::after {
+  content: "";
+  display: block;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TRANSITION SAFETY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .main,
+  .pageEntering .main,
+  .pageReady .main {
+    transition: none;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* NARCIS PAGE SCROLL FIX START */
+
+/*
+ * Keep the New Case page itself vertically scrollable.
+ * The existing sidebar/layout remains otherwise untouched.
+ */
+.page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* NARCIS PAGE SCROLL FIX END */
+
+/* NARCIS SAFE SIDEBAR SCROLL FIX */
+
+/*
+   The sidebar itself is the scroll container.
+   Navigation, officer block and secure-session block
+   remain in the same document flow and therefore move
+   together when the sidebar is scrolled.
+
+   Main page layout is untouched.
+   Backend/extraction workflow is untouched.
+*/
+
+@media (min-width: 769px) {
+
+  .sidebar {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(177, 206, 231, 0.35);
+    border-radius: 6px;
+  }
+
+  /*
+     IMPORTANT:
+     The officer and secure-session elements must NOT
+     remain absolutely positioned at the bottom.
+
+     They belong to the sidebar's normal flow so they
+     scroll together with the navigation.
+  */
+
+  .sidebarOfficer {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin-left: 17px;
+    margin-right: 17px;
+    margin-top: 24px;
+  }
+
+  .secureSession {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 14px;
+
+    flex-shrink: 0;
+  }
+}
+
+
+
+/* =========================================================
+   CASE VERIFICATION
+   NEW CASE VISUAL BASE
+   VERIFICATION-SPECIFIC EXTENSIONS ONLY
+   ========================================================= */
+
+.page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.main {
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 76px;
+}
+
+.content {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0 24px 28px;
+}
+
+/* =========================================================
+   DOCUMENT STATUS
+   ========================================================= */
+
+.documentStatus {
+  width: 100%;
+  min-height: 94px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+}
+
+.documentStatus h2 {
+  margin: 5px 0 4px;
+  color: #17315d;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.documentStatus p {
+  margin: 0;
+  color: #7d8da1;
+  font-size: 8px;
+}
+
+.cardLabel {
+  display: block;
+  color: #8998aa;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .75px;
+}
+
+.verificationStatus {
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusCircle {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #e8f1ff;
+  color: #075fc7;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.verificationStatus strong,
+.verificationStatus span {
+  display: block;
+}
+
+.verificationStatus strong {
+  color: #234568;
+  font-size: 8px;
+  letter-spacing: .45px;
+}
+
+.verificationStatus span {
+  margin-top: 4px;
+  color: #8796a9;
+  font-size: 7px;
+}
+
+/* =========================================================
+   WORKSPACE
+   ========================================================= */
+
+.verificationGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    350px;
+
+  gap: 16px;
+  align-items: start;
+}
+
+.verificationCard,
+.workflowCard {
+  min-width: 0;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+}
+
+/* =========================================================
+   VERIFICATION CARD
+   ========================================================= */
+
+.verificationCard {
+  overflow: hidden;
+}
+
+.cardHeader {
+  min-height: 76px;
+  box-sizing: border-box;
+
+  padding: 15px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  border-bottom: 1px solid #e4e9ef;
+}
+
+.cardHeader h3 {
+  margin: 4px 0 3px;
+
+  color: #17315d;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cardHeader p {
+  margin: 0;
+  color: #8291a4;
+  font-size: 7px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #7b8da1;
+  font-size: 7px;
+}
+
+.extractedDot,
+.editedDot,
+.missingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.extractedDot {
+  background: #1eaa70;
+}
+
+.editedDot {
+  background: #1467c8;
+}
+
+.missingDot {
+  background: #d7833d;
+}
+
+/* =========================================================
+   FIELD GROUPS
+   ========================================================= */
+
+.groups {
+  padding: 4px 18px 18px;
+}
+
+.fieldGroup {
+  border-bottom: 1px solid #e6ebf0;
+}
+
+.groupHeader {
+  width: 100%;
+  min-height: 43px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #49627f;
+
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .65px;
+
+  cursor: pointer;
+}
+
+.groupHeader:hover {
+  color: #075fc7;
+}
+
+.groupArrow {
+  color: #8090a4;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   EDITABLE FIELDS
+   ========================================================= */
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px 12px;
+
+  padding: 0 0 15px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.fieldTop {
+  min-height: 15px;
+  margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.field label {
+  min-width: 0;
+
+  color: #74869d;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .4px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.field input {
+  width: 100%;
+  min-height: 38px;
+
+  box-sizing: border-box;
+  padding: 0 10px;
+
+  border: 1px solid #dce4ec;
+  border-radius: 5px;
+
+  background: #fbfcfd;
+  color: #263f60;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 8px;
+
+  transition:
+    border-color .15s ease,
+    box-shadow .15s ease,
+    background .15s ease;
+}
+
+.field input:hover {
+  background: #fff;
+}
+
+.field input:focus {
+  background: #fff;
+  border-color: #1467c8;
+  box-shadow:
+    0 0 0 3px rgba(20,103,200,.08);
+}
+
+.field input::placeholder {
+  color: #adb8c5;
+}
+
+.statusExtracted,
+.statusAdded,
+.statusMissing {
+  flex-shrink: 0;
+
+  padding: 3px 5px;
+
+  border-radius: 3px;
+
+  font-size: 5.5px;
+  font-weight: 900;
+  letter-spacing: .3px;
+}
+
+.statusExtracted {
+  background: #e5f7ef;
+  color: #148e61;
+}
+
+.statusAdded {
+  background: #e8f1ff;
+  color: #075fc7;
+}
+
+.statusMissing {
+  background: #fff1e6;
+  color: #bd672c;
+}
+
+/* =========================================================
+   WORKFLOW
+   EXACT SAME STRUCTURE/DIMENSION FAMILY
+   ========================================================= */
+
+.workflowCard {
+  overflow: hidden;
+}
+
+.workflowHeader {
+  min-height: 76px;
+  box-sizing: border-box;
+
+  padding: 15px 17px;
+
+  border-bottom: 1px solid #e4e9ef;
+}
+
+.workflowHeader h3 {
+  margin: 4px 0 3px;
+
+  color: #17315d;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+.workflowHeader p {
+  margin: 0;
+  color: #8291a4;
+  font-size: 7px;
+}
+
+.workflow {
+  padding: 17px 19px 19px;
+}
+
+.workflowStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 58px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+
+  box-sizing: border-box;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #cbd6e5;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #50668c;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.completeStep .stepNumber,
+.currentStep .stepNumber {
+  border-color: #0965d5;
+  background: #0965d5;
+  color: #fff;
+
+  box-shadow:
+    0 5px 12px rgba(0,89,190,.22);
+}
+
+.stepText {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stepTitle strong {
+  color: #18345b;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.stepText > span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8090a5;
+  font-size: 7px;
+  line-height: 1.45;
+}
+
+.completeBadge,
+.currentBadge {
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  font-size: 6px;
+  font-weight: 800;
+}
+
+.completeBadge {
+  background: #e5f7ef;
+  color: #159364;
+}
+
+.currentBadge {
+  background: #e8f1ff;
+  color: #075fd0;
+}
+
+.workflowLine {
+  width: 1px;
+  height: 22px;
+
+  margin-left: 20px;
+
+  background: #d4dce8;
+}
+
+.completeStep + .workflowLine {
+  background: #8bbcf0;
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.verificationNotice {
+  margin-top: 16px;
+
+  min-height: 70px;
+  box-sizing: border-box;
+
+  padding: 13px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  background: #f5f9fe;
+  border: 1px solid #dce6f2;
+  border-radius: 7px;
+}
+
+.noticeIcon {
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #e4effd;
+  color: #1467c8;
+}
+
+.noticeIcon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.verificationNotice strong {
+  display: block;
+
+  color: #25496f;
+  font-size: 7px;
+  letter-spacing: .55px;
+}
+
+.verificationNotice p {
+  max-width: 680px;
+
+  margin: 4px 0 0;
+
+  color: #71859c;
+  font-size: 7px;
+  line-height: 1.5;
+}
+
+.noticeStats {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.noticeStats > span {
+  min-width: 35px;
+
+  color: #1b426b;
+  font-size: 13px;
+  font-weight: 900;
+
+  text-align: center;
+}
+
+.noticeStats small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #8999aa;
+  font-size: 5.5px;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.actions {
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.actionRight {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.cancelButton,
+.continueButton {
+  min-height: 38px;
+
+  padding: 0 16px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .35px;
+
+  cursor: pointer;
+}
+
+.cancelButton {
+  border: 1px solid #d7e0e9;
+  background: #fff;
+  color: #60748d;
+}
+
+.cancelButton:hover {
+  background: #f4f7fa;
+}
+
+.continueButton {
+  border: 1px solid #075fc7;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0a71db,
+      #075fc7
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 4px 10px rgba(0,95,199,.18);
+}
+
+.continueButton:hover {
+  filter: brightness(1.04);
+}
+
+.continueButton:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.continueButton span {
+  margin-left: 8px;
+}
+
+.savedMessage {
+  color: #159364;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  position: fixed;
+
+  left: 253px;
+  right: 0;
+  bottom: 0;
+
+  height: 52px;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  background: #061a32;
+  color: #fff;
+
+  z-index: 20;
+
+  font-size: 9px;
+}
+
+.footer svg {
+  width: 15px;
+  height: 15px;
+}
+
+.footer strong {
+  font-size: 9px;
+}
+
+.footer i {
+  width: 1px;
+  height: 13px;
+
+  background: rgba(255,255,255,.35);
+}
+
+/* =========================================================
+   SCROLL BEHAVIOR
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  .main {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+
+  .main::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .main::-webkit-scrollbar-track {
+    background: #eef1f5;
+  }
+
+  .main::-webkit-scrollbar-thumb {
+    background: #b9c4d0;
+    border-radius: 8px;
+  }
+
+  .sidebar {
+    height: 100vh;
+    max-height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .verificationGrid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      315px;
+  }
+
+  .noticeStats {
+    display: none;
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  .verificationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    order: 2;
+  }
+
+  .fieldsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .documentStatus {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .verificationStatus {
+    min-width: 0;
+  }
+
+  .footer {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    min-height: 52px;
+    height: auto;
+
+    flex-wrap: wrap;
+
+    padding: 12px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .cardHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .legend {
+    flex-wrap: wrap;
+  }
+
+}

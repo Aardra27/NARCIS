@@ -1,0 +1,60 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 4 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1619 >>
+stream
+BT
+/F1 12 Tf
+BT /F1 12 Tf 72 760 Td (NARCIS Investigation Decision-Support Report) Tj ET
+BT /F1 12 Tf 72 742 Td (Case ID: UNKNOWN) Tj ET
+BT /F1 12 Tf 72 724 Td (Drug Type: Opium & Poppy Straw) Tj ET
+BT /F1 12 Tf 72 706 Td (Quantity: 10.286 Kg Opium; 7.220 Kg Poppy Straw) Tj ET
+BT /F1 12 Tf 72 688 Td (Route Type: Interstate) Tj ET
+BT /F1 12 Tf 72 670 Td (Interstate Travel: Yes) Tj ET
+BT /F1 12 Tf 72 652 Td (Predicted Priority: Medium) Tj ET
+BT /F1 12 Tf 72 634 Td () Tj ET
+BT /F1 12 Tf 72 616 Td (Executive Assessment:) Tj ET
+BT /F1 12 Tf 72 598 Td (The case involves a seizure by the NCB Ahmedabad Zonal Unit in Gujarat concerning 39,60,000 capsules \(475.2 kg) Tj ET
+BT /F1 12 Tf 72 580 Td () Tj ET
+BT /F1 12 Tf 72 562 Td (Probability Distribution:) Tj ET
+BT /F1 12 Tf 72 544 Td (Low: 0.005, Medium: 0.865, High: 0.13) Tj ET
+BT /F1 12 Tf 72 526 Td () Tj ET
+BT /F1 12 Tf 72 508 Td (SHAP / Historical / Domain Knowledge:) Tj ET
+BT /F1 12 Tf 72 490 Td (SHAP summary: [{'feature': 'Quantity_Category', 'value': 'Unknown', 'encoded_value': 4.0, 'shap_impact': 0.210) Tj ET
+BT /F1 12 Tf 72 472 Td (Knowledge sources: {'drug_profile': {'status': 'found', 'source_file': 'pseudoephedrine.json', 'data': {'versi) Tj ET
+BT /F1 12 Tf 72 454 Td () Tj ET
+BT /F1 12 Tf 72 436 Td (Officer Decision:) Tj ET
+BT /F1 12 Tf 72 418 Td (Proceed with referral) Tj ET
+BT /F1 12 Tf 72 400 Td () Tj ET
+BT /F1 12 Tf 72 382 Td (Officer Remarks:) Tj ET
+BT /F1 12 Tf 72 364 Td () Tj ET
+BT /F1 12 Tf 72 346 Td () Tj ET
+BT /F1 12 Tf 72 328 Td (Reviewed At: 2026-10-15T14:43:07.306Z) Tj ET
+BT /F1 12 Tf 72 310 Td (Final Status: FINALIZED) Tj ET
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1982
+%%EOF

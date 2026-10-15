@@ -1,0 +1,1231 @@
+﻿.page {
+  min-height: 100vh;
+  padding-bottom: 52px;
+  box-sizing: border-box;
+  background: #f5f7fa;
+  color: #10264b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================================
+   DASHBOARD SHELL
+   These values intentionally match dashboard.module.css
+   ============================================================ */
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 253px;
+  padding: 28px 12px 92px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 82% 45%,
+      rgba(20,93,160,.30),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #06182d 0%,
+      #092443 52%,
+      #071c35 100%
+    );
+
+  color: #fff;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 210px -40px 100px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49%,
+      rgba(38,126,198,.16) 50%,
+      transparent 51%
+    ) 0 0 / 82px 82px,
+
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(38,126,198,.12) 50%,
+      transparent 51%
+    ) 0 0 / 82px 82px;
+
+  opacity: .65;
+  pointer-events: none;
+}
+
+.sidebarBrand,
+.navigation,
+.sidebarDivider,
+.sidebarOfficer,
+.secureSession {
+  position: relative;
+  z-index: 2;
+}
+
+.sidebarBrand {
+  padding: 2px 17px 19px;
+  border-bottom: 1px solid rgba(177,206,231,.25);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.logoArea span {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.sidebarBrand p {
+  margin: 7px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 17px;
+}
+
+.navItem {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 7px;
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  background: transparent;
+  color: rgba(255,255,255,.93);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background: rgba(255,255,255,.07);
+}
+
+.navActive {
+  background: linear-gradient(
+    90deg,
+    #0f61c4,
+    #1267d1
+  );
+
+  box-shadow:
+    0 8px 24px rgba(0,70,160,.25);
+}
+
+.navIcon {
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.sidebarDivider {
+  height: 1px;
+  margin: 21px 17px 8px;
+  background: rgba(177,206,231,.22);
+}
+
+.sidebarOfficer {
+  position: absolute;
+  left: 29px;
+  right: 22px;
+  bottom: 81px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.officerAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #145da0;
+  font-size: 23px;
+}
+
+.sidebarOfficer strong,
+.sidebarOfficer small {
+  display: block;
+}
+
+.sidebarOfficer strong {
+  font-size: 15px;
+}
+
+.sidebarOfficer small {
+  margin-top: 4px;
+  color: rgba(255,255,255,.7);
+  font-size: 11px;
+}
+
+.secureSession {
+  position: absolute;
+  left: 30px;
+  right: 48px;
+  bottom: 29px;
+
+  height: 35px;
+
+  border: 1px solid rgba(27,123,211,.7);
+  border-radius: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #1687e5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.sessionShield {
+  font-size: 15px;
+}
+
+.sessionDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #15875f;
+}
+
+/* ============================================================
+   MAIN + HEADER
+   EXACT DASHBOARD VALUES
+   ============================================================ */
+
+.main {
+  margin-left: 253px;
+  min-height: calc(100vh - 52px);
+  padding: 27px 25px 82px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  gap: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #415677;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  flex-shrink: 0;
+}
+
+.iconButton {
+  position: relative;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  background: transparent;
+  color: #10264b;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.iconButton svg {
+  width: 26px;
+  height: 26px;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -3px;
+  right: -4px;
+
+  min-width: 19px;
+  height: 19px;
+  padding: 0 4px;
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #df2732;
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 34px;
+  background: #d6dde7;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: #112849;
+  color: #fff;
+  font-size: 20px;
+}
+
+.userAvatar svg {
+  width: 23px;
+  height: 23px;
+}
+
+.userMenu strong,
+.userMenu small {
+  display: block;
+}
+
+.userMenu strong {
+  font-size: 16px;
+}
+
+.userMenu small {
+  margin-top: 5px;
+  color: #1559a7;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.userMenu small span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #1266c5;
+}
+
+.chevron {
+  margin-left: 13px;
+  font-size: 21px;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 14px;
+
+  color: #607392;
+  font-size: 11px;
+}
+
+.breadcrumb b {
+  color: #b3bdca;
+  font-weight: 400;
+}
+
+.breadcrumb strong {
+  color: #1559a7;
+  font-weight: 600;
+}
+
+/* ============================================================
+   NEW CASE MAIN GRID
+   ============================================================ */
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: stretch;
+}
+
+/* ============================================================
+   DASHBOARD CARD LANGUAGE
+   ============================================================ */
+
+.uploadCard,
+.workflowCard {
+  min-width: 0;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  box-sizing: border-box;
+}
+
+.uploadCard {
+  padding: 17px 19px;
+}
+
+.workflowCard {
+  padding: 17px 19px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+
+.cardIntro p {
+  margin: 6px 0 0;
+  color: #344b70;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   UPLOAD ZONE
+   ============================================================ */
+
+.dropZone {
+  width: 100%;
+  height: 330px;
+  margin-top: 14px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #5c9bff;
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbfdff 0%,
+      #f8fbff 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.dropZone:hover,
+.dropZone.dragging {
+  background: #f2f7ff;
+  border-color: #0965d5;
+}
+
+.pdfIcon {
+  position: relative;
+  width: 88px;
+  height: 94px;
+  margin-bottom: 14px;
+}
+
+.fileShape {
+  position: absolute;
+  left: 11px;
+  top: 0;
+
+  width: 61px;
+  height: 78px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #9daabd;
+  border-radius: 5px;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileShape::after {
+  content: "";
+
+  position: absolute;
+  right: -3px;
+  top: -3px;
+
+  width: 21px;
+  height: 21px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+  border-left: 3px solid #9daabd;
+  border-bottom: 3px solid #9daabd;
+}
+
+.fileShape span {
+  position: relative;
+  z-index: 2;
+
+  padding: 6px 5px;
+  border-radius: 4px;
+
+  background: #ef3038;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.uploadBadge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border: 4px solid #fff;
+  border-radius: 50%;
+
+  background: #0965d5;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow:
+    0 3px 10px rgba(0,70,170,.20);
+}
+
+.uploadBadge svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dropZone > h3 {
+  margin: 0;
+  color: #10264b;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.or {
+  margin: 6px 0 10px;
+  color: #52698e;
+  font-size: 13px;
+}
+
+.browseButton {
+  min-width: 145px;
+  height: 42px;
+
+  border: 1px solid #0d61ca;
+  border-radius: 6px;
+
+  background: #fff;
+  color: #0d5cc5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.browseButton:hover {
+  background: #f3f8ff;
+}
+
+.fileRules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 12px;
+
+  color: #50688f;
+  font-size: 12px;
+}
+
+/* ============================================================
+   SELECTED FILE
+   ============================================================ */
+
+.selectedFile {
+  width: 82%;
+  max-width: 560px;
+
+  padding: 17px;
+  box-sizing: border-box;
+
+  border: 1px solid #cbd8e9;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #fff;
+}
+
+.selectedPdf {
+  padding: 10px 8px;
+  border-radius: 5px;
+
+  background: #ef3038;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fileDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fileDetails strong {
+  color: #10264b;
+  font-size: 13px;
+}
+
+.fileDetails span,
+.fileDetails small {
+  color: #617493;
+  font-size: 11px;
+}
+
+.removeFile {
+  border: 0;
+  background: transparent;
+  color: #7b879a;
+  cursor: pointer;
+}
+
+.removeFile svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================================
+   PROCESSING
+   ============================================================ */
+
+.processingInfo {
+  margin-top: 13px;
+
+  padding: 12px 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #d3e2fa;
+  border-radius: 7px;
+
+  background: #f1f6ff;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.infoIcon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+
+  border-radius: 50%;
+  background: #0864ce;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+}
+
+.infoIcon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.processingInfo h3 {
+  margin: 0 0 4px;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.processingInfo p {
+  margin: 2px 0;
+  color: #3b527a;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   WORKFLOW
+   ============================================================ */
+
+.workflow {
+  margin-top: 20px;
+}
+
+.workflowStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 58px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd6e5;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #50668c;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 12px;
+}
+
+.current .stepNumber {
+  border-color: #0965d5;
+  background: #0965d5;
+  color: #fff;
+
+  box-shadow:
+    0 5px 12px rgba(0,89,190,.22);
+}
+
+.stepText {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.stepText strong {
+  display: block;
+  color: #122754;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.stepText > span:not(.currentBadge) {
+  display: block;
+  margin-top: 5px;
+  color: #536b91;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currentBadge {
+  padding: 4px 7px;
+  border-radius: 4px;
+
+  background: #e8f1ff;
+  color: #075fd0;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.workflowLine {
+  width: 1px;
+  height: 22px;
+  margin-left: 20px;
+  background: #d4dce8;
+}
+
+/* ============================================================
+   SECURITY + ACTIONS
+   ============================================================ */
+
+.securityCard {
+  min-height: 82px;
+  margin-top: 14px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #f1f6ff;
+  border: 1px solid #d3e2fa;
+  border-radius: 8px;
+}
+
+.securityIcon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  border-radius: 50%;
+  background: #0965d5;
+  color: #fff;
+
+  display: grid;
+  place-items: center;
+}
+
+.securityIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.securityCard h3 {
+  margin: 0 0 4px;
+  color: #10264b;
+  font-size: 13px;
+}
+
+.securityCard p {
+  margin: 0;
+  color: #435b83;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.footerActions {
+  height: 62px;
+  margin-top: 14px;
+  padding: 0 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+}
+
+.cancelButton,
+.continueButton {
+  height: 40px;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cancelButton {
+  min-width: 116px;
+
+  border: 1px solid #2e75dc;
+  background: #fff;
+  color: #10264b;
+
+  cursor: pointer;
+}
+
+.cancelButton svg {
+  width: 15px;
+  height: 15px;
+}
+
+.continueButton {
+  min-width: 215px;
+
+  border: 0;
+  background: #0d5cc5;
+  color: #fff;
+
+  box-shadow:
+    0 7px 18px rgba(13,92,197,.18);
+
+  cursor: pointer;
+}
+
+.continueButton span {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.continueButton:disabled {
+  background: #c7ceda;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   EXACT DASHBOARD FOOTER
+   ============================================================ */
+
+.footer {
+  position: fixed;
+  left: 253px;
+  right: 0;
+  bottom: 0;
+
+  height: 52px;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  background: #061a32;
+  color: #fff;
+
+  z-index: 20;
+  font-size: 10px;
+}
+
+.footer strong {
+  font-size: 11px;
+}
+
+.footer i {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,.4);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1250px) {
+  .mainGrid {
+    grid-template-columns: 1fr 360px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    order: 2;
+  }
+
+  .sidebar {
+    width: 210px;
+  }
+
+  .main {
+    margin-left: 210px;
+  }
+
+  .footer {
+    left: 210px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 20px 15px 70px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .footer {
+    left: 0;
+    position: relative;
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   NARCIS DASHBOARD-MATCHED WORKSPACE
+   ========================================================= */
+
+/* The Dashboard uses a full-height scrolling workspace.
+   New Case must behave identically. */
+
+.page {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  min-height: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scrollbar-gutter: stable;
+
+  transition:
+    opacity .26s cubic-bezier(.65,0,.35,1),
+    transform .26s cubic-bezier(.65,0,.35,1),
+    filter .26s cubic-bezier(.65,0,.35,1);
+}
+
+/* Force the same visible browser scrollbar behavior
+   as the Dashboard workspace. */
+
+.main::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #eef2f6;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #aeb9c7;
+  border-radius: 8px;
+  border: 3px solid #eef2f6;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #8998aa;
+}
+
+/* =========================================================
+   EXACT DASHBOARD NARCIS LOGO GLOW
+   ========================================================= */
+
+.sidebarBrand {
+  position: relative;
+}
+
+.sidebarBrand::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 30px;
+
+  width: 105px;
+  height: 85px;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(255, 255, 255, 0.24) 0%,
+      rgba(255, 255, 255, 0.12) 32%,
+      rgba(255, 255, 255, 0.045) 55%,
+      transparent 75%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sidebarBrand img {
+  position: relative;
+  z-index: 1;
+
+  filter:
+    brightness(1.18)
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.72))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.42))
+    drop-shadow(0 0 28px rgba(255, 255, 255, 0.18));
+}
+
+/* Keep brand text above the glow */
+.sidebarBrand .logoArea,
+.sidebarBrand p {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SMOOTH NEW CASE ENTRANCE
+   ========================================================= */
+
+.pageEntering .main {
+  opacity: 0;
+  transform: translateY(7px);
+  filter: blur(1.5px);
+}
+
+.pageReady .main {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* =========================================================
+   KEEP FIXED SIDEBAR + FIXED FOOTER OUTSIDE SCROLL
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 253px;
+  right: 0;
+  bottom: 0;
+}
+
+/* =========================================================
+   DASHBOARD-MATCHED CONTENT WIDTH
+   ========================================================= */
+
+.main {
+  margin-left: 253px;
+  padding: 27px 25px 82px;
+}
+
+/* Make sure the page has enough vertical workspace.
+   Content scrolls instead of being compressed. */
+
+.main::after {
+  content: "";
+  display: block;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   TRANSITION SAFETY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .main,
+  .pageEntering .main,
+  .pageReady .main {
+    transition: none;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* NARCIS PAGE SCROLL FIX START */
+
+/*
+ * Keep the New Case page itself vertically scrollable.
+ * The existing sidebar/layout remains otherwise untouched.
+ */
+.page {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* NARCIS PAGE SCROLL FIX END */

@@ -1,0 +1,871 @@
+﻿.page {
+  min-height: 100vh;
+  background: #f5f8fc;
+  color: #102957;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 243px;
+  min-width: 243px;
+  height: 100vh;
+  background: #061c3b;
+  color: white;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.sidebarInner {
+  min-height: 100%;
+  padding: 28px 16px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px 18px;
+}
+
+.brandMark {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #dce8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brandSubtitle {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #edf3fb;
+}
+
+.sidebarDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 0 17px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.navItem {
+  min-height: 49px;
+  padding: 0 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  background: rgba(28, 116, 224, 0.3);
+}
+
+.active {
+  background: #1268d8;
+}
+
+.navIcon {
+  width: 22px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.officerBlock {
+  margin-top: auto;
+  padding: 28px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.officerAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1470d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.officerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.officerInfo strong {
+  font-size: 17px;
+}
+
+.officerInfo span {
+  font-size: 12px;
+  color: #d7e5f6;
+}
+
+.secureSession {
+  margin: 0 10px;
+  min-height: 35px;
+  border: 1px solid #1681ed;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #1591ff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sessionDot {
+  width: 7px;
+  height: 7px;
+  background: #15a96b;
+  border-radius: 50%;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 22px 28px 72px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 27px;
+  color: #071a3d;
+  letter-spacing: 0.2px;
+}
+
+.header p {
+  margin: 5px 0 18px;
+  color: #526b94;
+  font-size: 14px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #657a9b;
+  font-size: 13px;
+}
+
+.breadcrumbs strong {
+  color: #1268d8;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #071a3d;
+}
+
+.notification {
+  position: relative;
+  font-size: 25px;
+}
+
+.notification span {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #df3036;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.help {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #0c1d43;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 40px;
+  background: #d7dfe9;
+}
+
+.headerOfficerAvatar {
+  width: 40px;
+  height: 40px;
+  background: #0c1d43;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerOfficer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.headerOfficer strong {
+  font-size: 16px;
+}
+
+.headerOfficer span {
+  color: #1268d8;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.headerOfficer i {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background: #1268d8;
+  border-radius: 50%;
+}
+
+/* ================= DOCUMENT BANNER ================= */
+
+.documentBanner {
+  background: white;
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(20, 50, 90, 0.03);
+}
+
+.documentInfo {
+  padding: 15px 20px;
+  width: 300px;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.documentRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdfIcon {
+  width: 33px;
+  height: 37px;
+  border-radius: 3px;
+  background: #dc3036;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.documentRow strong {
+  display: block;
+  font-size: 15px;
+}
+
+.documentRow span {
+  display: block;
+  margin-top: 4px;
+  color: #64799a;
+  font-size: 11px;
+}
+
+.extractionStatus {
+  border-left: 1px solid #dfe5ec;
+  min-height: 55px;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusIcon {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #00a56a;
+  color: #00a56a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.extractionStatus strong {
+  display: block;
+  font-size: 12px;
+}
+
+.extractionStatus span {
+  display: block;
+  color: #64799a;
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+/* ================= WORKSPACE ================= */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(470px, 1.55fr) 270px;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.sourceCard,
+.extractedCard,
+.workflowCard {
+  background: white;
+  border: 1px solid #d9e1eb;
+  border-radius: 7px;
+  min-width: 0;
+}
+
+.sourceCard {
+  padding: 14px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 800;
+  color: #142951;
+}
+
+.pdfToolbar {
+  height: 38px;
+  margin-top: 10px;
+  border: 1px solid #e0e5ec;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 9px;
+  color: #17305b;
+  font-size: 14px;
+}
+
+.pdfToolbar button {
+  background: #f7f9fc;
+  border: 1px solid #dce3ec;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #19335f;
+}
+
+.pageNumber {
+  margin-left: auto;
+  font-size: 11px;
+}
+
+.pdfPreview {
+  flex: 1;
+  min-height: 500px;
+  margin-top: 4px;
+  background: #e7e9eb;
+  overflow: auto;
+  padding: 18px;
+}
+
+.fakePdf {
+  min-height: 670px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+  color: #202b3d;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  box-sizing: border-box;
+}
+
+.fakePdfHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.fakePdfHeader strong {
+  display: block;
+}
+
+.fakeSeal {
+  font-size: 30px;
+}
+
+.fakeLine {
+  height: 1px;
+  background: #333;
+  margin: 12px 0;
+}
+
+.fakePdf h4 {
+  margin: 16px 0 8px;
+  font-size: 10px;
+}
+
+.fakePdf p {
+  margin: 5px 0;
+}
+
+.fakeTable {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 5px;
+}
+
+/* ================= EXTRACTED ================= */
+
+.extractedCard {
+  padding: 14px;
+  overflow: hidden;
+}
+
+.extractedHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #e1e6ed;
+  padding-bottom: 10px;
+}
+
+.extractedHeader p {
+  margin: 5px 0 0;
+  font-size: 10px;
+  color: #667a9a;
+}
+
+.fieldBadge {
+  border: 1px solid #74a7ef;
+  border-radius: 5px;
+  color: #075fc9;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 7px 9px;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.fieldsArea {
+  max-height: 565px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.fieldsArea h3 {
+  font-size: 10px;
+  margin: 12px 0 7px;
+  color: #102653;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.field {
+  border: 1px solid #e1e6ed;
+  border-radius: 5px;
+  padding: 8px;
+  min-height: 55px;
+  box-sizing: border-box;
+}
+
+.field span {
+  display: block;
+  font-size: 8px;
+  font-weight: 700;
+  color: #1c3159;
+}
+
+.field strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: #142951;
+}
+
+.field small {
+  display: block;
+  margin-top: 4px;
+  color: #075fc9;
+  font-size: 8px;
+}
+
+.verificationNotice {
+  margin-top: 10px;
+  background: #edf5ff;
+  border: 1px solid #d5e6fc;
+  border-radius: 5px;
+  padding: 11px;
+  display: flex;
+  gap: 10px;
+}
+
+.infoCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1268d8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 800;
+}
+
+.verificationNotice strong {
+  font-size: 10px;
+  color: #0755b4;
+}
+
+.verificationNotice p {
+  margin: 5px 0 0;
+  color: #526b91;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* ================= WORKFLOW ================= */
+
+.workflowCard {
+  padding: 15px 14px;
+}
+
+.workflowTitle {
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.workflowStep {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  min-height: 94px;
+}
+
+.stepCircle {
+  width: 31px;
+  height: 31px;
+  border: 1px solid #c8d3e2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #536987;
+  font-size: 11px;
+  background: white;
+  z-index: 2;
+}
+
+.stepCurrent {
+  background: #1268d8;
+  border-color: #1268d8;
+  color: white;
+  box-shadow: 0 5px 12px rgba(18, 104, 216, 0.25);
+}
+
+.stepComplete {
+  color: #00966b;
+  border-color: #00966b;
+}
+
+.stepLine {
+  position: absolute;
+  left: 15px;
+  top: 31px;
+  bottom: 0;
+  width: 1px;
+  background: #d7dfe9;
+}
+
+.stepContent {
+  padding-top: 4px;
+  min-width: 0;
+}
+
+.stepHeading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stepHeading strong {
+  font-size: 12px;
+  color: #10244b;
+}
+
+.stepContent p {
+  margin: 6px 0 0;
+  color: #607493;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.currentBadge,
+.nextBadge {
+  font-size: 7px;
+  font-weight: 800;
+  border-radius: 4px;
+  padding: 4px 5px;
+}
+
+.currentBadge {
+  background: #e6f0ff;
+  color: #075fc9;
+}
+
+.nextBadge {
+  background: #f0f2f5;
+  color: #52637d;
+}
+
+.completeText {
+  display: block;
+  margin-top: 6px;
+  color: #008d64;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* ================= BOTTOM ================= */
+
+.bottomBar {
+  margin-top: 12px;
+  background: white;
+  border: 1px solid #d9e1eb;
+  border-radius: 7px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+
+.backButton,
+.continueButton {
+  border-radius: 5px;
+  height: 35px;
+  padding: 0 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.backButton {
+  background: white;
+  border: 1px solid #75a8ec;
+  color: #132b55;
+}
+
+.continueButton {
+  background: #1268d8;
+  border: 1px solid #1268d8;
+  color: white;
+  min-width: 250px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  position: fixed;
+  left: 243px;
+  right: 0;
+  bottom: 0;
+  height: 38px;
+  background: #061a38;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  font-size: 10px;
+  z-index: 10;
+}
+
+.footer i {
+  width: 1px;
+  height: 17px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1250px) {
+  .workspace {
+    grid-template-columns: minmax(280px, 0.9fr) minmax(430px, 1.4fr);
+  }
+
+  .workflowCard {
+    grid-column: 1 / -1;
+  }
+
+  .workflow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .workflowStep {
+    min-height: 80px;
+  }
+
+  .stepLine {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 190px;
+    min-width: 190px;
+  }
+
+  .content {
+    padding: 18px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    left: 190px;
+  }
+
+  .headerRight {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .page {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    position: relative;
+  }
+
+  .sidebarInner {
+    min-height: 0;
+  }
+
+  .officerBlock {
+    margin-top: 18px;
+  }
+
+  .content {
+    padding: 14px;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .documentBanner {
+    display: block;
+  }
+
+  .documentInfo {
+    width: auto;
+  }
+
+  .extractionStatus {
+    border-left: 0;
+    border-top: 1px solid #dfe5ec;
+    padding: 12px 20px;
+  }
+
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow {
+    display: block;
+  }
+
+  .footer {
+    position: relative;
+    left: auto;
+    height: auto;
+    min-height: 42px;
+    padding: 8px;
+    flex-wrap: wrap;
+  }
+}

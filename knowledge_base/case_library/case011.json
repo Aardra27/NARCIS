@@ -1,0 +1,26 @@
+{
+    "Investigation_Year": "2023",
+    "Agency": "NCB",
+    "Drug_Type": "Opium & Poppy Straw",
+    "NCB_Zonal_Unit": "Indore Zonal Unit",
+    "Quantity": "10.286 Kg Opium; 7.220 Kg Poppy Straw",
+    "Persons_Arrested": "03",
+    "Source_Type": "Secret Information",
+    "Applicable_NDPS_Sections": "8/15/18/25/27A/29",
+    "Quantity_Category": "Commercial (Opium); Above Small Quantity and Below Commercial Quantity (Poppy Straw)",
+    "Operation_Type": "Seizure and follow-up recovery",
+    "Origin_State": "Madhya Pradesh",
+    "Destination_State": "Punjab",
+    "Vehicle_Type": "Unknown",
+    "Transport_Mode": "Road",
+    "Route_Type": "Interstate",
+    "Interstate_Travel": "Yes",
+    "Case_ID": "CASE-001",
+    "Location": "",
+    "Incident_Date": "",
+    "_verification": {
+        "verified": true,
+        "verification_timestamp": "2026-10-08T17:39:11Z",
+        "verification_method": "Officer verification"
+    }
+}

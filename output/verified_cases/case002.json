@@ -1,0 +1,23 @@
+{
+    "Investigation_Year": "2022",
+    "Agency": "NCB",
+    "Drug_Type": "Heroin",
+    "NCB_Zonal_Unit": "Chandigarh Zonal Unit",
+    "Quantity": "20.326 Kg Heroin",
+    "Persons_Arrested": "20",
+    "Source_Type": "Secret Information",
+    "Applicable_NDPS_Sections": "Unknown",
+    "Quantity_Category": "Commercial",
+    "Operation_Type": "International trafficking syndicate investigation and seizure",
+    "Origin_State": "Gujarat",
+    "Destination_State": "Punjab",
+    "Vehicle_Type": "Unknown",
+    "Transport_Mode": "Road",
+    "Route_Type": "Interstate",
+    "Interstate_Travel": "Yes",
+    "_verification": {
+        "verified": true,
+        "verification_timestamp": "2026-09-01T18:34:05.344481",
+        "verification_method": "Officer verification"
+    }
+}

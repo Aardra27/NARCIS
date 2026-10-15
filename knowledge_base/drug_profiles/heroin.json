@@ -1,80 +1,145 @@
-{
-  "drug_name": "Heroin",
-  "aliases": [
-    "Smack",
-    "Brown Sugar",
-    "Diacetylmorphine"
-  ],
-  "scientific_name": "Diacetylmorphine",
-  "category": "Manufactured Narcotic Drug (Opioid)",
-  "description": "A highly addictive opioid narcotic derived from morphine and prohibited under the NDPS Act except for authorized medical or scientific purposes.",
-  "small_quantity": {
-    "value": 5,
-    "unit": "g"
-  },
-  "commercial_quantity": {
-    "value": 250,
-    "unit": "g"
-  },
-  "common_transport_modes": [
-    "Road",
-    "Rail",
-    "Air",
-    "Courier"
-  ],
-  "common_vehicle_types": [
-    "Car",
-    "Motorcycle",
-    "Bus",
-    "Train",
-    "Flight",
-    "Courier Parcel"
-  ],
-  "common_concealment_methods": [
-    "False Bottom Luggage",
-    "Hidden Vehicle Compartment",
-    "Parcel",
-    "Clothing Concealment",
-    "Food Packet",
-    "Cosmetic Container"
-  ],
-  "major_trafficking_states": [
-    "Punjab",
-    "Delhi",
-    "Jammu and Kashmir",
-    "Rajasthan",
-    "Gujarat",
-    "Maharashtra"
-  ],
-  "common_source_regions": [
-    "Golden Crescent Route",
-    "Interstate Distribution Networks"
-  ],
-  "typical_intelligence_sources": [
-    "Confidential Informant",
-    "NCB Intelligence",
-    "State Police Intelligence",
-    "Surveillance",
-    "Interstate Coordination"
-  ],
-  "evidence_types": [
-    "Drug Sample",
-    "Mobile Phone",
-    "Call Detail Records",
-    "Digital Payment Records",
-    "Vehicle Search",
-    "Fingerprints",
-    "CCTV Footage"
-  ],
-  "applicable_ndps_sections": [
-    "8(c)",
-    "21"
-  ],
-  "risk_weight": null,
-  "references": [
-    "NDPS Act, 1985",
-    "Department of Revenue - Small and Commercial Quantities",
-    "NCB Annual Reports",
-    "Public NCB and State Police Seizure Reports"
-  ]
+﻿{
+    "version":  "1.0",
+    "last_updated":  "2026-07-30",
+    "drug_information":  {
+                             "drug_name":  "Heroin",
+                             "scientific_name":  "Diacetylmorphine",
+                             "aliases":  [
+                                             "Smack",
+                                             "Brown Sugar",
+                                             "Chitta",
+                                             "No. 4 Heroin"
+                                         ],
+                             "category":  "Manufactured Narcotic Drug (Opioid)",
+                             "description":  "Heroin (Diacetylmorphine) is a semi-synthetic opioid derived from morphine. It is classified as a manufactured narcotic drug under the Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985. Unauthorized production, possession, sale, purchase, transport, storage and distribution are prohibited except where permitted for medical or scientific purposes."
+                         },
+    "legal_information":  {
+                              "applicable_ndps_sections":  [
+                                                               {
+                                                                   "applicability":  "Prohibits production, possession, sale, purchase, transport, warehousing, use, import, export and inter-state movement except as authorized under the NDPS Act.",
+                                                                   "section":  "8(c)",
+                                                                   "title":  "Prohibition of Certain Operations"
+                                                               },
+                                                               {
+                                                                   "applicability":  "Applies to offences involving heroin. Punishment depends on whether the quantity is small, intermediate or commercial.",
+                                                                   "section":  "21",
+                                                                   "title":  "Punishment for Contravention in Relation to Manufactured Drugs"
+                                                               }
+                                                           ],
+                              "quantity_thresholds":  {
+                                                          "small_quantity":  {
+                                                                                 "unit":  "g",
+                                                                                 "source":  "Government of India Notification S.O. 1055(E), 19 October 2001",
+                                                                                 "value":  5
+                                                                             },
+                                                          "commercial_quantity":  {
+                                                                                      "unit":  "g",
+                                                                                      "source":  "Government of India Notification S.O. 1055(E), 19 October 2001",
+                                                                                      "value":  250
+                                                                                  }
+                                                      }
+                          },
+    "operational_intelligence":  {
+                                     "vehicle_types":  [
+                                                           "Car",
+                                                           "Motorcycle",
+                                                           "Bus",
+                                                           "Truck",
+                                                           "Train",
+                                                           "Flight",
+                                                           "Courier Parcel"
+                                                       ],
+                                     "source_regions":  [
+                                                            "Golden Crescent"
+                                                        ],
+                                     "concealment_methods":  [
+                                                                 "False Bottom Luggage",
+                                                                 "Hidden Vehicle Compartment",
+                                                                 "Courier Parcel",
+                                                                 "Clothing Concealment",
+                                                                 "Food Packet",
+                                                                 "Cosmetic Container"
+                                                             ],
+                                     "intelligence_inputs":  [
+                                                                 "Confidential Informant",
+                                                                 "NCB Intelligence",
+                                                                 "State Police Intelligence",
+                                                                 "Surveillance",
+                                                                 "Interstate Coordination"
+                                                             ],
+                                     "transport_modes":  [
+                                                             "Road",
+                                                             "Rail",
+                                                             "Air",
+                                                             "Courier"
+                                                         ],
+                                     "distribution_regions":  [
+                                                                  "Punjab",
+                                                                  "Delhi",
+                                                                  "Rajasthan",
+                                                                  "Gujarat",
+                                                                  "Maharashtra"
+                                                              ]
+                                 },
+    "investigation_support":  {
+                                  "storage_guidelines":  [
+                                                             "Store in tamper-evident sealed evidence bags.",
+                                                             "Label each exhibit with a unique evidence ID.",
+                                                             "Keep in a secure evidence storage facility.",
+                                                             "Restrict access to authorized personnel only.",
+                                                             "Maintain detailed evidence movement logs."
+                                                         ],
+                                  "investigation_guidelines":  [
+                                                                   "Secure the scene and prevent contamination.",
+                                                                   "Photograph and document all seized materials before handling.",
+                                                                   "Collect representative samples following NDPS procedures.",
+                                                                   "Maintain an unbroken chain of custody.",
+                                                                   "Record weight, packaging and identifying marks.",
+                                                                   "Document witness statements and seizure memo.",
+                                                                   "Send samples to an authorized forensic laboratory."
+                                                               ],
+                                  "officer_precautions":  [
+                                                              "Wear disposable gloves.",
+                                                              "Use appropriate PPE when handling unknown substances.",
+                                                              "Avoid direct skin contact and inhalation.",
+                                                              "Seal evidence immediately after collection.",
+                                                              "Handle sharp objects carefully.",
+                                                              "Report accidental exposure immediately."
+                                                          ],
+                                  "evidence_types":  [
+                                                         "Seized Drug Sample",
+                                                         "Packaging Material",
+                                                         "Digital Devices",
+                                                         "Financial Records",
+                                                         "Call Detail Records",
+                                                         "Fingerprints",
+                                                         "DNA Evidence",
+                                                         "CCTV Footage"
+                                                     ]
+                              },
+    "dataset_mapping":  {
+                            "drug_type":  "Heroin",
+                            "quantity_field":  "Quantity",
+                            "quantity_category_field":  "Quantity_Category",
+                            "transport_mode_field":  "Transport_Mode",
+                            "vehicle_type_field":  "Vehicle_Type",
+                            "concealment_method_field":  "Concealment_Method",
+                            "intelligence_input_field":  "Intelligence_Input",
+                            "evidence_type_field":  "Evidence_Type",
+                            "ndps_section_field":  "Applicable_NDPS_Sections"
+                        },
+    "references":  {
+                       "operational":  [
+                                           "Narcotics Control Bureau (NCB)",
+                                           "United Nations Office on Drugs and Crime (UNODC)"
+                                       ],
+                       "medical":  [
+                                       "World Health Organization (WHO)",
+                                       "National Institute on Drug Abuse (NIDA)"
+                                   ],
+                       "legal":  [
+                                     "NDPS Act, 1985",
+                                     "Government of India Notification S.O. 1055(E), 19 October 2001"
+                                 ]
+                   }
 }

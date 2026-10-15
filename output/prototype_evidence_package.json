@@ -1,0 +1,1251 @@
+{
+    "case": {
+        "Investigation_Year": "2023",
+        "Agency": "NCB",
+        "Drug_Type": "Pseudoephedrine",
+        "NCB_Zonal_Unit": "Ahmedabad Zonal Unit",
+        "Quantity": "39,60,000 capsules (475.2 kg Pseudoephedrine HCL",
+        "Persons_Arrested": "02",
+        "Source_Type": "Specific Input",
+        "Applicable_NDPS_Sections": "9A, 25A, 26, 29",
+        "Quantity_Category": "Unknown",
+        "Operation_Type": "Unknown",
+        "Origin_State": "Gujarat",
+        "Destination_State": "Unknown",
+        "Vehicle_Type": "Container",
+        "Transport_Mode": "Unknown",
+        "Route_Type": "Unknown",
+        "Interstate_Travel": "Unknown",
+        "Case_ID": "",
+        "Location": "",
+        "Incident_Date": "",
+        "_verification": {
+            "verified": true,
+            "verification_timestamp": "2026-10-15T13:47:29Z",
+            "verification_method": "Officer verification"
+        }
+    },
+    "ml_prediction": {
+        "prediction": "Medium",
+        "probabilities": {
+            "Low": 0.005,
+            "Medium": 0.865,
+            "High": 0.13
+        },
+        "feature_vector": {
+            "Investigation_Year": 2023.0,
+            "Origin_State": 10.0,
+            "Destination_State": 33.0,
+            "Origin_City": 156.0,
+            "Destination_City": 156.0,
+            "Agency": 10.0,
+            "Investigation_Status": 4.0,
+            "Source_Type": 5.0,
+            "Age": 38.0,
+            "Gender": 3.0,
+            "Occupation": 34.0,
+            "Known_Associate_Count": 5.0,
+            "Previous_NDPS_FIRs": 0.0,
+            "Total_Criminal_Cases": 2.0,
+            "Previous_Seizure_Link": 1.0,
+            "Transport_Mode": 5.0,
+            "Vehicle_Type": 13.0,
+            "Route_Type": 3.0,
+            "Interstate_Travel": 1.0,
+            "Travel_Frequency": 3.0,
+            "Drug_Type": 9.0,
+            "Quantity": 39.0,
+            "Quantity_Category": 4.0,
+            "Concealment_Method": 18.0,
+            "Intelligence_Input": 15.0,
+            "Evidence_Type": 5170.0,
+            "Applicable_NDPS_Sections": 5.0
+        }
+    },
+    "local_explainability": {
+        "predicted_class": "Medium",
+        "top_factors": [
+            {
+                "feature": "Quantity_Category",
+                "value": "Unknown",
+                "encoded_value": 4.0,
+                "shap_impact": 0.210047,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Previous_NDPS_FIRs",
+                "value": "Unknown",
+                "encoded_value": 0.0,
+                "shap_impact": 0.169761,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Previous_Seizure_Link",
+                "value": "Unknown",
+                "encoded_value": 1.0,
+                "shap_impact": 0.063818,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Drug_Type",
+                "value": "Pseudoephedrine",
+                "encoded_value": 9.0,
+                "shap_impact": 0.0496,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Applicable_NDPS_Sections",
+                "value": "9A, 25A, 26, 29",
+                "encoded_value": 5.0,
+                "shap_impact": 0.045166,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Interstate_Travel",
+                "value": "Unknown",
+                "encoded_value": 1.0,
+                "shap_impact": 0.041143,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Route_Type",
+                "value": "Unknown",
+                "encoded_value": 3.0,
+                "shap_impact": 0.034425,
+                "direction": "increased support"
+            },
+            {
+                "feature": "Quantity",
+                "value": "39,60,000 capsules (475.2 kg Pseudoephedrine HCL",
+                "encoded_value": 39.0,
+                "shap_impact": -0.023111,
+                "direction": "decreased support"
+            },
+            {
+                "feature": "Intelligence_Input",
+                "value": "Unknown",
+                "encoded_value": 15.0,
+                "shap_impact": -0.014803,
+                "direction": "decreased support"
+            },
+            {
+                "feature": "Concealment_Method",
+                "value": "Unknown",
+                "encoded_value": 18.0,
+                "shap_impact": -0.014646,
+                "direction": "decreased support"
+            }
+        ]
+    },
+    "similar_historical_cases": [
+        {
+            "file": "case008.json",
+            "semantic_score": 91.83,
+            "structured_score": 93.33,
+            "quantity_similarity": 100.0,
+            "final_score": 92.73,
+            "matching_fields": [
+                "Drug_Type",
+                "Origin_State",
+                "Vehicle_Type"
+            ],
+            "case": {
+                "Investigation_Year": "2023",
+                "Agency": "NCB",
+                "Drug_Type": "Pseudoephedrine",
+                "NCB_Zonal_Unit": "Ahmedabad Zonal Unit",
+                "Quantity": "39,60,000 capsules (475.2 kg Pseudoephedrine HCL)",
+                "Persons_Arrested": "02",
+                "Source_Type": "Specific Input",
+                "Applicable_NDPS_Sections": "9A, 25A, 26, 29, 38",
+                "Quantity_Category": "Commercial",
+                "Operation_Type": "Container inspection, forensic sampling and seizure",
+                "Origin_State": "Gujarat",
+                "Destination_State": "South Sudan",
+                "Vehicle_Type": "Container",
+                "Transport_Mode": "Sea",
+                "Route_Type": "International",
+                "Interstate_Travel": "No"
+            },
+            "rank": 1
+        },
+        {
+            "file": "case002.json",
+            "semantic_score": 75.12,
+            "structured_score": 18.52,
+            "quantity_similarity": 52.12,
+            "final_score": 41.16,
+            "matching_fields": [
+                "Origin_State"
+            ],
+            "case": {
+                "Investigation_Year": "2022",
+                "Agency": "NCB",
+                "Drug_Type": "Heroin",
+                "NCB_Zonal_Unit": "Chandigarh Zonal Unit",
+                "Quantity": "20.326 Kg Heroin",
+                "Persons_Arrested": "20",
+                "Source_Type": "Secret Information",
+                "Applicable_NDPS_Sections": "8(c), 21, 27A, 29",
+                "Quantity_Category": "Commercial",
+                "Operation_Type": "International trafficking syndicate investigation and seizure",
+                "Origin_State": "Gujarat",
+                "Destination_State": "Punjab",
+                "Vehicle_Type": "Unknown",
+                "Transport_Mode": "Road",
+                "Route_Type": "Interstate",
+                "Interstate_Travel": "Yes",
+                "_verification": {
+                    "verified": true,
+                    "verification_method": "Officer verification",
+                    "unknown_fields": [
+                        "Vehicle_Type"
+                    ]
+                }
+            },
+            "rank": 2
+        },
+        {
+            "file": "case009.json",
+            "semantic_score": 74.05,
+            "structured_score": 0.0,
+            "quantity_similarity": 19.57,
+            "final_score": 29.62,
+            "matching_fields": [],
+            "case": {
+                "Investigation_Year": "2023",
+                "Agency": "NCB",
+                "Drug_Type": "Alprazolam",
+                "NCB_Zonal_Unit": "Mumbai Zonal Unit",
+                "Quantity": "199.3 kg Alprazolam",
+                "Persons_Arrested": "02",
+                "Source_Type": "Investigation / Follow-up Search",
+                "Applicable_NDPS_Sections": "Unknown",
+                "Quantity_Category": "Commercial",
+                "Operation_Type": "Clandestine laboratory seizure and multi-state syndicate investigation",
+                "Origin_State": "Maharashtra",
+                "Destination_State": "Telangana",
+                "Vehicle_Type": "Unknown",
+                "Transport_Mode": "Road",
+                "Route_Type": "Interstate",
+                "Interstate_Travel": "Yes"
+            },
+            "rank": 3
+        }
+    ],
+    "knowledge": {
+        "drug_profile": {
+            "status": "found",
+            "source_file": "pseudoephedrine.json",
+            "data": {
+                "version": "1.0",
+                "last_updated": "2026-08-17",
+                "drug_information": {
+                    "drug_name": "Pseudoephedrine",
+                    "scientific_name": "Pseudoephedrine",
+                    "aliases": [
+                        "Pseudoephedrine HCl"
+                    ],
+                    "category": "Controlled Substance / Precursor Chemical",
+                    "description": "Pseudoephedrine is a controlled precursor chemical subject to regulatory controls because of its potential use in the illicit manufacture of narcotic drugs and psychotropic substances."
+                },
+                "legal_information": {
+                    "applicable_ndps_sections": [
+                        {
+                            "section": "9A",
+                            "title": "Controlled Substances",
+                            "applicability": "Provides the regulatory framework for controlled substances notified by the Central Government."
+                        },
+                        {
+                            "section": "25A",
+                            "title": "Punishment for Contravention of Orders Regarding Controlled Substances",
+                            "applicability": "Applies to contravention of orders relating to controlled substances."
+                        }
+                    ],
+                    "quantity_thresholds": {
+                        "small_quantity": {
+                            "unit": "N/A",
+                            "value": null,
+                            "source": "Not applicable. Controlled substances are not categorized using the narcotic-drug/psychotropic-substance small-quantity framework."
+                        },
+                        "commercial_quantity": {
+                            "unit": "N/A",
+                            "value": null,
+                            "source": "Not applicable. Controlled substances are not categorized using the narcotic-drug/psychotropic-substance commercial-quantity framework."
+                        }
+                    }
+                },
+                "operational_intelligence": {
+                    "vehicle_types": [
+                        "Container",
+                        "Truck",
+                        "Courier Parcel"
+                    ],
+                    "source_regions": [
+                        "Unknown"
+                    ],
+                    "concealment_methods": [
+                        "Container Concealment",
+                        "False Declaration",
+                        "Mislabelled Pharmaceutical Product"
+                    ],
+                    "intelligence_inputs": [
+                        "Specific Information",
+                        "NCB Intelligence",
+                        "Customs Intelligence",
+                        "Port Intelligence"
+                    ],
+                    "transport_modes": [
+                        "Road",
+                        "Sea",
+                        "Container Freight",
+                        "Courier"
+                    ],
+                    "distribution_regions": [
+                        "Gujarat",
+                        "South Sudan"
+                    ]
+                },
+                "investigation_support": {
+                    "storage_guidelines": [
+                        "Store seized material in secure, appropriately labelled evidence containers.",
+                        "Maintain evidence identification and movement records.",
+                        "Restrict access to authorized personnel.",
+                        "Maintain chain-of-custody documentation."
+                    ],
+                    "investigation_guidelines": [
+                        "Secure the seized material and relevant documentation.",
+                        "Record container, package and batch identifiers.",
+                        "Document declared versus actual contents.",
+                        "Collect representative samples according to applicable procedures.",
+                        "Send samples to an authorized forensic laboratory.",
+                        "Document manufacturer, exporter and consignee information where relevant.",
+                        "Preserve financial and export documentation."
+                    ],
+                    "officer_precautions": [
+                        "Use appropriate PPE when handling unknown powders or pharmaceutical materials.",
+                        "Avoid direct contact and inhalation.",
+                        "Secure containers before examination.",
+                        "Document evidence handling."
+                    ],
+                    "evidence_types": [
+                        "Seized Chemical Material",
+                        "Packaging Material",
+                        "Container Records",
+                        "Export Documents",
+                        "Company Records",
+                        "Financial Records",
+                        "Digital Devices",
+                        "CCTV Footage"
+                    ]
+                },
+                "dataset_mapping": {
+                    "drug_type": "Pseudoephedrine",
+                    "quantity_field": "Quantity",
+                    "quantity_category_field": "Quantity_Category",
+                    "transport_mode_field": "Transport_Mode",
+                    "vehicle_type_field": "Vehicle_Type",
+                    "concealment_method_field": "Concealment_Method",
+                    "intelligence_input_field": "Intelligence_Input",
+                    "evidence_type_field": "Evidence_Type",
+                    "ndps_section_field": "Applicable_NDPS_Sections"
+                },
+                "references": {
+                    "operational": [
+                        "Narcotics Control Bureau (NCB)",
+                        "Central Bureau of Narcotics (CBN)"
+                    ],
+                    "medical": [
+                        "World Health Organization (WHO)"
+                    ],
+                    "legal": [
+                        "NDPS Act, 1985",
+                        "NDPS (Regulation of Controlled Substances) Order",
+                        "Central Bureau of Narcotics controlled-substance information"
+                    ]
+                }
+            }
+        },
+        "ndps_sections": {
+            "status": "found",
+            "source_file": "ndps_sections.json",
+            "sections": [
+                {
+                    "section": "27A",
+                    "title": "Financing Illicit Traffic and Harbouring Offenders",
+                    "description": "Punishes financing illicit trafficking and harbouring persons engaged in narcotics offences.",
+                    "applicable_drugs": [
+                        "All Drugs"
+                    ]
+                },
+                {
+                    "section": "29",
+                    "title": "Abetment and Criminal Conspiracy",
+                    "description": "Applies to abetment of offences and criminal conspiracy under the NDPS Act.",
+                    "applicable_drugs": [
+                        "All Drugs"
+                    ]
+                }
+            ]
+        },
+        "quantity_information": {
+            "status": "not_found",
+            "drug": "Pseudoephedrine"
+        },
+        "sop": {
+            "status": "found",
+            "sources": [
+                {
+                    "source_file": "search_and_seizure.json",
+                    "data": {
+                        "version": "2.0",
+                        "last_updated": "2026-07-31",
+                        "sop_name": "Search and Seizure under the NDPS Act",
+                        "objective": "To ensure lawful search, seizure, sampling, storage and reporting of narcotic drugs and psychotropic substances in accordance with the NDPS Act, 1985 and associated rules.",
+                        "legal_basis": [
+                            {
+                                "section": "41",
+                                "purpose": "Power to issue warrants and authorizations."
+                            },
+                            {
+                                "section": "42",
+                                "purpose": "Search, seizure and arrest based on prior information in buildings, conveyances or enclosed places."
+                            },
+                            {
+                                "section": "43",
+                                "purpose": "Search and seizure in public places."
+                            },
+                            {
+                                "section": "49",
+                                "purpose": "Power to stop and search conveyances."
+                            },
+                            {
+                                "section": "50",
+                                "purpose": "Conditions for personal search."
+                            },
+                            {
+                                "section": "52",
+                                "purpose": "Disposal and reporting after arrest and seizure."
+                            },
+                            {
+                                "section": "52A",
+                                "purpose": "Disposal, inventory, photography and sampling of seized narcotic drugs."
+                            },
+                            {
+                                "section": "55",
+                                "purpose": "Safe custody of seized articles."
+                            },
+                            {
+                                "section": "57",
+                                "purpose": "Reporting of arrest and seizure to superior officers."
+                            }
+                        ],
+                        "procedure": [
+                            {
+                                "step": 1,
+                                "title": "Record Intelligence",
+                                "description": "Record information received regarding narcotic offences as required under Section 42 before initiating action where applicable."
+                            },
+                            {
+                                "step": 2,
+                                "title": "Obtain Authorization",
+                                "description": "Obtain warrant or authorization under Section 41 whenever required. Emergency searches shall follow provisions of Section 42."
+                            },
+                            {
+                                "step": 3,
+                                "title": "Identify Search Location",
+                                "description": "Determine whether the search is in a public place (Section 43) or a private building, conveyance or enclosed place (Section 42)."
+                            },
+                            {
+                                "step": 4,
+                                "title": "Conduct Personal Search",
+                                "description": "Where personal search is required, comply with safeguards provided under Section 50."
+                            },
+                            {
+                                "step": 5,
+                                "title": "Search Premises or Vehicle",
+                                "description": "Conduct systematic search while documenting all recovered narcotic drugs, psychotropic substances and related evidence."
+                            },
+                            {
+                                "step": 6,
+                                "title": "Prepare Inventory",
+                                "description": "Prepare inventory of seized material including description, quantity, packaging, identifying marks and seizure location in accordance with Section 52A."
+                            },
+                            {
+                                "step": 7,
+                                "title": "Photography and Sampling",
+                                "description": "Photograph seized material and draw representative samples following the NDPS Seizure, Storage, Sampling and Disposal Rules, 2022."
+                            },
+                            {
+                                "step": 8,
+                                "title": "Seal Evidence",
+                                "description": "Seal all exhibits using tamper-evident methods and assign unique evidence identifiers."
+                            },
+                            {
+                                "step": 9,
+                                "title": "Deposit in Safe Custody",
+                                "description": "Deposit seized articles in the designated malkhana or authorized storage facility as required under Section 55."
+                            },
+                            {
+                                "step": 10,
+                                "title": "Submit Report",
+                                "description": "Forward seizure and arrest report to the immediate superior officer within the prescribed time under Section 57."
+                            }
+                        ],
+                        "documents_required": [
+                            "Search Authorization or Warrant",
+                            "Grounds of Search",
+                            "Seizure Memo (Panchnama)",
+                            "Inventory under Section 52A",
+                            "Photographic Record",
+                            "Sample Seal Impression",
+                            "Chain of Custody Form",
+                            "Forwarding Letter to Forensic Laboratory",
+                            "Arrest Memo (where applicable)"
+                        ],
+                        "references": [
+                            "NDPS Act, 1985",
+                            "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+                            "NCB Standing Orders",
+                            "NCB Training Module"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "evidence_collection.json",
+                    "data": {
+                        "version": "2.0",
+                        "last_updated": "2026-07-31",
+                        "sop_name": "Evidence Collection under the NDPS Act",
+                        "objective": "To ensure proper identification, collection, documentation, preservation and transfer of evidence in narcotics investigations while maintaining evidentiary integrity.",
+                        "legal_basis": [
+                            {
+                                "section": "52A",
+                                "purpose": "Preparation of inventory, photography and sampling of seized narcotic drugs and psychotropic substances."
+                            },
+                            {
+                                "section": "55",
+                                "purpose": "Safe custody of seized narcotic drugs and psychotropic substances."
+                            },
+                            {
+                                "section": "57",
+                                "purpose": "Reporting of arrest and seizure."
+                            }
+                        ],
+                        "procedure": [
+                            {
+                                "step": 1,
+                                "title": "Secure the Scene",
+                                "description": "Restrict unauthorized access to prevent contamination, loss or tampering of evidence."
+                            },
+                            {
+                                "step": 2,
+                                "title": "Identify Evidence",
+                                "description": "Locate narcotic substances, packaging materials, weighing instruments, digital devices, financial records and other relevant evidence."
+                            },
+                            {
+                                "step": 3,
+                                "title": "Photograph Evidence",
+                                "description": "Photograph all evidence in its original position before collection."
+                            },
+                            {
+                                "step": 4,
+                                "title": "Prepare Inventory",
+                                "description": "Record description, quantity, packaging, markings and place of recovery as required under Section 52A."
+                            },
+                            {
+                                "step": 5,
+                                "title": "Draw Representative Samples",
+                                "description": "Draw representative samples in accordance with the NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022."
+                            },
+                            {
+                                "step": 6,
+                                "title": "Seal and Label",
+                                "description": "Seal all evidence using tamper-evident seals and assign a unique evidence identification number."
+                            },
+                            {
+                                "step": 7,
+                                "title": "Document Collection",
+                                "description": "Record the officer collecting the evidence, date, time, location and witness details."
+                            },
+                            {
+                                "step": 8,
+                                "title": "Transfer for Safe Custody",
+                                "description": "Transfer evidence to the designated evidence storage facility while maintaining chain of custody."
+                            },
+                            {
+                                "step": 9,
+                                "title": "Forward Samples",
+                                "description": "Send representative samples to an authorized forensic laboratory with appropriate documentation."
+                            }
+                        ],
+                        "evidence_categories": [
+                            "Narcotic Drugs",
+                            "Psychotropic Substances",
+                            "Controlled Substances",
+                            "Packaging Materials",
+                            "Digital Devices",
+                            "Mobile Phones",
+                            "Financial Documents",
+                            "Identity Documents",
+                            "Call Detail Records",
+                            "CCTV Footage",
+                            "Fingerprints",
+                            "DNA Evidence"
+                        ],
+                        "required_documents": [
+                            "Seizure Memo",
+                            "Evidence Inventory",
+                            "Photography Record",
+                            "Sample Seal Impression",
+                            "Forensic Laboratory Forwarding Letter",
+                            "Chain of Custody Form"
+                        ],
+                        "officer_precautions": [
+                            "Wear appropriate personal protective equipment.",
+                            "Prevent contamination of exhibits.",
+                            "Use tamper-evident packaging.",
+                            "Do not mix evidence from different seizure locations.",
+                            "Maintain continuous documentation during collection."
+                        ],
+                        "references": [
+                            "NDPS Act, 1985",
+                            "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+                            "NCB Standing Orders",
+                            "NCB Training Module"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "chain_of_custody.json",
+                    "data": {
+                        "version": "2.0",
+                        "last_updated": "2026-07-31",
+                        "sop_name": "Chain of Custody under the NDPS Act",
+                        "objective": "To maintain the integrity, authenticity and traceability of seized narcotic drugs, psychotropic substances and associated evidence from the time of seizure until final disposal or production before the Court.",
+                        "legal_basis": [
+                            {
+                                "section": "52A",
+                                "purpose": "Preparation of inventory, photography, sampling and certification of seized narcotic drugs and psychotropic substances."
+                            },
+                            {
+                                "section": "55",
+                                "purpose": "Safe custody of seized narcotic drugs, psychotropic substances and related articles."
+                            },
+                            {
+                                "section": "57",
+                                "purpose": "Reporting of arrest and seizure to superior officers."
+                            }
+                        ],
+                        "procedure": [
+                            {
+                                "step": 1,
+                                "title": "Assign Evidence Identification",
+                                "description": "Assign a unique identification number to every seized exhibit immediately after seizure."
+                            },
+                            {
+                                "step": 2,
+                                "title": "Document Evidence",
+                                "description": "Record description, quantity, packaging, identifying marks, seizure location, date, time and seizing officer."
+                            },
+                            {
+                                "step": 3,
+                                "title": "Seal Evidence",
+                                "description": "Seal every exhibit using tamper-evident seals and record the seal impression in official documentation."
+                            },
+                            {
+                                "step": 4,
+                                "title": "Prepare Inventory",
+                                "description": "Prepare inventory and photographic documentation in accordance with Section 52A of the NDPS Act."
+                            },
+                            {
+                                "step": 5,
+                                "title": "Transfer to Safe Custody",
+                                "description": "Deposit seized material in the designated malkhana or authorized storage facility without unnecessary delay."
+                            },
+                            {
+                                "step": 6,
+                                "title": "Record Every Transfer",
+                                "description": "Document every transfer of custody including officer names, designation, date, time, purpose and signatures."
+                            },
+                            {
+                                "step": 7,
+                                "title": "Forward Samples",
+                                "description": "Forward representative samples to an authorized forensic laboratory with proper forwarding documents and seal verification."
+                            },
+                            {
+                                "step": 8,
+                                "title": "Produce Before Court",
+                                "description": "Produce evidence before the competent Court whenever required while maintaining complete custody records."
+                            },
+                            {
+                                "step": 9,
+                                "title": "Final Disposal",
+                                "description": "Dispose of seized narcotic drugs and psychotropic substances in accordance with judicial orders and applicable NDPS Rules."
+                            }
+                        ],
+                        "chain_of_custody_record": [
+                            "Evidence Identification Number",
+                            "Case Number",
+                            "Description of Evidence",
+                            "Quantity",
+                            "Packaging Details",
+                            "Seal Number",
+                            "Date and Time of Seizure",
+                            "Seizing Officer",
+                            "Transfer History",
+                            "Receiving Officer",
+                            "Storage Location",
+                            "Forensic Laboratory Reference",
+                            "Court Production Details",
+                            "Final Disposal Details"
+                        ],
+                        "required_documents": [
+                            "Seizure Memo",
+                            "Evidence Inventory",
+                            "Chain of Custody Form",
+                            "Sample Seal Impression",
+                            "Forwarding Letter to Forensic Laboratory",
+                            "Forensic Acknowledgement Receipt",
+                            "Court Submission Record",
+                            "Evidence Disposal Certificate"
+                        ],
+                        "officer_responsibilities": [
+                            "Maintain continuous custody documentation.",
+                            "Prevent unauthorized access to evidence.",
+                            "Verify seal integrity during every transfer.",
+                            "Immediately report damaged or broken seals.",
+                            "Ensure evidence remains secure until final disposal."
+                        ],
+                        "references": [
+                            "Narcotic Drugs and Psychotropic Substances Act, 1985",
+                            "NDPS (Seizure, Storage, Sampling and Disposal) Rules, 2022",
+                            "Narcotics Control Bureau Standing Orders",
+                            "Narcotics Control Bureau Training Module",
+                            "Directorate of Forensic Science Services Guidelines"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "arrest_procedure.json",
+                    "data": {
+                        "version": "2.0",
+                        "last_updated": "2026-07-31",
+                        "sop_name": "Arrest Procedure under the NDPS Act",
+                        "objective": "To ensure lawful arrest, documentation and production of accused persons in accordance with the NDPS Act, 1985 and the Code of Criminal Procedure (CrPC).",
+                        "legal_basis": [
+                            {
+                                "section": "41",
+                                "purpose": "Power to issue warrants and authorizations for arrest."
+                            },
+                            {
+                                "section": "42",
+                                "purpose": "Power to arrest based on prior information in specified places."
+                            },
+                            {
+                                "section": "43",
+                                "purpose": "Power to arrest in public places."
+                            },
+                            {
+                                "section": "52",
+                                "purpose": "Procedure after arrest."
+                            },
+                            {
+                                "section": "57",
+                                "purpose": "Mandatory report of arrest and seizure."
+                            }
+                        ],
+                        "procedure": [
+                            {
+                                "step": 1,
+                                "title": "Establish Legal Grounds",
+                                "description": "Confirm that reasonable grounds exist for arrest under the NDPS Act."
+                            },
+                            {
+                                "step": 2,
+                                "title": "Identify the Officer",
+                                "description": "The arresting officer shall identify themselves and disclose their authority."
+                            },
+                            {
+                                "step": 3,
+                                "title": "Inform the Accused",
+                                "description": "Inform the accused of the grounds of arrest and applicable provisions of law."
+                            },
+                            {
+                                "step": 4,
+                                "title": "Conduct Personal Search",
+                                "description": "Where applicable, conduct personal search in accordance with Section 50 of the NDPS Act."
+                            },
+                            {
+                                "step": 5,
+                                "title": "Prepare Arrest Memo",
+                                "description": "Prepare an arrest memo containing the date, time, location, witnesses and signatures."
+                            },
+                            {
+                                "step": 6,
+                                "title": "Seize Relevant Evidence",
+                                "description": "Secure narcotic substances, digital devices, documents and other material connected to the offence."
+                            },
+                            {
+                                "step": 7,
+                                "title": "Medical Examination",
+                                "description": "Arrange medical examination whenever required under applicable law."
+                            },
+                            {
+                                "step": 8,
+                                "title": "Produce Before Magistrate",
+                                "description": "Produce the arrested person before the competent Magistrate within the legally prescribed period."
+                            },
+                            {
+                                "step": 9,
+                                "title": "Submit Report",
+                                "description": "Forward arrest and seizure report to the immediate superior officer in accordance with Section 57."
+                            }
+                        ],
+                        "documents_required": [
+                            "Arrest Memo",
+                            "Grounds of Arrest",
+                            "Seizure Memo",
+                            "Inventory of Seized Articles",
+                            "Personal Search Memo",
+                            "Medical Examination Report (if applicable)",
+                            "Case Diary Entry",
+                            "Report under Section 57"
+                        ],
+                        "rights_of_accused": [
+                            "To be informed of the grounds of arrest.",
+                            "To be produced before a Magistrate within the prescribed legal period.",
+                            "To consult a legal practitioner as permitted by law.",
+                            "To receive a copy of the arrest memo."
+                        ],
+                        "references": [
+                            "NDPS Act, 1985",
+                            "Code of Criminal Procedure, 1973",
+                            "NCB Standing Orders",
+                            "NCB Training Module"
+                        ]
+                    }
+                }
+            ]
+        },
+        "trafficking_patterns": {
+            "status": "found",
+            "sources": [
+                {
+                    "source_file": "routes.json",
+                    "matches": [],
+                    "data": {
+                        "version": "1.0",
+                        "last_updated": "2026-07-31",
+                        "pattern_name": "Drug Trafficking Route Characteristics",
+                        "objective": "Provide structured knowledge regarding common trafficking route characteristics observed in narcotics investigations to support intelligence analysis, investigation planning and machine learning feature interpretation.",
+                        "route_patterns": [
+                            {
+                                "route_type": "Interstate",
+                                "risk_level": "High",
+                                "description": "Movement of narcotic drugs across one or more state boundaries using road, rail, air or courier networks.",
+                                "common_characteristics": [
+                                    "Multiple jurisdiction involvement",
+                                    "Long-distance transportation",
+                                    "Coordination between trafficking networks",
+                                    "Higher logistical planning"
+                                ],
+                                "dataset_mapping": {
+                                    "route_type_field": "Route_Type",
+                                    "interstate_field": "Interstate_Travel"
+                                }
+                            },
+                            {
+                                "route_type": "Intrastate",
+                                "risk_level": "Medium",
+                                "description": "Distribution occurring within a single state through regional transportation networks.",
+                                "common_characteristics": [
+                                    "Local distribution",
+                                    "Short-distance transportation",
+                                    "Smaller operational networks"
+                                ],
+                                "dataset_mapping": {
+                                    "route_type_field": "Route_Type",
+                                    "interstate_field": "Interstate_Travel"
+                                }
+                            }
+                        ],
+                        "risk_indicators": [
+                            "Frequent travel between multiple jurisdictions.",
+                            "Repeated use of commercial transport services.",
+                            "Frequent changes in travel schedules.",
+                            "Movement inconsistent with declared occupation or purpose.",
+                            "Use of multiple transport modes during a single journey."
+                        ],
+                        "investigation_guidelines": [
+                            "Verify travel history.",
+                            "Compare origin and destination with intelligence records.",
+                            "Coordinate with relevant enforcement agencies when multiple jurisdictions are involved.",
+                            "Review transport and booking documentation.",
+                            "Document movement chronology during investigation."
+                        ],
+                        "dataset_mapping": {
+                            "origin_city_field": "Origin_City",
+                            "destination_city_field": "Destination_City",
+                            "state_field": "State",
+                            "route_type_field": "Route_Type",
+                            "interstate_field": "Interstate_Travel"
+                        },
+                        "references": [
+                            "Narcotics Control Bureau Annual Reports",
+                            "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+                            "NDPS Act, 1985"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "transport.json",
+                    "query_transport": "unknown",
+                    "query_vehicle": "container",
+                    "data": {
+                        "version": "1.0",
+                        "last_updated": "2026-07-31",
+                        "pattern_name": "Transportation Methods in Narcotics Trafficking",
+                        "objective": "Provide operational intelligence regarding common transportation methods, vehicle usage and movement patterns observed in narcotics trafficking investigations to support risk assessment and investigation planning.",
+                        "transport_patterns": [
+                            {
+                                "transport_mode": "Road",
+                                "risk_level": "High",
+                                "common_vehicles": [
+                                    "Car",
+                                    "SUV",
+                                    "Motorcycle",
+                                    "Bus",
+                                    "Truck"
+                                ],
+                                "common_usage": "Most frequently used for interstate distribution due to extensive highway connectivity and operational flexibility.",
+                                "dataset_mapping": {
+                                    "transport_mode_field": "Transport_Mode",
+                                    "vehicle_type_field": "Vehicle_Type"
+                                }
+                            },
+                            {
+                                "transport_mode": "Rail",
+                                "risk_level": "Medium",
+                                "common_vehicles": [
+                                    "Passenger Train",
+                                    "Parcel Coach"
+                                ],
+                                "common_usage": "Used for transporting concealed narcotics over long distances through passenger or parcel services.",
+                                "dataset_mapping": {
+                                    "transport_mode_field": "Transport_Mode",
+                                    "vehicle_type_field": "Vehicle_Type"
+                                }
+                            },
+                            {
+                                "transport_mode": "Air",
+                                "risk_level": "High",
+                                "common_vehicles": [
+                                    "Commercial Flight"
+                                ],
+                                "common_usage": "Primarily associated with international trafficking, courier networks and passenger baggage concealment.",
+                                "dataset_mapping": {
+                                    "transport_mode_field": "Transport_Mode",
+                                    "vehicle_type_field": "Vehicle_Type"
+                                }
+                            },
+                            {
+                                "transport_mode": "Courier",
+                                "risk_level": "High",
+                                "common_vehicles": [
+                                    "Courier Parcel",
+                                    "Logistics Shipment"
+                                ],
+                                "common_usage": "Increasingly used for concealed shipments through commercial logistics services.",
+                                "dataset_mapping": {
+                                    "transport_mode_field": "Transport_Mode",
+                                    "vehicle_type_field": "Vehicle_Type"
+                                }
+                            }
+                        ],
+                        "route_characteristics": [
+                            {
+                                "route_type": "Interstate",
+                                "description": "Movement of narcotic substances across state boundaries requiring coordination between enforcement agencies.",
+                                "related_dataset_field": "Interstate_Travel"
+                            },
+                            {
+                                "route_type": "Intrastate",
+                                "description": "Distribution occurring within a single state through local transportation networks.",
+                                "related_dataset_field": "Interstate_Travel"
+                            }
+                        ],
+                        "investigation_indicators": [
+                            "Frequent interstate travel.",
+                            "Repeated movement along known trafficking corridors.",
+                            "Inconsistent travel history.",
+                            "Use of hired or borrowed vehicles.",
+                            "Frequent courier bookings under different identities."
+                        ],
+                        "investigation_guidelines": [
+                            "Verify ownership of the vehicle.",
+                            "Examine travel history and route consistency.",
+                            "Coordinate with neighboring state agencies for interstate cases.",
+                            "Inspect hidden compartments and modified vehicle structures.",
+                            "Review transport documentation where applicable."
+                        ],
+                        "dataset_mapping": {
+                            "transport_mode_field": "Transport_Mode",
+                            "vehicle_type_field": "Vehicle_Type",
+                            "interstate_field": "Interstate_Travel",
+                            "route_type_field": "Route_Type"
+                        },
+                        "references": [
+                            "Narcotics Control Bureau Annual Reports",
+                            "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+                            "NDPS Act, 1985"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "concealment.json",
+                    "query": "",
+                    "data": {
+                        "version": "1.0",
+                        "last_updated": "2026-07-31",
+                        "pattern_name": "Concealment Methods in Narcotics Trafficking",
+                        "objective": "Provide structured intelligence regarding commonly encountered concealment methods in narcotics investigations to support evidence identification, investigative analysis and machine learning feature interpretation.",
+                        "concealment_patterns": [
+                            {
+                                "method": "False Bottom Luggage",
+                                "risk_level": "High",
+                                "description": "Hidden compartments incorporated into luggage or baggage for concealing narcotic substances.",
+                                "common_detection_methods": [
+                                    "Visual inspection",
+                                    "Physical examination",
+                                    "X-ray baggage scanner"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            },
+                            {
+                                "method": "Hidden Vehicle Compartment",
+                                "risk_level": "High",
+                                "description": "Modified compartments within vehicles identified during enforcement operations.",
+                                "common_detection_methods": [
+                                    "Vehicle inspection",
+                                    "Density scanning",
+                                    "Canine detection"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            },
+                            {
+                                "method": "Courier Parcel",
+                                "risk_level": "High",
+                                "description": "Commercial courier consignments intercepted during enforcement or customs inspections.",
+                                "common_detection_methods": [
+                                    "Parcel screening",
+                                    "Risk profiling",
+                                    "X-ray examination"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            },
+                            {
+                                "method": "Food Package",
+                                "risk_level": "Medium",
+                                "description": "Commercial food packages identified during seizure operations.",
+                                "common_detection_methods": [
+                                    "Physical inspection",
+                                    "X-ray examination",
+                                    "Canine detection"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            },
+                            {
+                                "method": "Cosmetic Container",
+                                "risk_level": "Medium",
+                                "description": "Personal care or cosmetic containers examined during baggage or parcel inspections.",
+                                "common_detection_methods": [
+                                    "Visual examination",
+                                    "Container inspection",
+                                    "Chemical screening"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            },
+                            {
+                                "method": "Clothing Concealment",
+                                "risk_level": "Medium",
+                                "description": "Concealment within garments or personal belongings identified during lawful searches.",
+                                "common_detection_methods": [
+                                    "Personal search",
+                                    "Baggage inspection",
+                                    "Body scanner where authorized"
+                                ],
+                                "dataset_mapping": {
+                                    "concealment_method_field": "Concealment_Method"
+                                }
+                            }
+                        ],
+                        "investigation_indicators": [
+                            "Tampered packaging.",
+                            "Modified luggage or vehicle structures.",
+                            "Weight inconsistent with declared contents.",
+                            "Unusual packaging materials.",
+                            "Inconsistent declarations during inspection."
+                        ],
+                        "investigation_guidelines": [
+                            "Photograph concealed evidence before recovery whenever practicable.",
+                            "Document the concealment location in detail.",
+                            "Maintain chain of custody throughout recovery.",
+                            "Collect fingerprints or DNA where appropriate.",
+                            "Record concealment method for intelligence analysis."
+                        ],
+                        "dataset_mapping": {
+                            "concealment_method_field": "Concealment_Method"
+                        },
+                        "references": [
+                            "Narcotics Control Bureau Annual Reports",
+                            "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+                            "NDPS Act, 1985",
+                            "NCB Training Module"
+                        ]
+                    }
+                },
+                {
+                    "source_file": "intelligence_sources.json",
+                    "query": "",
+                    "data": {
+                        "version": "1.0",
+                        "last_updated": "2026-07-31",
+                        "pattern_name": "Intelligence Sources in Narcotics Investigations",
+                        "objective": "Provide structured knowledge regarding intelligence sources commonly used during narcotics investigations to support intelligence analysis, investigation planning and machine learning feature interpretation.",
+                        "intelligence_sources": [
+                            {
+                                "source": "Confidential Informant",
+                                "reliability": "Variable",
+                                "description": "Information received from confidential human sources assisting law enforcement agencies.",
+                                "common_use": [
+                                    "Drug distribution networks",
+                                    "Local trafficking activities",
+                                    "Identification of suspects"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "Surveillance",
+                                "reliability": "High",
+                                "description": "Information obtained through lawful physical or electronic surveillance during investigations.",
+                                "common_use": [
+                                    "Movement analysis",
+                                    "Meeting locations",
+                                    "Transportation monitoring"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "NCB Intelligence",
+                                "reliability": "High",
+                                "description": "Operational intelligence developed or shared by the Narcotics Control Bureau.",
+                                "common_use": [
+                                    "Interstate investigations",
+                                    "Major trafficking networks",
+                                    "Coordinated operations"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "State Police Intelligence",
+                                "reliability": "High",
+                                "description": "Information generated by State Police Special Branches and Anti-Narcotics Units.",
+                                "common_use": [
+                                    "Local investigations",
+                                    "Regional trafficking",
+                                    "Known offenders"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "Interstate Coordination",
+                                "reliability": "High",
+                                "description": "Information exchanged between law enforcement agencies operating across multiple jurisdictions.",
+                                "common_use": [
+                                    "Cross-border investigations",
+                                    "Joint operations",
+                                    "Suspect tracking"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "Public Tip",
+                                "reliability": "Variable",
+                                "description": "Information voluntarily provided by members of the public requiring independent verification.",
+                                "common_use": [
+                                    "Initial lead generation",
+                                    "Suspicious activity reporting"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            },
+                            {
+                                "source": "Cyber Intelligence",
+                                "reliability": "High",
+                                "description": "Information derived from lawful analysis of digital platforms, online communications and cyber investigations.",
+                                "common_use": [
+                                    "Digital evidence",
+                                    "Online trafficking networks",
+                                    "Financial investigations"
+                                ],
+                                "dataset_mapping": {
+                                    "intelligence_input_field": "Intelligence_Input",
+                                    "source_type_field": "Source_Type"
+                                }
+                            }
+                        ],
+                        "intelligence_assessment": {
+                            "verification_principles": [
+                                "Corroborate intelligence using independent sources wherever possible.",
+                                "Document the origin of every intelligence input.",
+                                "Evaluate credibility before operational deployment.",
+                                "Maintain confidentiality of protected sources.",
+                                "Record intelligence handling in accordance with agency procedures."
+                            ]
+                        },
+                        "dataset_mapping": {
+                            "intelligence_input_field": "Intelligence_Input",
+                            "source_type_field": "Source_Type"
+                        },
+                        "references": [
+                            "Narcotics Control Bureau Annual Reports",
+                            "Narcotics Control Bureau Training Module",
+                            "United Nations Office on Drugs and Crime (UNODC) World Drug Report",
+                            "NDPS Act, 1985"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "success": true,
+    "analysis_status": "complete"
+}

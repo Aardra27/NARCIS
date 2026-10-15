@@ -1,0 +1,1708 @@
+﻿/*
+============================================================
+NARCIS DOCUMENT EXTRACTION
+COMBINED LAYOUT
+============================================================
+
+VISUAL SOURCE:
+New Case / Dashboard shell
+
+FUNCTIONAL SOURCE:
+Document Extraction page.tsx
+
+BACKEND:
+UNTOUCHED
+
+EXTRACTOR:
+UNTOUCHED
+
+This stylesheet intentionally keeps Document Extraction
+class names because page.tsx is already functional.
+
+============================================================
+*/
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+.page {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  background: #f5f7fa;
+  color: #122b49;
+
+  overflow: hidden;
+}
+
+/* ============================================================
+   SIDEBAR
+   Same visual proportions as New Case
+   ============================================================ */
+
+.sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 218px;
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #071b33 0%,
+      #08213c 52%,
+      #06182d 100%
+    );
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 0 18px;
+
+  z-index: 20;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(177, 206, 231, 0.35);
+  border-radius: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(177, 206, 231, 0.55);
+}
+
+/* ============================================================
+   SIDEBAR BRAND / NARCIS LOGO
+   ============================================================ */
+
+.sidebarBrand {
+  position: relative;
+
+  padding:
+    25px
+    18px
+    20px;
+
+  flex-shrink: 0;
+}
+
+.sidebarBrand::before {
+  content: "";
+
+  position: absolute;
+
+  top: 13px;
+  left: 20px;
+
+  width: 170px;
+  height: 85px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(23, 122, 222, 0.30),
+      rgba(23, 122, 222, 0.08) 42%,
+      transparent 72%
+    );
+
+  filter: blur(7px);
+
+  pointer-events: none;
+}
+
+.logoArea {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  z-index: 1;
+}
+
+.logo {
+  position: relative;
+
+  width: auto;
+  height: 58px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.logoArea span {
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.sidebarBrand p {
+  position: relative;
+
+  margin:
+    8px
+    0
+    0
+    4px;
+
+  color: #a9bdd6;
+
+  font-size: 8px;
+  line-height: 1.45;
+
+  letter-spacing: 0.15px;
+
+  z-index: 1;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding:
+    8px
+    11px
+    10px;
+}
+
+.navItem {
+  width: 100%;
+  min-height: 39px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #b5c8dd;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    0
+    13px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.navItem:hover {
+  background: rgba(255,255,255,0.06);
+  color: #ffffff;
+}
+
+.navActive {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 105, 211, 0.34),
+      rgba(15, 105, 211, 0.16)
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    inset 3px 0 0 #1982e8;
+}
+
+.navIcon {
+  width: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  color: #9eb5d1;
+}
+
+.navActive .navIcon {
+  color: #55a7f4;
+}
+
+.sidebarDivider {
+  height: 1px;
+
+  margin:
+    4px
+    17px;
+
+  background:
+    rgba(184, 207, 232, 0.15);
+
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   OFFICER AREA
+   ============================================================ */
+
+.sidebarOfficer {
+  position: relative;
+
+  margin:
+    auto
+    17px
+    0;
+
+  padding:
+    13px
+    10px;
+
+  min-height: 52px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(170, 199, 225, 0.12);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255,255,255,0.035);
+}
+
+.officerAvatar {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    rgba(74, 145, 214, 0.22);
+
+  color: #a9d0f4;
+
+  flex-shrink: 0;
+}
+
+.sidebarOfficer strong,
+.sidebarOfficer small {
+  display: block;
+}
+
+.sidebarOfficer strong {
+  font-size: 9px;
+  letter-spacing: 0.7px;
+}
+
+.sidebarOfficer small {
+  margin-top: 3px;
+
+  color: #7f9bb8;
+
+  font-size: 7px;
+}
+
+/* ============================================================
+   SECURE SESSION
+   ============================================================ */
+
+.secureSession {
+  position: relative;
+
+  margin:
+    13px
+    18px
+    0;
+
+  min-height: 28px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #88a8c7;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  flex-shrink: 0;
+}
+
+.sessionDot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #36c98f;
+
+  box-shadow:
+    0 0 8px rgba(54, 201, 143, 0.65);
+}
+
+/* ============================================================
+   MAIN WORKSPACE
+   ============================================================ */
+
+.main {
+  position: relative;
+
+  margin-left: 218px;
+
+  width: calc(100% - 218px);
+
+  height: 100vh;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  scrollbar-gutter: stable;
+
+  background: #f5f7fa;
+}
+
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #eef1f5;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #b6c2d1;
+
+  border-radius: 8px;
+
+  border:
+    2px solid
+    #eef1f5;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #93a3b7;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.header {
+  min-height: 92px;
+
+  padding:
+    24px
+    28px
+    14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom:
+    1px solid
+    #e0e6ed;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  flex-shrink: 0;
+}
+
+.header h1 {
+  margin: 0;
+
+  color: #122b49;
+
+  font-size: 20px;
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+}
+
+.header p {
+  margin:
+    7px
+    0
+    0;
+
+  color: #6f819b;
+
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 1px;
+}
+
+.iconButton {
+  width: 30px;
+  height: 30px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #5d718c;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.iconButton:hover {
+  background: #f1f4f8;
+}
+
+.notificationBadge {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  min-width: 13px;
+  height: 13px;
+
+  padding: 0 3px;
+
+  border-radius: 8px;
+
+  background: #e33c43;
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.headerDivider {
+  width: 1px;
+  height: 30px;
+
+  background: #e0e6ed;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.userAvatar {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #eaf1f8;
+
+  color: #55718f;
+
+  display: grid;
+  place-items: center;
+}
+
+.userMenu strong {
+  display: block;
+
+  color: #1a3150;
+
+  font-size: 9px;
+}
+
+.userMenu small {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 3px;
+
+  color: #6e849e;
+
+  font-size: 6px;
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+.userMenu small span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #35bf8b;
+}
+
+.chevron {
+  margin-left: 4px;
+
+  color: #71849c;
+
+  font-size: 14px;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb {
+  min-height: 34px;
+
+  padding:
+    8px
+    28px
+    0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #8292a7;
+
+  font-size: 8px;
+
+  background: #f5f7fa;
+}
+
+.breadcrumb b {
+  color: #b1bdca;
+}
+
+.breadcrumb strong {
+  color: #2d4e76;
+}
+
+/* ============================================================
+   PAGE CONTENT
+   ============================================================ */
+
+.pageContent {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    28px
+    34px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  min-height: max-content;
+}
+
+/* ============================================================
+   DOCUMENT STATUS CARD
+   ============================================================ */
+
+.documentCard {
+  min-height: 72px;
+
+  box-sizing: border-box;
+
+  padding:
+    14px
+    18px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e0e6ed;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.documentLeft {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.pdfMiniIcon {
+  width: 39px;
+  height: 45px;
+
+  border-radius: 5px;
+
+  background: #fff1f2;
+
+  border:
+    1px solid
+    #f1c9cd;
+
+  color: #d93640;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.documentInfo {
+  min-width: 0;
+}
+
+.cardLabel {
+  display: block;
+
+  color: #8a9aae;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+.documentInfo h2 {
+  margin:
+    3px
+    0;
+
+  color: #17315a;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.documentInfo p {
+  margin: 0;
+
+  color: #7a8ba1;
+
+  font-size: 7px;
+}
+
+.extractionComplete {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding-right: 8px;
+}
+
+.completeCircle {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #e6f7ef;
+
+  color: #1caa70;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.extractionComplete strong,
+.extractionComplete span {
+  display: block;
+}
+
+.extractionComplete strong {
+  color: #1b8b61;
+
+  font-size: 8px;
+
+  letter-spacing: 0.5px;
+}
+
+.extractionComplete > div > span {
+  margin-top: 3px;
+
+  color: #8a9aae;
+
+  font-size: 7px;
+}
+
+/* ============================================================
+   TOP GRID
+   PDF LEFT + WORKFLOW RIGHT
+   ============================================================ */
+
+.topGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    355px;
+
+  align-items: start;
+
+  gap: 16px;
+
+  width: 100%;
+}
+
+/* ============================================================
+   SOURCE DOCUMENT CARD
+   ============================================================ */
+
+.sourceCard {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e0e6ed;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  overflow: hidden;
+}
+
+.cardHeader {
+  min-height: 48px;
+
+  box-sizing: border-box;
+
+  padding:
+    13px
+    16px;
+
+  border-bottom:
+    1px solid
+    #e4e9ef;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.cardHeader h3 {
+  margin: 0;
+
+  color: #17315d;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+}
+
+.pdfControls {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.pdfControls button {
+  min-width: 27px;
+  height: 25px;
+
+  padding:
+    0
+    7px;
+
+  border:
+    1px solid
+    #dbe2ea;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #60748d;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.pdfControls button:hover {
+  background: #f4f7fa;
+}
+
+.pdfControls span {
+  margin:
+    0
+    4px;
+
+  color: #8291a5;
+
+  font-size: 7px;
+}
+
+/* ============================================================
+   PDF VIEWER
+   ============================================================ */
+
+.pdfViewer {
+  position: relative;
+
+  width: 100%;
+
+  height: 560px;
+
+  min-height: 560px;
+
+  background: #e9edf2;
+
+  overflow: hidden;
+}
+
+.pdfFrame {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  background: #ffffff;
+}
+
+.pdfPlaceholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #72849b;
+}
+
+.pdfLargeIcon {
+  width: 62px;
+  height: 76px;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #d4dce6;
+
+  color: #d63a43;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.pdfPlaceholder strong {
+  color: #304c70;
+
+  font-size: 9px;
+}
+
+.pdfPlaceholder span {
+  font-size: 8px;
+}
+
+.pdfPlaceholder small {
+  font-size: 7px;
+}
+
+/* ============================================================
+   WORKFLOW CARD
+   Same size family as New Case
+   ============================================================ */
+
+.workflowCard {
+  min-width: 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e0e6ed;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  padding:
+    0
+    0
+    17px;
+}
+
+.workflowCard .cardHeader {
+  padding:
+    15px
+    17px;
+}
+
+.workflow {
+  padding:
+    17px
+    19px
+    0;
+}
+
+.workflowStep {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+
+  min-height: 58px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+
+  flex:
+    0 0
+    40px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    #cbd6e5;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #50668c;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.completeStep .stepNumber {
+  border-color: #0965d5;
+
+  background: #0965d5;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(0,89,190,.22);
+}
+
+.currentStep .stepNumber {
+  border-color: #0965d5;
+
+  background: #0965d5;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 12px rgba(0,89,190,.22);
+}
+
+.stepText {
+  min-width: 0;
+
+  padding-top: 3px;
+}
+
+.stepTitle {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.stepTitle strong {
+  color: #18345b;
+
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.stepText > span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8090a5;
+
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.completeBadge,
+.currentBadge {
+  padding:
+    4px
+    7px;
+
+  border-radius: 4px;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.completeBadge {
+  background: #e5f7ef;
+
+  color: #159364;
+}
+
+.currentBadge {
+  background: #e8f1ff;
+
+  color: #075fd0;
+}
+
+.workflowLine {
+  width: 1px;
+  height: 22px;
+
+  margin-left: 20px;
+
+  background: #d4dce8;
+}
+
+.completeStep + .workflowLine {
+  background: #8bbcf0;
+}
+
+/* ============================================================
+   EXTRACTED INFORMATION
+   BELOW THE TOP AREA
+   ============================================================ */
+
+.extractedSection {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    19px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e0e6ed;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+}
+
+.extractedHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 15px;
+
+  border-bottom:
+    1px solid
+    #e6ebf1;
+}
+
+.extractedHeader h2 {
+  margin:
+    4px
+    0
+    3px;
+
+  color: #17315d;
+
+  font-size: 15px;
+
+  font-weight: 900;
+}
+
+.extractedHeader p {
+  margin: 0;
+
+  color: #8291a4;
+
+  font-size: 8px;
+}
+
+.fieldCount {
+  white-space: nowrap;
+
+  padding:
+    7px
+    10px;
+
+  border-radius: 5px;
+
+  background: #e8f1ff;
+
+  color: #075fd0;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+/* ============================================================
+   FIELD GROUPS
+   ============================================================ */
+
+.fieldGroup {
+  margin-top: 17px;
+}
+
+.fieldGroup h3 {
+  margin:
+    0
+    0
+    10px;
+
+  color: #5f7693;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+}
+
+.fieldsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+.fieldCard {
+  min-width: 0;
+
+  padding:
+    12px
+    13px;
+
+  border:
+    1px solid
+    #e2e8ef;
+
+  border-radius: 6px;
+
+  background: #fbfcfd;
+}
+
+.fieldCard label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #7b8da3;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.55px;
+}
+
+.fieldValue {
+  min-height: 22px;
+
+  color: #263f60;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+}
+
+.missing {
+  color: #c76a31;
+
+  font-size: 8px;
+
+  font-style: italic;
+}
+
+.extractedStatus {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #20a36e;
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+/* ============================================================
+   VERIFICATION NOTICE
+   ============================================================ */
+
+.verificationCard {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding:
+    15px
+    17px;
+
+  border:
+    1px solid
+    #dce6f2;
+
+  border-radius: 7px;
+
+  background:
+    #f5f9fe;
+}
+
+.verificationIcon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #e5f0ff;
+
+  color: #116acb;
+
+  display: grid;
+  place-items: center;
+}
+
+.verificationCard h3 {
+  margin:
+    0
+    0
+    5px;
+
+  color: #24476e;
+
+  font-size: 8px;
+
+  letter-spacing: 0.5px;
+}
+
+.verificationCard p {
+  margin:
+    0
+    0
+    4px;
+
+  color: #70849b;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding-top: 2px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 38px;
+
+  padding:
+    0
+    17px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.35px;
+
+  cursor: pointer;
+}
+
+.secondaryButton {
+  border:
+    1px solid
+    #d7e0e9;
+
+  background: #ffffff;
+
+  color: #60748d;
+}
+
+.secondaryButton:hover {
+  background: #f3f6f9;
+}
+
+.primaryButton {
+  border:
+    1px solid
+    #075fc7;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0a71db,
+      #075fc7
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 4px 10px
+    rgba(0,95,199,.18);
+}
+
+.primaryButton:hover {
+  filter: brightness(1.04);
+}
+
+.primaryButton span {
+  margin-left: 7px;
+}
+
+/* ============================================================
+   LOADING / EMPTY STATES
+   ============================================================ */
+
+.loadingCard,
+.emptyCard {
+  margin-top: 0;
+
+  min-height: 350px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #e0e6ed;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 15px rgba(18,43,73,.06);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.loadingCard h2,
+.emptyCard h2 {
+  margin: 0;
+
+  color: #17315d;
+
+  font-size: 13px;
+}
+
+.loadingCard p,
+.emptyCard p {
+  margin: 0;
+
+  max-width: 420px;
+
+  text-align: center;
+
+  color: #8090a5;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+
+  border:
+    3px solid
+    #dce8f5;
+
+  border-top-color: #0965d5;
+
+  border-radius: 50%;
+
+  animation:
+    narcisSpin
+    0.8s
+    linear
+    infinite;
+}
+
+@keyframes narcisSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyIcon {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #fff3e8;
+
+  color: #d36c2f;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  min-height: 42px;
+
+  margin:
+    0
+    28px
+    20px;
+
+  padding:
+    0
+    3px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #7f90a5;
+
+  font-size: 7px;
+
+  flex-shrink: 0;
+}
+
+.footer strong {
+  color: #506782;
+
+  font-size: 7px;
+}
+
+.footer i {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #b8c4d1;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+  .topGrid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      315px;
+  }
+
+  .fieldsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    min-height: auto;
+  }
+
+  .page {
+    height: auto;
+
+    display: block;
+
+    overflow: visible;
+  }
+
+  .main {
+    margin-left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+  .topGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflowCard {
+    order: 2;
+  }
+
+  .pdfViewer {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .header {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .breadcrumb,
+  .pageContent {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

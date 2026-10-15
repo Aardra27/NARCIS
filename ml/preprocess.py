@@ -90,7 +90,18 @@ def preprocess_data(df):
 
         encoder = LabelEncoder()
 
-        df[column] = encoder.fit_transform(
+        # Keep Unknown as an explicit category for officer-unverified fields.
+        values = df[column].astype(str)
+
+        if "Unknown" not in values.values:
+            values = pd.concat(
+                [values, pd.Series(["Unknown"])],
+                ignore_index=True
+            )
+
+        encoder.fit(values)
+
+        df[column] = encoder.transform(
             df[column].astype(str)
         )
 
